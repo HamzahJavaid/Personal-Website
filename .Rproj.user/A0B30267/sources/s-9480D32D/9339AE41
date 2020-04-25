@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "9339AE41",
-    "lastKnownWriteTime" : 1587825522,
-    "last_content_update" : 1587825522639,
+    "lastKnownWriteTime" : 1587827783,
+    "last_content_update" : 1587827783742,
     "path" : "~/Dropbox/Website/config/_default/params.toml",
     "project_path" : "config/_default/params.toml",
     "properties" : {
-        "cursorPosition" : "4,8",
-        "scrollLine" : "0"
+        "cursorPosition" : "116,17",
+        "scrollLine" : "94"
     },
     "relative_order" : 2,
     "source_on_save" : false,
