@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 3 Asymptotic Theory | Econometrics Notes</title>
+  <meta name="description" content="Lecture 3 Asymptotic Theory | Econometrics Notes" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 3 Asymptotic Theory | Econometrics Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture 3 Asymptotic Theory | Econometrics Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 3 Asymptotic Theory | Econometrics Notes" />
+  
+  <meta name="twitter:description" content="Lecture 3 Asymptotic Theory | Econometrics Notes" />
+  
+
+<meta name="author" content="Matteo Courthoud" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="appendix2.html">
+<link rel="next" href="lecture1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="../" target="_self">MATTEO COURTHOUD</a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="appendix1.html"><a href="appendix1.html"><i class="fa fa-check"></i><b>1</b> Matrix Algebra</a><ul>
+<li class="chapter" data-level="1.1" data-path="appendix1.html"><a href="appendix1.html#basics"><i class="fa fa-check"></i><b>1.1</b> Basics</a></li>
+<li class="chapter" data-level="1.2" data-path="appendix1.html"><a href="appendix1.html#spectral-decomposition"><i class="fa fa-check"></i><b>1.2</b> Spectral Decomposition</a></li>
+<li class="chapter" data-level="1.3" data-path="appendix1.html"><a href="appendix1.html#quadratic-forms-and-definite-matrices"><i class="fa fa-check"></i><b>1.3</b> Quadratic Forms and Definite Matrices</a></li>
+<li class="chapter" data-level="1.4" data-path="appendix1.html"><a href="appendix1.html#matrix-calculus"><i class="fa fa-check"></i><b>1.4</b> Matrix Calculus</a></li>
+<li class="chapter" data-level="1.5" data-path="appendix1.html"><a href="appendix1.html#references-1"><i class="fa fa-check"></i><b>1.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="appendix2.html"><a href="appendix2.html"><i class="fa fa-check"></i><b>2</b> Probability Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="appendix2.html"><a href="appendix2.html#probability"><i class="fa fa-check"></i><b>2.1</b> Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="appendix2.html"><a href="appendix2.html#random-variables"><i class="fa fa-check"></i><b>2.2</b> Random Variables</a></li>
+<li class="chapter" data-level="2.3" data-path="appendix2.html"><a href="appendix2.html#moments"><i class="fa fa-check"></i><b>2.3</b> Moments</a></li>
+<li class="chapter" data-level="2.4" data-path="appendix2.html"><a href="appendix2.html#inequalities"><i class="fa fa-check"></i><b>2.4</b> Inequalities</a></li>
+<li class="chapter" data-level="2.5" data-path="appendix2.html"><a href="appendix2.html#theorems"><i class="fa fa-check"></i><b>2.5</b> Theorems</a></li>
+<li class="chapter" data-level="2.6" data-path="appendix2.html"><a href="appendix2.html#statistical-models"><i class="fa fa-check"></i><b>2.6</b> Statistical Models</a></li>
+<li class="chapter" data-level="2.7" data-path="appendix2.html"><a href="appendix2.html#references-2"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="appendix3.html"><a href="appendix3.html"><i class="fa fa-check"></i><b>3</b> Asymptotic Theory</a><ul>
+<li class="chapter" data-level="3.1" data-path="appendix3.html"><a href="appendix3.html#convergence"><i class="fa fa-check"></i><b>3.1</b> Convergence</a></li>
+<li class="chapter" data-level="3.2" data-path="appendix3.html"><a href="appendix3.html#theorems-1"><i class="fa fa-check"></i><b>3.2</b> Theorems</a></li>
+<li class="chapter" data-level="3.3" data-path="appendix3.html"><a href="appendix3.html#ergodic-theory"><i class="fa fa-check"></i><b>3.3</b> Ergodic Theory</a></li>
+<li class="chapter" data-level="3.4" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-estimators"><i class="fa fa-check"></i><b>3.4</b> Asymptotic Properties of Estimators</a></li>
+<li class="chapter" data-level="3.5" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-test-statistics"><i class="fa fa-check"></i><b>3.5</b> Asymptotic Properties of Test Statistics</a></li>
+<li class="chapter" data-level="3.6" data-path="appendix3.html"><a href="appendix3.html#references-3"><i class="fa fa-check"></i><b>3.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture1.html"><a href="lecture1.html"><i class="fa fa-check"></i><b>4</b> OLS Algebra</a><ul>
+<li class="chapter" data-level="4.1" data-path="lecture1.html"><a href="lecture1.html#the-gauss-markov-model"><i class="fa fa-check"></i><b>4.1</b> The Gauss Markov Model</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="lecture1.html"><a href="lecture1.html#matlab"><i class="fa fa-check"></i><b>4.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lecture1.html"><a href="lecture1.html#the-ols-estimator"><i class="fa fa-check"></i><b>4.2</b> The OLS estimator</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lecture1.html"><a href="lecture1.html#matlab-1"><i class="fa fa-check"></i><b>4.2.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lecture1.html"><a href="lecture1.html#ols-residual-properties"><i class="fa fa-check"></i><b>4.3</b> OLS residual properties</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="lecture1.html"><a href="lecture1.html#matlab-2"><i class="fa fa-check"></i><b>4.3.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="lecture1.html"><a href="lecture1.html#finite-sample-properties-of-the-ols-estimator"><i class="fa fa-check"></i><b>4.4</b> Finite Sample Properties of the OLS estimator</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="lecture1.html"><a href="lecture1.html#matlab-3"><i class="fa fa-check"></i><b>4.4.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="lecture1.html"><a href="lecture1.html#references-4"><i class="fa fa-check"></i><b>4.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lecture2.html"><a href="lecture2.html"><i class="fa fa-check"></i><b>5</b> OLS Inference</a><ul>
+<li class="chapter" data-level="5.1" data-path="lecture2.html"><a href="lecture2.html#asymptotic-theory-of-the-ols-estimator"><i class="fa fa-check"></i><b>5.1</b> Asymptotic Theory of the OLS Estimator</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lecture2.html"><a href="lecture2.html#gaussian-error-term"><i class="fa fa-check"></i><b>5.1.1</b> Gaussian Error Term</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lecture2.html"><a href="lecture2.html#homoskedastic-error-term"><i class="fa fa-check"></i><b>5.1.2</b> Homoskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-error-term"><i class="fa fa-check"></i><b>5.1.3</b> Heteroskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-and-autocorrelated-error-term"><i class="fa fa-check"></i><b>5.1.4</b> Heteroskedastic and Autocorrelated Error Term</a></li>
+<li class="chapter" data-level="5.1.5" data-path="lecture2.html"><a href="lecture2.html#fixed-b-asymptotics"><i class="fa fa-check"></i><b>5.1.5</b> Fixed b asymptotics</a></li>
+<li class="chapter" data-level="5.1.6" data-path="lecture2.html"><a href="lecture2.html#fixed-g-asymptotics"><i class="fa fa-check"></i><b>5.1.6</b> Fixed G asymptotics</a></li>
+<li class="chapter" data-level="5.1.7" data-path="lecture2.html"><a href="lecture2.html#matlab-4"><i class="fa fa-check"></i><b>5.1.7</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="lecture2.html"><a href="lecture2.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="lecture2.html"><a href="lecture2.html#hypothesis-testing"><i class="fa fa-check"></i><b>5.2.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lecture2.html"><a href="lecture2.html#confidence-intervals"><i class="fa fa-check"></i><b>5.2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="5.2.3" data-path="lecture2.html"><a href="lecture2.html#matlab-5"><i class="fa fa-check"></i><b>5.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lecture2.html"><a href="lecture2.html#references-5"><i class="fa fa-check"></i><b>5.3</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lecture3.html"><a href="lecture3.html"><i class="fa fa-check"></i><b>6</b> Endogeneity</a><ul>
+<li class="chapter" data-level="6.1" data-path="lecture3.html"><a href="lecture3.html#instrumental-variables"><i class="fa fa-check"></i><b>6.1</b> Instrumental Variables</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lecture3.html"><a href="lecture3.html#matlab-6"><i class="fa fa-check"></i><b>6.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lecture3.html"><a href="lecture3.html#gmm"><i class="fa fa-check"></i><b>6.2</b> GMM</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="lecture3.html"><a href="lecture3.html#step-gmm"><i class="fa fa-check"></i><b>6.2.1</b> 1-step GMM</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lecture3.html"><a href="lecture3.html#step-gmm-1"><i class="fa fa-check"></i><b>6.2.2</b> 2-step GMM</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lecture3.html"><a href="lecture3.html#matlab-7"><i class="fa fa-check"></i><b>6.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lecture3.html"><a href="lecture3.html#testing-overidentifying-restrictions"><i class="fa fa-check"></i><b>6.3</b> Testing Overidentifying Restrictions</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="lecture3.html"><a href="lecture3.html#naive-test"><i class="fa fa-check"></i><b>6.3.1</b> Naive Test</a></li>
+<li class="chapter" data-level="6.3.2" data-path="lecture3.html"><a href="lecture3.html#hansens-test"><i class="fa fa-check"></i><b>6.3.2</b> Hansen’s Test</a></li>
+<li class="chapter" data-level="6.3.3" data-path="lecture3.html"><a href="lecture3.html#special-case-conditional-homoskedasticity"><i class="fa fa-check"></i><b>6.3.3</b> Special Case: Conditional Homoskedasticity</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="lecture3.html"><a href="lecture3.html#small-sample-properties-of-2sls"><i class="fa fa-check"></i><b>6.4</b> Small-Sample Properties of 2SLS</a></li>
+<li class="chapter" data-level="6.5" data-path="lecture3.html"><a href="lecture3.html#many-instrument-robust-estimation"><i class="fa fa-check"></i><b>6.5</b> Many Instrument Robust Estimation</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="lecture3.html"><a href="lecture3.html#liml"><i class="fa fa-check"></i><b>6.5.1</b> LIML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lecture3.html"><a href="lecture3.html#jive"><i class="fa fa-check"></i><b>6.5.2</b> JIVE</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="lecture3.html"><a href="lecture3.html#hausman-test"><i class="fa fa-check"></i><b>6.6</b> Hausman Test</a></li>
+<li class="chapter" data-level="6.7" data-path="lecture3.html"><a href="lecture3.html#references-6"><i class="fa fa-check"></i><b>6.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lecture4.html"><a href="lecture4.html"><i class="fa fa-check"></i><b>7</b> Non-Parametric Estimation</a><ul>
+<li class="chapter" data-level="7.1" data-path="lecture4.html"><a href="lecture4.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture4.html"><a href="lecture4.html#discrete-x---cell-estimator"><i class="fa fa-check"></i><b>7.2</b> Discrete x - Cell Estimator</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture4.html"><a href="lecture4.html#local-non-parametric-estimation---kernels"><i class="fa fa-check"></i><b>7.3</b> Local Non-Parametric Estimation - Kernels</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="lecture4.html"><a href="lecture4.html#estimator-examples"><i class="fa fa-check"></i><b>7.3.1</b> Estimator examples:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lecture4.html"><a href="lecture4.html#kernel-examples"><i class="fa fa-check"></i><b>7.3.2</b> Kernel examples:</a></li>
+<li class="chapter" data-level="7.3.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-bandwidth"><i class="fa fa-check"></i><b>7.3.3</b> Choice of the optimal bandwidth</a></li>
+<li class="chapter" data-level="7.3.4" data-path="lecture4.html"><a href="lecture4.html#inference-1"><i class="fa fa-check"></i><b>7.3.4</b> Inference</a></li>
+<li class="chapter" data-level="7.3.5" data-path="lecture4.html"><a href="lecture4.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>7.3.5</b> Bias-variance trade-off</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lecture4.html"><a href="lecture4.html#global-non-parametric-estimation---series"><i class="fa fa-check"></i><b>7.4</b> Global Non-Parametric Estimation - Series</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lecture4.html"><a href="lecture4.html#examples"><i class="fa fa-check"></i><b>7.4.1</b> Examples</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lecture4.html"><a href="lecture4.html#estimation"><i class="fa fa-check"></i><b>7.4.2</b> Estimation</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-k"><i class="fa fa-check"></i><b>7.4.3</b> Choice of the optimal <span class="math inline">\(K\)</span></a></li>
+<li class="chapter" data-level="7.4.4" data-path="lecture4.html"><a href="lecture4.html#inference-2"><i class="fa fa-check"></i><b>7.4.4</b> Inference</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lecture4.html"><a href="lecture4.html#kernel-vs-series"><i class="fa fa-check"></i><b>7.4.5</b> Kernel vs Series</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lecture4.html"><a href="lecture4.html#references-7"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lecture5.html"><a href="lecture5.html"><i class="fa fa-check"></i><b>8</b> Variable Selection</a><ul>
+<li class="chapter" data-level="8.1" data-path="lecture5.html"><a href="lecture5.html#lasso"><i class="fa fa-check"></i><b>8.1</b> Lasso</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lecture5.html"><a href="lecture5.html#choosing-the-optimal-lambda"><i class="fa fa-check"></i><b>8.1.1</b> Choosing the optimal lambda</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lecture5.html"><a href="lecture5.html#pre-testing"><i class="fa fa-check"></i><b>8.2</b> Pre-Testing</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="lecture5.html"><a href="lecture5.html#omitted-variable-bias"><i class="fa fa-check"></i><b>8.2.1</b> Omitted Variable Bias</a></li>
+<li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
+<li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
+<li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
+<li class="chapter" data-level="9.1" data-path="matlabcode.html"><a href="matlabcode.html#lecture-1"><i class="fa fa-check"></i><b>9.1</b> Lecture 1</a></li>
+<li class="chapter" data-level="9.2" data-path="matlabcode.html"><a href="matlabcode.html#lecture-2"><i class="fa fa-check"></i><b>9.2</b> Lecture 2</a></li>
+<li class="chapter" data-level="9.3" data-path="matlabcode.html"><a href="matlabcode.html#lecture-3"><i class="fa fa-check"></i><b>9.3</b> Lecture 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Econometrics Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix3" class="section level1">
+<h1><span class="header-section-number">Lecture 3</span> Asymptotic Theory</h1>
+<div id="convergence" class="section level2">
+<h2><span class="header-section-number">3.1</span> Convergence</h2>
+<p>A sequence of nonrandom numbers <span class="math inline">\(\{ a_n \}\)</span> <strong>converges</strong> to <span class="math inline">\(a\)</span> (has limit <span class="math inline">\(a\)</span>) if for all <span class="math inline">\(\varepsilon&gt;0\)</span>, there exists <span class="math inline">\(n _ \varepsilon\)</span> such that if <span class="math inline">\(n &gt; n_ \varepsilon\)</span>, then <span class="math inline">\(|a_n - a| &lt; \varepsilon\)</span>. We write <span class="math inline">\(a_n \to a\)</span> as <span class="math inline">\(n \to \infty\)</span>.</p>
+<p>A sequence of nonrandom numbers <span class="math inline">\(\{ a_n \}\)</span> is <strong>bounded</strong> if and only if there is some <span class="math inline">\(B &lt; \infty\)</span> such that <span class="math inline">\(|a_n| \leq B\)</span> for all <span class="math inline">\(n=1,2,...\)</span> Otherwise, we say that <span class="math inline">\(\{a_n\}\)</span> is unbounded.</p>
+<p>A sequence of nonrandom numbers <span class="math inline">\(\{ a_n \}\)</span> is <span class="math inline">\(O(N^\delta)\)</span> (at most of order <span class="math inline">\(N^\delta\)</span>) if <span class="math inline">\(N^{-\delta} a_n\)</span> is bounded. When <span class="math inline">\(\delta=0\)</span>, <span class="math inline">\(a_n\)</span> is bounded, and we also write <span class="math inline">\(a_n = O(1)\)</span> (big oh one).</p>
+<p>A sequenc of nonrandom numberse <span class="math inline">\(\{ a_n \}\)</span> is <span class="math inline">\(o(N^\delta)\)</span> if <span class="math inline">\(N^{-\delta} a_n \to 0\)</span>. When <span class="math inline">\(\delta=0\)</span>, <span class="math inline">\(a_n\)</span> converges to zero, and we also write <span class="math inline">\(a_n = o(1)\)</span> (little oh one).</p>
+<blockquote>
+<p>From the definitions, it is clear that if <span class="math inline">\(a_n = o(N^{\delta})\)</span>, then <span class="math inline">\(a_n = O(N^\delta)\)</span>; in particular, if <span class="math inline">\(a_n = o(1)\)</span>, then <span class="math inline">\(a_n = O(1)\)</span>. If each element of a sequence of vectors or matrices is <span class="math inline">\(O(N^\delta)\)</span>, we say the sequence of vectors or matrices is <span class="math inline">\(O(N^\delta)\)</span>, and similarly for <span class="math inline">\(o(N^\delta)\)</span>.</p>
+</blockquote>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> <strong>converges in probability</strong> to a constant <span class="math inline">\(c \in \mathbb R\)</span> if for all <span class="math inline">\(\varepsilon&gt;0\)</span>
+<span class="math display">\[
+    \Pr \big( |X_n - c| &gt; \varepsilon \big) \to 0 \qquad \text{ as } n \to \infty
+\]</span>
+We write <span class="math inline">\(X_n \overset{p}{\to} c\)</span> and say that <span class="math inline">\(a\)</span> is the probability limit (<em>plim</em>) of <span class="math inline">\(X_n\)</span>: <span class="math inline">\(\mathrm{plim} X_n = c\)</span>. In the special case where <span class="math inline">\(c=0\)</span>, we also say that <span class="math inline">\(\{ X_n \}\)</span> is <span class="math inline">\(o_p(1)\)</span> (little oh p one). We also write <span class="math inline">\(X_n = o_p(1)\)</span> or <span class="math inline">\(X_n \overset{p}{\to} 0\)</span>.</p>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> is bounded in probability if for every <span class="math inline">\(\varepsilon&gt;0\)</span>, there exists a <span class="math inline">\(B _ \varepsilon &lt; \infty\)</span> and an integer <span class="math inline">\(n_ \varepsilon\)</span> such that
+<span class="math display">\[
+    \Pr \big( |x_ n| &gt; B_ \varepsilon \big) &lt; \varepsilon \qquad \text{ for all } n &gt; n_ \varepsilon
+\]</span>
+We write <span class="math inline">\(X_n = O_p(1)\)</span> (<span class="math inline">\(\{ X_n \}\)</span> is big oh p one).</p>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> is <span class="math inline">\(o_p(a_n)\)</span> where <span class="math inline">\(\{ a_n \}\)</span> is a nonrandom positive sequence, if <span class="math inline">\(X_n/a_n = o_p(1)\)</span>. We write <span class="math inline">\(X_n = o_p(a_n)\)</span>.</p>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> is <span class="math inline">\(O_p(a_n)\)</span> where <span class="math inline">\(\{ a_n \}\)</span> is a nonrandom positive sequence, if <span class="math inline">\(X_n/a_n = O_p(1)\)</span>. We write <span class="math inline">\(X_n = O_p(a_n)\)</span>.</p>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> <strong>converges almost surely</strong> to a constant <span class="math inline">\(c \in \mathbb R\)</span> if
+<span class="math display">\[
+    \Pr \big( X_n \overset{p}{\to} c \big) = 1
+\]</span>
+We write <span class="math inline">\(X_n \overset{as}{\to} c\)</span>.</p>
+<p>A sequence of random variables <span class="math inline">\(\{ X_n \}\)</span> <strong>converges in mean square</strong> to a constant <span class="math inline">\(c \in \mathbb R\)</span> if
+<span class="math display">\[
+  \mathbb E [(X_n - c)^2] \to 0  \qquad \text{ as } n \to \infty
+\]</span>
+We write <span class="math inline">\(X_n \overset{ms}{\to} c\)</span>.</p>
+<p>Let <span class="math inline">\(\{ X_n \}\)</span> be a sequence of random variables and <span class="math inline">\(F_n\)</span> be the cumulative distribution function (cdf) of <span class="math inline">\(X_n\)</span>. We say that <span class="math inline">\(X_n\)</span> <strong>converges in distribution</strong> to a random variable <span class="math inline">\(x\)</span> with cdf <span class="math inline">\(F\)</span> if the cdf <span class="math inline">\(F_n\)</span> of <span class="math inline">\(X_n\)</span> converges to the cdf <span class="math inline">\(F\)</span> of <span class="math inline">\(x\)</span> <em>at every continuity point</em> of <span class="math inline">\(F\)</span>. We write <span class="math inline">\(X_n \overset{d}{\to} x\)</span> and we call <span class="math inline">\(F\)</span> the <strong>asymptotic distribution</strong> of <span class="math inline">\(X_n\)</span>.</p>
+<p><strong>Lemma</strong>:
+Let <span class="math inline">\(\{ X_n \}\)</span> be a sequence of random variables and <span class="math inline">\(c \in \mathbb R\)</span></p>
+<ul>
+<li><span class="math inline">\(X_n \overset{ms}{\to} c \ \Rightarrow \ X_n \overset{p}{\to} c\)</span></li>
+<li><span class="math inline">\(X_n \overset{as}{\to} c \ \Rightarrow \ X_n \overset{p}{\to} c\)</span></li>
+<li><span class="math inline">\(X_n \overset{p}{\to} c \ \Rightarrow \ X_n \overset{d}{\to} c\)</span></li>
+</ul>
+<blockquote>
+<p>Note that all the above definitions naturally extend to a sequence of random vectors by requiring element-by-element convergence. For example, a sequence of <span class="math inline">\(K \times 1\)</span> random vectors <span class="math inline">\(\{ X_n \}\)</span> <strong>converges in probability</strong> to a constant <span class="math inline">\(c \in \mathbb R^K\)</span> if for all <span class="math inline">\(\varepsilon&gt;0\)</span>
+<span class="math display">\[
+\Pr \big( |X _ {nk} - c_k| &gt; \varepsilon \big) \to 0 \qquad \text{ as } n \to \infty \quad \forall k = 1...K \\
+\]</span></p>
+</blockquote>
+</div>
+<div id="theorems-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Theorems</h2>
+<p><strong>Slutsky Theorem</strong>:
+Let <span class="math inline">\(\{ X_n \}\)</span> and <span class="math inline">\(\{ Y_n \}\)</span> be two sequences of random variables, <span class="math inline">\(x\)</span> a random variable and <span class="math inline">\(c\)</span> a constant such that <span class="math inline">\(\{ X_n \} \overset{d}{\to} X\)</span> and <span class="math inline">\(\{ Y_n \} \overset{p}{\to} c\)</span>. Then</p>
+<ul>
+<li><span class="math inline">\(X_n + Y_n \overset{d}{\to} X + c\)</span></li>
+<li><span class="math inline">\(X_n \cdot Y_n \overset{d}{\to} X \cdot c\)</span></li>
+</ul>
+<p><strong>Continuous Mapping Theorem</strong>:
+Let <span class="math inline">\(\{ X_n \}\)</span> be sequence of <span class="math inline">\(K \times 1\)</span> random vectors and <span class="math inline">\(g: \mathbb{R}^K \to \mathbb{R}^J\)</span> a continuous function that does not depend on <span class="math inline">\(n\)</span>.Then</p>
+<ul>
+<li><span class="math inline">\(x _n \overset{as}{\to} x \ \Rightarrow \ g(X_n) \overset{as}{\to} g(x)\)</span></li>
+<li><span class="math inline">\(x _n \overset{p}{\to} x \ \Rightarrow \ g(X_n) \overset{p}{\to} g(x)\)</span></li>
+<li><span class="math inline">\(x _n \overset{d}{\to} x \ \Rightarrow \ g(X_n) \overset{d}{\to} g(x)\)</span></li>
+</ul>
+<p><strong>Weak Law of Large Numbers</strong>:
+Let <span class="math inline">\(\{ x_i \} _ {i=1}^n\)</span> be a sequence of independent, identically distributed random variables such that <span class="math inline">\(\mathbb{E}[|x_i|] &lt; \infty\)</span>. Then the sequence satisfies the <strong>weak law of large numbers (WLLN)</strong>:
+<span class="math display">\[
+    \mathbb{E}_n[x_i] = \frac{1}{n} \sum _ {i=1}^n x_i \overset{p}{\to} \mu \qquad \text{ where } \mu \equiv \mathbb{E}[x_i] 
+\]</span></p>
+<p><strong>Proof</strong>:
+The independence of the random variables implies no correlation between them, and we have that
+<span class="math display">\[
+    Var \left( \mathbb{E}_n[x_i] \right) = Var \left( \frac{1}{n} \sum _ {i=1}^n x_i \right) = \frac{1}{n^2} Var\left( \sum _ {i=1}^n x_i \right) = \frac{n \sigma^2}{n^2} = \frac{\sigma^2}{n}
+\]</span>
+Using Chebyshev’s inequality on <span class="math inline">\(\mathbb{E}_n[x_i]\)</span> results in
+<span class="math display">\[
+    \Pr \big( \left|\mathbb{E}_n[x_i]-\mu \right| &gt; \varepsilon \big) \leq {\frac {\sigma ^{2}}{n\varepsilon ^{2}}}
+\]</span>
+As <span class="math inline">\(n\)</span> approaches infinity, the right hand side approaches <span class="math inline">\(0\)</span>. And by definition of convergence in probability, we have obtained <span class="math inline">\(\mathbb{E}_n[x_i] \overset{p}{\to} \mu\)</span> as <span class="math inline">\(n \to \infty\)</span>.
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<blockquote>
+<p>Intuitions for the law of large numbers:</p>
+<ul>
+<li>Cancellation with high probability.</li>
+<li>Re-visiting regions of the sample space over and over again.</li>
+</ul>
+</blockquote>
+<p><strong>Lindberg-Levy Central Limit Theorem</strong>:
+Let <span class="math inline">\(\{ x_i \} _ {i=1}^n\)</span> be a sequence of independent, identically distributed random variables such that <span class="math inline">\(\mathbb{E}[x_i^2] &lt; \infty\)</span>, and <span class="math inline">\(\mathbb{E}[x_i] = \mu\)</span>. Then <span class="math inline">\(\{ x_i \}\)</span> satisfies the <strong>central limit theorem (CLT)</strong>; that is,
+<span class="math display">\[
+    \frac{1}{\sqrt{n}} \sum _ {i=1}^{n} (x_i - \mu) \overset{d}{\to} N(0,\sigma^2)
+\]</span>
+where <span class="math inline">\(\sigma^2 = Var(x_i) = \mathbb{E}[x_i x_i&#39;]\)</span> is necessarily positive semidefinite.</p>
+<p><strong>Proof</strong>:
+Suppose <span class="math inline">\(\{ x_i \}\)</span> are independent and identically distributed random variables, each with mean <span class="math inline">\(\mu\)</span> and finite variance <span class="math inline">\(\sigma^2\)</span>. The sum <span class="math inline">\(x_1 + ... + X_n\)</span> has mean <span class="math inline">\(n\mu\)</span> and variance <span class="math inline">\(n\sigma^2\)</span>. Consider the random variable
+<span class="math display">\[
+    Z_n = \frac{x_1 + ... + X_n - n\mu}{\sqrt{n \sigma^2}} = \sum _ {i=1}^n \frac{x_i - \mu}{\sqrt{n \sigma^2}} = \sum _ {i=1}^n \frac{1}{\sqrt{n}} \tilde x_i
+\]</span>
+where in the last step we defined the new random variables <span class="math inline">\(\tilde x _i = \frac{x_i - \mu}{\sigma}\)</span> each with zero mean and unit variance. The characteristic function of <span class="math inline">\(Z_n\)</span> is given by
+<span class="math display">\[
+    \varphi _ {Z_n}(t) = \varphi _ { \sum _ {i=1}^n \frac{1}{\sqrt{n}} \tilde x_i}(t) = \varphi _ {\tilde x_1} \left( \frac{t}{\sqrt{n}} \right) \times ... \times \varphi _ {Y_n} \left( \frac{t}{\sqrt{n}} \right) = \left[ \varphi _ {\tilde x_1} \left( \frac{t}{\sqrt{n}} \right) \right]^n
+\]</span>
+where in the last step we used the fact that all of the <span class="math inline">\(\tilde x _i\)</span> are identically distributed. The characteristic function of <span class="math inline">\(\tilde x _1\)</span> is, by Taylor’s theorem,
+<span class="math display">\[
+    \varphi _ {\tilde x_1} \left( \frac{t}{\sqrt{n}} \right) = 1 - \frac{t^2}{2n} + o\left(\frac{t^2}{n}\right) \qquad \text{ for } n \to \infty
+\]</span>
+where <span class="math inline">\(o(t^2)\)</span> is “little o notation” for some function of <span class="math inline">\(t\)</span> that goes to zero more rapidly than <span class="math inline">\(t^2\)</span>. By the limit of the exponential function, the characteristic function of <span class="math inline">\(Z_n\)</span> equals
+<span class="math display">\[
+    \varphi _ {Z_ n}(t) = \left[  1 - \frac{t^2}{2n} + o \left( \frac{t^2}{n} \right) \right]^n \to e^{ -\frac{1}{2}t^2 } \qquad \text{ for } n \to \infty
+\]</span>
+Note that all of the higher order terms vanish in the limit <span class="math inline">\(n \to \infty\)</span>. The right hand side equals the characteristic function of a standard normal distribution <span class="math inline">\(N(0,1)\)</span>, which implies through Lévy’s continuity theorem that the distribution of <span class="math inline">\(Z_ n\)</span> will approach <span class="math inline">\(N(0,1)\)</span> as <span class="math inline">\(n \to \infty\)</span>. Therefore, the sum <span class="math inline">\(x_ 1 + ... + x_ n\)</span> will approach that of the normal distribution <span class="math inline">\(N(n_ \mu, n\sigma^2)\)</span>, and the sample average
+<span class="math display">\[
+    \mathbb{E}_n [x_i] = \frac{1}{n} \sum _ {i=1}^n x_i
+\]</span>
+converges to the normal distribution <span class="math inline">\(N(\mu, \sigma^2)\)</span>, from which the central limit theorem follows.
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<p><strong>Delta Method</strong>:
+Let <span class="math inline">\(\{ X_n \}\)</span> be a sequence of independent, identically distributed <span class="math inline">\(K \times 1\)</span> random vectors such that <span class="math inline">\(\sqrt{n} (X_n - c) \overset{d}{\to} Z\)</span> for some fixed <span class="math inline">\(c \in \mathbb{R}^K\)</span> and <span class="math inline">\(\Sigma\)</span> a <span class="math inline">\(K \times K\)</span> positive definite matrix. Suppose <span class="math inline">\(g : \mathbb{R}^K \to \mathbb{R}^J\)</span> with <span class="math inline">\(J \leq K\)</span> is continuously differentiable and full rank at <span class="math inline">\(c\)</span>, then
+<span class="math display">\[
+    \sqrt{n} \Big[ g(X_n) - g( c ) \Big] \overset{d}{\to} G Z
+\]</span>
+where <span class="math inline">\(G = \frac{\partial g( c )}{\partial x}\)</span> is the <span class="math inline">\(J \times K\)</span> matrix of partial derivatives evaluated at <span class="math inline">\(c\)</span>.</p>
+<blockquote>
+<p>Note that the most common utilization is with the random variable <span class="math inline">\(\mathbb E_n [x_i]\)</span>. In fact, under the assumptions of the CLT, we have that
+<span class="math display">\[
+\sqrt{n} \Big[ g \big( \mathbb E_n [x_i] \big) - g(\mu) \Big] \overset{d}{\to} N(0, G \Sigma G&#39;)
+\]</span></p>
+</blockquote>
+</div>
+<div id="ergodic-theory" class="section level2">
+<h2><span class="header-section-number">3.3</span> Ergodic Theory</h2>
+<p>Let <span class="math inline">\((\Omega, \mathcal{B}, P)\)</span> be a probability space and <span class="math inline">\(T: \Omega \rightarrow \Omega\)</span> a measurable map. <span class="math inline">\(T\)</span> is a <strong>probability preserving transformation</strong> if the probability of the pre-image of every set is the same as the probability of the set itself, i.e. <span class="math inline">\(\forall G, \Pr(T^{-1}(G)) = \Pr(G)\)</span>.</p>
+<p>Let <span class="math inline">\((\Omega, \mathcal{B}, P)\)</span> be a probability space and <span class="math inline">\(T: \Omega \rightarrow \Omega\)</span> a PPT. A set <span class="math inline">\(G \in \mathcal{B}\)</span> is <strong>invariant</strong> if <span class="math inline">\(T^{-1}(G)=G\)</span>.</p>
+<blockquote>
+<p>Note that it does not have to work the other way around: <span class="math inline">\(G \neq T(G)\)</span>.</p>
+</blockquote>
+<p>Let <span class="math inline">\((\Omega, \mathcal{B}, P)\)</span> be a probability space and <span class="math inline">\(T: \Omega \rightarrow \Omega\)</span> a PPT. <span class="math inline">\(T\)</span> is <strong>ergodic</strong> if every invariant set <span class="math inline">\(G \in \mathcal{B}\)</span> has probability zero or one, i.e. <span class="math inline">\(\Pr(G) = 0 \lor \Pr(G) = 1\)</span>.</p>
+<p><strong>Poincarè Recurrence Theorem</strong>:
+Let <span class="math inline">\((\Omega, \mathcal{B}, P)\)</span> be a probability space and <span class="math inline">\(T: \Omega \rightarrow \Omega\)</span> a PPT. Suppose <span class="math inline">\(A \in \mathcal{B}\)</span> is measurable. Then, for almost every <span class="math inline">\(\omega \in A\)</span>, <span class="math inline">\(T^n(\omega)\in A\)</span> for infinitely many <span class="math inline">\(n\)</span>.</p>
+<p><strong>Proof</strong>:
+We follow 5 steps:</p>
+<ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(G = \{ \omega \in A : T^K(\omega) \notin A \quad \forall k &gt;0 \}\)</span>: the set of all points of A that never ``return" in A.</li>
+<li>Note that <span class="math inline">\(\forall j \geq 1\)</span>, <span class="math inline">\(T^{-j}(G) \cap G = \emptyset\)</span>. In fact, suppose <span class="math inline">\(\omega \in T^{-j}(G)\)</span>. Then <span class="math inline">\(\omega \notin G\)</span> since otherwise we would have <span class="math inline">\(\omega \in G \subseteq A\)</span> and <span class="math inline">\(\omega \in T^J(G) \subseteq A\)</span> which contradicts the definition of <span class="math inline">\(G\)</span>.</li>
+<li>It follows that <span class="math inline">\(\forall l,n \geq 1\)</span>, <span class="math inline">\(T^{-l}(G) \cap T^{-n}(G) = \emptyset\)</span></li>
+<li>Since <span class="math inline">\(T\)</span> is a PPT, <span class="math inline">\(\Pr(T^{-j}(G)) = \Pr(G)\)</span> <span class="math inline">\(\forall j\)</span></li>
+<li>Then
+<span class="math display">\[
+     \Pr (T^{-1}(G) \cup T^{-2}(G) \cup ... \cup T^{-l}(G)) = l \cdot \Pr(G) \leq 1 \Rightarrow \Pr(G) \leq \frac{1}{l} \quad \Rightarrow \quad \lim_ {l \to \infty} \Pr(G) = 0 
+\]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></li>
+</ol>
+<p><span class="math display">\[
+    \frac{1}{n} \sum _ {i=1}^n f(T^{i}x) = \frac{1}{n} \sum _ {i=1}^n x_i 
+\]</span></p>
+<p><strong>Ergodic Theorem</strong>:
+Let <span class="math inline">\(T\)</span> be an ergodic PPT on <span class="math inline">\(\Omega\)</span>. Let <span class="math inline">\(x\)</span> be a random variable on <span class="math inline">\(\Omega\)</span> with <span class="math inline">\(\mathbb{E}[x] &lt; \infty\)</span>. Let <span class="math inline">\(x_i = x \circ T^i\)</span>. Then,
+<span class="math display">\[
+        \frac{1}{n} \sum _ {i=1}^n x_i \overset{as}{\to} \mathbb{E}[x]
+\]</span></p>
+<blockquote>
+<p>To figure out whether a PPT is ergodic, it’s useful to draw a graph with <span class="math inline">\(T^{-1}(G)\)</span> on the y-axis and <span class="math inline">\(G\)</span> on the x-axis.</p>
+</blockquote>
+<p>From the ergodic theorem, we have that
+<span class="math display">\[
+    \lim _ {n \to \infty} \frac{1}{n} \sum _ {i=1}^n f(T^{i}x) g(x) = f^* (x)g(x) \quad \Rightarrow \quad  \lim _ {n \to \infty} \Pr(T^{-n}G \cap H) = \Pr(G)\Pr(H)
+\]</span>
+where <span class="math inline">\(f^* (x) = \int f(x) dx = \mathbb{E}[f]\)</span>.</p>
+<p><a href="" title="*The recurrence theorem says that under the appropriate conditions on a transformation T almost every point of each measurable set $A$ returns to $A$ infinitely often. It is natural to ask: exactly how long a time do the images of such recurrent points spend in $A$? The precise formulation of the problem runs as follows: given a point $x$ (for present purposes it does not matter whether $x$ is in $A$ or not), and given a positive integer $n$, form the ratio of the number of these points that belong to $A$ to the total number (i.e., to $n$), and evaluate the limit of these ratios as $n$ tends to infinity. It is, of course, not at all obvious in what sense, if any, that limit exists. If $f$ is the characteristic function of $A$ then the ratio just discussed is*">Halmos</a>: <em>We have seen that if a transformation <span class="math inline">\(T\)</span> is ergodic, then <span class="math inline">\(\Pr(T^{-n}G \cap H)\)</span> converges in the sense of Cesaro to <span class="math inline">\(\Pr(G)\Pr(H)\)</span>. The validity of this condition for all <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span> is, in fact, equivalent to ergodicity. To prove this, suppose that <span class="math inline">\(A\)</span> is a measurable invariant set, and take both <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span> equal to <span class="math inline">\(A\)</span>. It follows that <span class="math inline">\(\Pr(A) = (\Pr(A))^2\)</span>, and hence that <span class="math inline">\(\Pr(A)\)</span> is either 0 or 1.</em></p>
+<p><em>The Cesaro convergence condition has a natural intuitive interpretation. We may visualize the transformation <span class="math inline">\(T\)</span> as a particular way of stirring the contents of a vessel (of total volume 1) full of an incompressible fluid, which may be thought of as 90 per cent gin (<span class="math inline">\(G\)</span>) and 10 per cent vermouth (<span class="math inline">\(H\)</span>). If <span class="math inline">\(H\)</span> is the region originally occupied by the vermouth, then, for any part <span class="math inline">\(G\)</span> of the vessel, the relative amount of vermouth in <span class="math inline">\(G\)</span>, after <span class="math inline">\(n\)</span> repetitions of the act of stirring, is given by <span class="math inline">\(\Pr(T^{-n}G \cap H)/\Pr(H)\)</span>. The ergodicity of <span class="math inline">\(T\)</span> implies therefore that on the average this relative amount is exactly equal to 10 per cent. In general, in physical situations like this one, one expects to be justified in making a much stronger statement, namely that, after the liquid has been stirred sufficiently often (<span class="math inline">\(n \to \infty\)</span>), every part <span class="math inline">\(G\)</span> of the container will contain approximately 10 per cent vermouth. In mathematical language this expectation amounts to replacing Cesaro convergence by ordinary convergence, i.e., to the condition <span class="math inline">\(\lim_ {n\to \infty} \Pr(T^{-n}G \cap H) = \Pr(G)\Pr(H)\)</span>. If a transformation <span class="math inline">\(T\)</span> satisfies this condition for every pair <span class="math inline">\(G\)</span> and <span class="math inline">\(H\)</span> of measurable sets, it is called mixing, or, in distinction from a related but slightly weaker concept, strongly mixing.</em>"</p>
+<p>Let <span class="math inline">\(\{\Omega, \mathcal{B}, P \}\)</span> be a probability space. Let <span class="math inline">\(T\)</span> be a probability preserving transform. Then <span class="math inline">\(T\)</span> is <strong>strongly mixing</strong> if for every invariant sets <span class="math inline">\(G\)</span>,<span class="math inline">\(H \in \mathcal{B}\)</span>
+<span class="math display">\[
+    P(G \cap T^{-k}H) \to P(G)P(H) \quad \text{ as } k \to \infty 
+\]</span>
+where <span class="math inline">\(T^{-k}H\)</span> is defined as <span class="math inline">\(T^{-k}H = T^{-1}(...T^{-1}(T^{-1} H)...)\)</span> repeated <span class="math inline">\(k\)</span> times.</p>
+<p>Let <span class="math inline">\(\{X_i\} _ {i=-\infty}^{\infty}\)</span> be a two sided sequence of random variables. Let <span class="math inline">\(\mathcal{B}_ {-\infty}^n\)</span> be the sigma algebra generated by <span class="math inline">\(\{X_i\} _ {i=-\infty}^{n}\)</span> and <span class="math inline">\(\mathcal{B}_ {n+k}^\infty\)</span> the sigma algebra generated by <span class="math inline">\(\{X_i\} _ {i=n+k}^{\infty}\)</span>. Define the mixing coefficient
+<span class="math display">\[
+    \alpha(k) = \sup_ {n \in \mathbb{Z}} \sup_ {G \in \mathcal{B}_ {-\infty}^n} \sup_ {H \in \mathcal{B}_ {n+k}^\infty} | \Pr(G \cap H) - \Pr(G) \Pr(H)| 
+\]</span>
+<span class="math inline">\(\{X_i\}\)</span> is <span class="math inline">\(\mathbb{\alpha}\)</span><strong>-mixing</strong> if <span class="math inline">\(\alpha(k) \to 0\)</span> if <span class="math inline">\(k \to \infty\)</span>.</p>
+<blockquote>
+<p>Note that mixing implies ergodicity.</p>
+</blockquote>
+<p>Let <span class="math inline">\(X_i : \Omega \to \mathbb{R}\)</span> be a (two sided) sequence of random variables with <span class="math inline">\(i \in \mathbb{Z}\)</span>. <span class="math inline">\(X_i\)</span> is <strong>strongly stationary</strong> or simply stationary if
+<span class="math display">\[
+    \Pr (X _ {i_ 1} \leq a_ 1 , ... , X _ {i_ k} \leq a_ k ) = \Pr (X _ { i _ {1-s}} \leq a_ 1 , ... , X _ {i _ {k-s}} \leq a_ k)  \quad \text{ for every } i_ 1, ..., i_ k, a_ 1, ..., a_ k, s \in \mathbb{R}.
+\]</span></p>
+<p>Let <span class="math inline">\(X_i : \Omega \to \mathbb{R}\)</span> be a (two sided) sequence of random variables with <span class="math inline">\(i \in \mathbb{Z}\)</span>. <span class="math inline">\(X_i\)</span> is <strong>covariance stationary</strong> if <span class="math inline">\(\mathbb{E}[X_i] = \mathbb{E}[X_j]\)</span> for every <span class="math inline">\(i,j\)</span> and <span class="math inline">\(\mathbb{E}[X_i X_j] = \mathbb{E}[X _ {i+k} X _ {j+k}]\)</span> for all <span class="math inline">\(i,j,k\)</span>. All of the second moments above are assumed to exist.</p>
+<p>Let <span class="math inline">\(X_t : \Omega \to \mathbb{R}\)</span> be a sequence of random variables indexed by <span class="math inline">\(t \in \mathbb{Z}\)</span> such that <span class="math inline">\(\mathbb{E}[|X_t|] &lt; 1\)</span> for each <span class="math inline">\(t\)</span>. <span class="math inline">\(X_t\)</span> is a <strong>martingale</strong> if <span class="math inline">\(\mathbb{E} [X _ t |X _ {t-1} , X _ {t-2} , ...] = X _ t\)</span>. <span class="math inline">\(X_t\)</span> is a <strong>martingale difference</strong> if <span class="math inline">\(\mathbb{E} [X _ t | X _ {t-1} , X _ {t-2} ,...] = 0\)</span>.</p>
+<p><strong>Gordin’s Central Limit Theorem</strong>:
+Let <span class="math inline">\(\{ z_i \}\)</span> be a stationary, <span class="math inline">\(\alpha\)</span>-mixing sequence of random variables. If moreover</p>
+<ul>
+<li><span class="math inline">\(\sum_ {m=1}^\infty \alpha(m)^{\frac{\delta}{2 + \delta}} &lt; \infty\)</span></li>
+<li><span class="math inline">\(\mathbb{E}[z_i] = 0\)</span></li>
+<li><span class="math inline">\(\mathbb{E}\Big[ ||z_i || ^ {2+\delta} \Big] &lt; \infty\)</span></li>
+</ul>
+<p>Then
+<span class="math display">\[
+        \sqrt{n} \mathbb{E}_n [z_i] \overset{d}{\to} N(0,\Omega) \quad  \text{ where } \quad  \Omega = \lim _ {n \to \infty} Var(\sqrt{n} \mathbb{E}_n [z_i])
+\]</span></p>
+<p>Let <span class="math inline">\(\Omega_k = \mathbb{E}[ z_i z _ {i+k}&#39;]\)</span>. Then a necessary condition for Gordin’s CLT is covariance summability: <span class="math inline">\(\sum _ {k=1}^\infty \Omega_k &lt; \infty\)</span>.</p>
+<p><strong>Ergodic Central Limit Theorem</strong>:
+Let <span class="math inline">\(\{z_i\}\)</span> be a stationary, ergodic, martingale difference sequence. Then
+<span class="math display">\[
+    \sqrt{n} \mathbb{E}_n [z_i] \overset{d}{\to} N(0,\Omega) \quad  \text{ where } \quad  \Omega = \lim _ {n \to \infty} Var(\sqrt{n}\mathbb{E}_n[z_i])
+\]</span></p>
+</div>
+<div id="asymptotic-properties-of-estimators" class="section level2">
+<h2><span class="header-section-number">3.4</span> Asymptotic Properties of Estimators</h2>
+<p>Let <span class="math inline">\(\{ \theta_n \}\)</span> be a sequence of estimators, if
+<span class="math display">\[
+    \hat{\theta} \overset{p}{\to} \theta_0
+\]</span>
+then we say <span class="math inline">\(\hat{\theta}\)</span> is a <strong>consistent</strong> estimator of <span class="math inline">\(\theta_0\)</span>.</p>
+<p>Let <span class="math inline">\(\{ \theta_n \}\)</span> be a sequence of estimators, if
+<span class="math display">\[
+    \sqrt{n} (\hat{\theta} - \theta_0) \overset{d}{\to} N(0,V)
+\]</span>
+then we say that <span class="math inline">\(\hat{\theta}\)</span> is <span class="math inline">\(\mathbb{\sqrt{n}}\)</span>-<strong>asymptotically distributed</strong> and <span class="math inline">\(V\)</span> is the <strong>asymptotic variance</strong> of <span class="math inline">\(\sqrt{n} (\hat{\theta} - \theta_0)\)</span>, denoted as <span class="math inline">\(AVar \Big( \sqrt{n} (\hat{\theta} - \theta_0) \Big)\)</span>.</p>
+<p>Let <span class="math inline">\(\hat{\theta}\)</span> and <span class="math inline">\(\tilde{\theta}\)</span> be estimators of <span class="math inline">\(\theta_0\)</span> each satisfying asymptotic normality, with asymptotic variances <span class="math inline">\(V = AVar \mathcal{B}ig( \sqrt{n} (\hat{\theta} - \theta_0) \mathcal{B}ig)\)</span> and <span class="math inline">\(D = AVar \mathcal{B}ig( \sqrt{n} (\tilde{\theta} - \theta_0) \mathcal{B}ig)\)</span> (these generally depend on the value of <span class="math inline">\(\theta_0\)</span>, but we suppress that consideration here). Then</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\hat{\theta}\)</span> is <strong>asymptotically efficient</strong> relative to <span class="math inline">\(\tilde{\theta}\)</span> if <span class="math inline">\(D-V\)</span> is positive semidefinite for all <span class="math inline">\(\theta_0\)</span>,<br />
+</li>
+<li><span class="math inline">\(\hat{\theta}\)</span> and <span class="math inline">\(\tilde{\theta}\)</span> are <span class="math inline">\(\mathbb{\sqrt{n}}\)</span><strong>-equivalent</strong> if <span class="math inline">\(\sqrt{n}(\hat{\theta} - \tilde{\theta}) = o_p(1)\)</span>.</li>
+</ol>
+</div>
+<div id="asymptotic-properties-of-test-statistics" class="section level2">
+<h2><span class="header-section-number">3.5</span> Asymptotic Properties of Test Statistics</h2>
+<p>The <strong>asymptotic size</strong> of a testing procedure is defined as the limiting probability of rejecting <span class="math inline">\(H_0\)</span> when <span class="math inline">\(H_0\)</span> is true. Mathematically, we can write this as <span class="math inline">\(\lim _ {n \to \infty} \Pr_n ( \text{reject } H_0 | H_0)\)</span>, where the <span class="math inline">\(n\)</span> subscript indexes the sample size.</p>
+<p>A test is said to be <strong>consistent</strong> against the alternative <span class="math inline">\(H_1\)</span> if the null hypothesis is rejected with probability approaching <span class="math inline">\(1\)</span> when <span class="math inline">\(H_1\)</span> is true: <span class="math inline">\(\lim _ {N \to \infty} \Pr_N (\text{reject } H_0 | H_1) \overset{p}{\to} 1\)</span>.</p>
+<p><strong>Theorem</strong>:
+Suppose that <span class="math inline">\(\sqrt{n}(\hat{\theta} - \theta_0) \overset{d}{\to} N(0, V)\)</span>, where <span class="math inline">\(V\)</span> is positive definite. Then for any non-stochastic <span class="math inline">\(Q\times P\)</span> matrix <span class="math inline">\(R\)</span>, <span class="math inline">\(Q \leq P\)</span>, with rank<span class="math inline">\(( R ) = Q\)</span>
+<span class="math display">\[
+    \sqrt{n} R (\hat{\theta} - \theta_0) \sim N(0, R VR&#39;)
+\]</span>
+and
+<span class="math display">\[
+    [\sqrt{n}R(\hat{\theta} - \theta_0)]&#39;[RVR&#39;]^{-1}[\sqrt{n}R(\hat{\theta} - \theta_0)] \overset{d}{\to} \chi^2_Q
+\]</span>
+In addition, if <span class="math inline">\(\text{plim} \hat{V} _n = V\)</span>, then
+<span class="math display">\[
+    [\sqrt{n}R(\hat{\theta} - \theta_0)]&#39;[RVR&#39;]^{-1}[\sqrt{n}R(\hat{\theta} - \theta_0)] = (\hat{\theta} - \theta_0)&#39; R&#39;[R (\hat{V} _n/n) R&#39;]^{-1}R (\hat{\theta} - \theta_0) \overset{d}{\to} \chi^2_Q 
+\]</span></p>
+<p>For testing the null hypothesis <span class="math inline">\(H_0: R\theta_0 = r\)</span>, where <span class="math inline">\(r\)</span> is a <span class="math inline">\(Q\times1\)</span> random vector, define the <strong>Wald statistic</strong> for testing <span class="math inline">\(H_0\)</span> against <span class="math inline">\(H_1 : R\theta_0 \neq r\)</span> as
+<span class="math display">\[
+    W_n = (R\hat{\theta} - r)&#39;[R (\hat{V} _n/n) R&#39;]^{-1} (R\hat{\theta} - r)
+\]</span>
+Under <span class="math inline">\(H_0\)</span>, <span class="math inline">\(W_n \overset{d}{\to} \chi^2_Q\)</span>. If we abuse the asymptotics and we treat <span class="math inline">\(\hat{\theta}\)</span> as being distributed as Normal we get the equation exactly.</p>
+</div>
+<div id="references-3" class="section level2">
+<h2><span class="header-section-number">3.6</span> References</h2>
+<ul>
+<li>Kozbur (2019). PhD Econometrics - Lecture Notes.</li>
+<li>Wooldridge (2010). “<em>Econometric Analysis of Cross Section and Panel Data</em>”. Chapter 3: Basic Asymptotic Theory.</li>
+<li>Halmos (2006). “<em>Lectures on Ergodic Theory</em>”.</li>
+<li>Greene (2006). “<em>Econometric Analysis</em>”. Appendix D: Large Sample Distribution Theory.</li>
+<li>Hayashi (2000). “<em>Econometrics</em>”. Chapter 2: Large-Sample Theory.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="appendix2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lecture1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": [["notes.pdf", "PDF"]],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

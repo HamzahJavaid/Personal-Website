@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 4 OLS Algebra | Econometrics Notes</title>
+  <meta name="description" content="Lecture 4 OLS Algebra | Econometrics Notes" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 4 OLS Algebra | Econometrics Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture 4 OLS Algebra | Econometrics Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 4 OLS Algebra | Econometrics Notes" />
+  
+  <meta name="twitter:description" content="Lecture 4 OLS Algebra | Econometrics Notes" />
+  
+
+<meta name="author" content="Matteo Courthoud" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="appendix3.html">
+<link rel="next" href="lecture2.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="../" target="_self">MATTEO COURTHOUD</a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="appendix1.html"><a href="appendix1.html"><i class="fa fa-check"></i><b>1</b> Matrix Algebra</a><ul>
+<li class="chapter" data-level="1.1" data-path="appendix1.html"><a href="appendix1.html#basics"><i class="fa fa-check"></i><b>1.1</b> Basics</a></li>
+<li class="chapter" data-level="1.2" data-path="appendix1.html"><a href="appendix1.html#spectral-decomposition"><i class="fa fa-check"></i><b>1.2</b> Spectral Decomposition</a></li>
+<li class="chapter" data-level="1.3" data-path="appendix1.html"><a href="appendix1.html#quadratic-forms-and-definite-matrices"><i class="fa fa-check"></i><b>1.3</b> Quadratic Forms and Definite Matrices</a></li>
+<li class="chapter" data-level="1.4" data-path="appendix1.html"><a href="appendix1.html#matrix-calculus"><i class="fa fa-check"></i><b>1.4</b> Matrix Calculus</a></li>
+<li class="chapter" data-level="1.5" data-path="appendix1.html"><a href="appendix1.html#references-1"><i class="fa fa-check"></i><b>1.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="appendix2.html"><a href="appendix2.html"><i class="fa fa-check"></i><b>2</b> Probability Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="appendix2.html"><a href="appendix2.html#probability"><i class="fa fa-check"></i><b>2.1</b> Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="appendix2.html"><a href="appendix2.html#random-variables"><i class="fa fa-check"></i><b>2.2</b> Random Variables</a></li>
+<li class="chapter" data-level="2.3" data-path="appendix2.html"><a href="appendix2.html#moments"><i class="fa fa-check"></i><b>2.3</b> Moments</a></li>
+<li class="chapter" data-level="2.4" data-path="appendix2.html"><a href="appendix2.html#inequalities"><i class="fa fa-check"></i><b>2.4</b> Inequalities</a></li>
+<li class="chapter" data-level="2.5" data-path="appendix2.html"><a href="appendix2.html#theorems"><i class="fa fa-check"></i><b>2.5</b> Theorems</a></li>
+<li class="chapter" data-level="2.6" data-path="appendix2.html"><a href="appendix2.html#statistical-models"><i class="fa fa-check"></i><b>2.6</b> Statistical Models</a></li>
+<li class="chapter" data-level="2.7" data-path="appendix2.html"><a href="appendix2.html#references-2"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="appendix3.html"><a href="appendix3.html"><i class="fa fa-check"></i><b>3</b> Asymptotic Theory</a><ul>
+<li class="chapter" data-level="3.1" data-path="appendix3.html"><a href="appendix3.html#convergence"><i class="fa fa-check"></i><b>3.1</b> Convergence</a></li>
+<li class="chapter" data-level="3.2" data-path="appendix3.html"><a href="appendix3.html#theorems-1"><i class="fa fa-check"></i><b>3.2</b> Theorems</a></li>
+<li class="chapter" data-level="3.3" data-path="appendix3.html"><a href="appendix3.html#ergodic-theory"><i class="fa fa-check"></i><b>3.3</b> Ergodic Theory</a></li>
+<li class="chapter" data-level="3.4" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-estimators"><i class="fa fa-check"></i><b>3.4</b> Asymptotic Properties of Estimators</a></li>
+<li class="chapter" data-level="3.5" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-test-statistics"><i class="fa fa-check"></i><b>3.5</b> Asymptotic Properties of Test Statistics</a></li>
+<li class="chapter" data-level="3.6" data-path="appendix3.html"><a href="appendix3.html#references-3"><i class="fa fa-check"></i><b>3.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture1.html"><a href="lecture1.html"><i class="fa fa-check"></i><b>4</b> OLS Algebra</a><ul>
+<li class="chapter" data-level="4.1" data-path="lecture1.html"><a href="lecture1.html#the-gauss-markov-model"><i class="fa fa-check"></i><b>4.1</b> The Gauss Markov Model</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="lecture1.html"><a href="lecture1.html#matlab"><i class="fa fa-check"></i><b>4.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lecture1.html"><a href="lecture1.html#the-ols-estimator"><i class="fa fa-check"></i><b>4.2</b> The OLS estimator</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lecture1.html"><a href="lecture1.html#matlab-1"><i class="fa fa-check"></i><b>4.2.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lecture1.html"><a href="lecture1.html#ols-residual-properties"><i class="fa fa-check"></i><b>4.3</b> OLS residual properties</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="lecture1.html"><a href="lecture1.html#matlab-2"><i class="fa fa-check"></i><b>4.3.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="lecture1.html"><a href="lecture1.html#finite-sample-properties-of-the-ols-estimator"><i class="fa fa-check"></i><b>4.4</b> Finite Sample Properties of the OLS estimator</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="lecture1.html"><a href="lecture1.html#matlab-3"><i class="fa fa-check"></i><b>4.4.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="lecture1.html"><a href="lecture1.html#references-4"><i class="fa fa-check"></i><b>4.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lecture2.html"><a href="lecture2.html"><i class="fa fa-check"></i><b>5</b> OLS Inference</a><ul>
+<li class="chapter" data-level="5.1" data-path="lecture2.html"><a href="lecture2.html#asymptotic-theory-of-the-ols-estimator"><i class="fa fa-check"></i><b>5.1</b> Asymptotic Theory of the OLS Estimator</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lecture2.html"><a href="lecture2.html#gaussian-error-term"><i class="fa fa-check"></i><b>5.1.1</b> Gaussian Error Term</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lecture2.html"><a href="lecture2.html#homoskedastic-error-term"><i class="fa fa-check"></i><b>5.1.2</b> Homoskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-error-term"><i class="fa fa-check"></i><b>5.1.3</b> Heteroskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-and-autocorrelated-error-term"><i class="fa fa-check"></i><b>5.1.4</b> Heteroskedastic and Autocorrelated Error Term</a></li>
+<li class="chapter" data-level="5.1.5" data-path="lecture2.html"><a href="lecture2.html#fixed-b-asymptotics"><i class="fa fa-check"></i><b>5.1.5</b> Fixed b asymptotics</a></li>
+<li class="chapter" data-level="5.1.6" data-path="lecture2.html"><a href="lecture2.html#fixed-g-asymptotics"><i class="fa fa-check"></i><b>5.1.6</b> Fixed G asymptotics</a></li>
+<li class="chapter" data-level="5.1.7" data-path="lecture2.html"><a href="lecture2.html#matlab-4"><i class="fa fa-check"></i><b>5.1.7</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="lecture2.html"><a href="lecture2.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="lecture2.html"><a href="lecture2.html#hypothesis-testing"><i class="fa fa-check"></i><b>5.2.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lecture2.html"><a href="lecture2.html#confidence-intervals"><i class="fa fa-check"></i><b>5.2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="5.2.3" data-path="lecture2.html"><a href="lecture2.html#matlab-5"><i class="fa fa-check"></i><b>5.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lecture2.html"><a href="lecture2.html#references-5"><i class="fa fa-check"></i><b>5.3</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lecture3.html"><a href="lecture3.html"><i class="fa fa-check"></i><b>6</b> Endogeneity</a><ul>
+<li class="chapter" data-level="6.1" data-path="lecture3.html"><a href="lecture3.html#instrumental-variables"><i class="fa fa-check"></i><b>6.1</b> Instrumental Variables</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lecture3.html"><a href="lecture3.html#matlab-6"><i class="fa fa-check"></i><b>6.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lecture3.html"><a href="lecture3.html#gmm"><i class="fa fa-check"></i><b>6.2</b> GMM</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="lecture3.html"><a href="lecture3.html#step-gmm"><i class="fa fa-check"></i><b>6.2.1</b> 1-step GMM</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lecture3.html"><a href="lecture3.html#step-gmm-1"><i class="fa fa-check"></i><b>6.2.2</b> 2-step GMM</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lecture3.html"><a href="lecture3.html#matlab-7"><i class="fa fa-check"></i><b>6.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lecture3.html"><a href="lecture3.html#testing-overidentifying-restrictions"><i class="fa fa-check"></i><b>6.3</b> Testing Overidentifying Restrictions</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="lecture3.html"><a href="lecture3.html#naive-test"><i class="fa fa-check"></i><b>6.3.1</b> Naive Test</a></li>
+<li class="chapter" data-level="6.3.2" data-path="lecture3.html"><a href="lecture3.html#hansens-test"><i class="fa fa-check"></i><b>6.3.2</b> Hansen’s Test</a></li>
+<li class="chapter" data-level="6.3.3" data-path="lecture3.html"><a href="lecture3.html#special-case-conditional-homoskedasticity"><i class="fa fa-check"></i><b>6.3.3</b> Special Case: Conditional Homoskedasticity</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="lecture3.html"><a href="lecture3.html#small-sample-properties-of-2sls"><i class="fa fa-check"></i><b>6.4</b> Small-Sample Properties of 2SLS</a></li>
+<li class="chapter" data-level="6.5" data-path="lecture3.html"><a href="lecture3.html#many-instrument-robust-estimation"><i class="fa fa-check"></i><b>6.5</b> Many Instrument Robust Estimation</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="lecture3.html"><a href="lecture3.html#liml"><i class="fa fa-check"></i><b>6.5.1</b> LIML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lecture3.html"><a href="lecture3.html#jive"><i class="fa fa-check"></i><b>6.5.2</b> JIVE</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="lecture3.html"><a href="lecture3.html#hausman-test"><i class="fa fa-check"></i><b>6.6</b> Hausman Test</a></li>
+<li class="chapter" data-level="6.7" data-path="lecture3.html"><a href="lecture3.html#references-6"><i class="fa fa-check"></i><b>6.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lecture4.html"><a href="lecture4.html"><i class="fa fa-check"></i><b>7</b> Non-Parametric Estimation</a><ul>
+<li class="chapter" data-level="7.1" data-path="lecture4.html"><a href="lecture4.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture4.html"><a href="lecture4.html#discrete-x---cell-estimator"><i class="fa fa-check"></i><b>7.2</b> Discrete x - Cell Estimator</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture4.html"><a href="lecture4.html#local-non-parametric-estimation---kernels"><i class="fa fa-check"></i><b>7.3</b> Local Non-Parametric Estimation - Kernels</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="lecture4.html"><a href="lecture4.html#estimator-examples"><i class="fa fa-check"></i><b>7.3.1</b> Estimator examples:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lecture4.html"><a href="lecture4.html#kernel-examples"><i class="fa fa-check"></i><b>7.3.2</b> Kernel examples:</a></li>
+<li class="chapter" data-level="7.3.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-bandwidth"><i class="fa fa-check"></i><b>7.3.3</b> Choice of the optimal bandwidth</a></li>
+<li class="chapter" data-level="7.3.4" data-path="lecture4.html"><a href="lecture4.html#inference-1"><i class="fa fa-check"></i><b>7.3.4</b> Inference</a></li>
+<li class="chapter" data-level="7.3.5" data-path="lecture4.html"><a href="lecture4.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>7.3.5</b> Bias-variance trade-off</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lecture4.html"><a href="lecture4.html#global-non-parametric-estimation---series"><i class="fa fa-check"></i><b>7.4</b> Global Non-Parametric Estimation - Series</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lecture4.html"><a href="lecture4.html#examples"><i class="fa fa-check"></i><b>7.4.1</b> Examples</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lecture4.html"><a href="lecture4.html#estimation"><i class="fa fa-check"></i><b>7.4.2</b> Estimation</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-k"><i class="fa fa-check"></i><b>7.4.3</b> Choice of the optimal <span class="math inline">\(K\)</span></a></li>
+<li class="chapter" data-level="7.4.4" data-path="lecture4.html"><a href="lecture4.html#inference-2"><i class="fa fa-check"></i><b>7.4.4</b> Inference</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lecture4.html"><a href="lecture4.html#kernel-vs-series"><i class="fa fa-check"></i><b>7.4.5</b> Kernel vs Series</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lecture4.html"><a href="lecture4.html#references-7"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lecture5.html"><a href="lecture5.html"><i class="fa fa-check"></i><b>8</b> Variable Selection</a><ul>
+<li class="chapter" data-level="8.1" data-path="lecture5.html"><a href="lecture5.html#lasso"><i class="fa fa-check"></i><b>8.1</b> Lasso</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lecture5.html"><a href="lecture5.html#choosing-the-optimal-lambda"><i class="fa fa-check"></i><b>8.1.1</b> Choosing the optimal lambda</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lecture5.html"><a href="lecture5.html#pre-testing"><i class="fa fa-check"></i><b>8.2</b> Pre-Testing</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="lecture5.html"><a href="lecture5.html#omitted-variable-bias"><i class="fa fa-check"></i><b>8.2.1</b> Omitted Variable Bias</a></li>
+<li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
+<li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
+<li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
+<li class="chapter" data-level="9.1" data-path="matlabcode.html"><a href="matlabcode.html#lecture-1"><i class="fa fa-check"></i><b>9.1</b> Lecture 1</a></li>
+<li class="chapter" data-level="9.2" data-path="matlabcode.html"><a href="matlabcode.html#lecture-2"><i class="fa fa-check"></i><b>9.2</b> Lecture 2</a></li>
+<li class="chapter" data-level="9.3" data-path="matlabcode.html"><a href="matlabcode.html#lecture-3"><i class="fa fa-check"></i><b>9.3</b> Lecture 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Econometrics Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lecture1" class="section level1">
+<h1><span class="header-section-number">Lecture 4</span> OLS Algebra</h1>
+<div id="the-gauss-markov-model" class="section level2">
+<h2><span class="header-section-number">4.1</span> The Gauss Markov Model</h2>
+<p>A statistical model for regression data is the <strong>Gauss Markov Model</strong> if each of its distributions satisfies the conditions (1)-(4): linearity, strict exogeneity, no multicollinearity, and spherical error variance. The <strong>Extended Gauss Markov Model</strong> also satisfies assumption (5).</p>
+<ol style="list-style-type: decimal">
+<li><strong>Linearity</strong>: a statistical model <span class="math inline">\(\mathcal{F}\)</span> over data <span class="math inline">\(\mathcal{D}\)</span> satisfies linearity if for each element of <span class="math inline">\(\mathcal{F}\)</span>, the data can be decomposed in
+<span class="math display">\[
+ \begin{aligned}
+   y_ i &amp;= \beta_ 1 x _ {i1} + \dots + \beta_ k x _ {ik} + \varepsilon_ i = x_ i&#39;\beta + \varepsilon_ i \\
+   \underset{n \times 1}{\vphantom{\beta_ \beta} y} &amp;= \underset{n \times k}{\vphantom{\beta}X} \cdot \underset{k \times 1}{\beta} + \underset{n \times 1}{\vphantom{\beta}\varepsilon}
+  \end{aligned}
+ \]</span></li>
+<li><strong>Strict Exogeneity</strong>: <span class="math inline">\(\mathbb E [\varepsilon_i|x_1, \dots, x_n] = 0, \forall i\)</span>.</li>
+<li><strong>No Multicollinerity</strong>: <span class="math inline">\(\mathbb E_n [x_i x_i&#39;]\)</span> is strictly positive definite almost surely. Equivalent to require <span class="math inline">\(rank(X)=k\)</span> with probability <span class="math inline">\(p \to 1\)</span>.
+Intuition: no regressor is a linear combination of other regressors.</li>
+<li><strong>Spherical Error Variance</strong>:
+-<span class="math inline">\(\mathbb E[\varepsilon_i^2 | x] = \sigma^2 &gt; 0, \ \forall i\)</span>
+-<span class="math inline">\(\mathbb E [\varepsilon_i \varepsilon_j |x ] = 0, \ \forall\)</span> <span class="math inline">\(1 \leq i &lt; j \leq n\)</span></li>
+<li>(Extended GM model) <strong>Normal error term</strong>: <span class="math inline">\(\varepsilon|X \sim N(0, \sigma^2 I_n)\)</span> and <span class="math inline">\(\varepsilon \perp X\)</span>.</li>
+</ol>
+<p>Note that by (2) and (4) you get <strong>homoskedasticity</strong>:
+<span class="math display">\[
+Var(\varepsilon_i|x) = \mathbb E[\varepsilon_i^2|x]- \mathbb E[\varepsilon_i|x]^2 = \sigma^2 I \qquad \forall i
+\]</span></p>
+<blockquote>
+<p>Implications:</p>
+<ul>
+<li>Strict exogeneity is not restrictive since it is sufficient to include a constant in the regression to enforce it
+<span class="math display">\[
+y_i = \alpha + x_i&#39;\beta + (\varepsilon_i - \alpha) \quad \Rightarrow \quad \mathbb E[\varepsilon_i] = \mathbb E_x [ \mathbb E[ \varepsilon_i | x]] = 0
+\]</span></li>
+<li>This implies <span class="math inline">\(\mathbb E[x _ {jk} \varepsilon_i ] = 0\)</span> by the LIE.</li>
+<li>These two conditions together imply <span class="math inline">\(Cov (x _ {jk} \varepsilon_i ) = 0\)</span>.</li>
+</ul>
+</blockquote>
+<p>A map <span class="math inline">\(\Pi: V \to V\)</span> is a <strong>projection</strong> if <span class="math inline">\(\Pi \circ \Pi = \Pi\)</span>.</p>
+<p>The Gauss Markov Model assumes that the <strong>conditional expectation function (CEF)</strong> <span class="math inline">\(f(X) = \mathbb E[Y|X]\)</span> and the <strong>linear projection</strong> <span class="math inline">\(g(X) = X \beta\)</span> coincide.</p>
+<div id="matlab" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> <code>Matlab</code></h3>
+<p>This code draws 100 observations from the model <span class="math inline">\(y = 2 x_1 - x_2 + \varepsilon\)</span> where <span class="math inline">\(x_1, x_2 \sim U[0,1]\)</span> and <span class="math inline">\(\varepsilon \sim N(0,1)\)</span>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="lecture1.html#cb1-1"></a><span class="co">% Set seed</span></span>
+<span id="cb1-2"><a href="lecture1.html#cb1-2"></a>rng(<span class="fl">123</span>)</span>
+<span id="cb1-3"><a href="lecture1.html#cb1-3"></a></span>
+<span id="cb1-4"><a href="lecture1.html#cb1-4"></a><span class="co">% Set the number of observations</span></span>
+<span id="cb1-5"><a href="lecture1.html#cb1-5"></a>n = <span class="fl">100</span>;</span>
+<span id="cb1-6"><a href="lecture1.html#cb1-6"></a></span>
+<span id="cb1-7"><a href="lecture1.html#cb1-7"></a><span class="co">% Set the dimension of X</span></span>
+<span id="cb1-8"><a href="lecture1.html#cb1-8"></a>k = <span class="fl">2</span>;</span>
+<span id="cb1-9"><a href="lecture1.html#cb1-9"></a></span>
+<span id="cb1-10"><a href="lecture1.html#cb1-10"></a><span class="co">% Draw a sample of explanatory variables</span></span>
+<span id="cb1-11"><a href="lecture1.html#cb1-11"></a>X = rand(n, k);</span>
+<span id="cb1-12"><a href="lecture1.html#cb1-12"></a></span>
+<span id="cb1-13"><a href="lecture1.html#cb1-13"></a><span class="co">% Draw the error term</span></span>
+<span id="cb1-14"><a href="lecture1.html#cb1-14"></a>sigma = <span class="fl">1</span>;</span>
+<span id="cb1-15"><a href="lecture1.html#cb1-15"></a>e = randn(n,<span class="fl">1</span>)*sqrt(sigma);</span>
+<span id="cb1-16"><a href="lecture1.html#cb1-16"></a></span>
+<span id="cb1-17"><a href="lecture1.html#cb1-17"></a><span class="co">% Set the parameters</span></span>
+<span id="cb1-18"><a href="lecture1.html#cb1-18"></a>b = [<span class="fl">2</span>; -<span class="fl">1</span>];</span>
+<span id="cb1-19"><a href="lecture1.html#cb1-19"></a></span>
+<span id="cb1-20"><a href="lecture1.html#cb1-20"></a><span class="co">% Calculate the dependent variable</span></span>
+<span id="cb1-21"><a href="lecture1.html#cb1-21"></a>y = X*b + e;</span></code></pre></div>
+</div>
+</div>
+<div id="the-ols-estimator" class="section level2">
+<h2><span class="header-section-number">4.2</span> The OLS estimator</h2>
+<p>The <strong>sum of squared residuals (SSR)</strong> is given by
+<span class="math display">\[
+    Q_n (\beta) \equiv   \frac{1}{n} \sum _ {i=1}^n \left( y_i - x_i&#39;\beta \right)^2 = \frac{1}{n} (y - X\beta)&#39; (y - X \beta)
+\]</span></p>
+<p>Consider a dataset <span class="math inline">\(\mathcal{D}\)</span> and define <span class="math inline">\(Q_n(\beta) = \mathbb E_n[(y_i - x_i&#39;\beta )^2 ]\)</span>. Then the <strong>ordinary least squares (OLS)</strong> estimator <span class="math inline">\(\hat \beta _ {OLS}\)</span> is the value of <span class="math inline">\(\beta\)</span> that minimizes <span class="math inline">\(Q_n(\beta)\)</span>.</p>
+<p>When we can write <span class="math inline">\(D = (y, X)\)</span> in matrix form, then
+<span class="math display">\[
+  \hat \beta _ {OLS} = \arg \min_\beta \frac{1}{n} (y - X \beta)&#39; (y - X\beta)
+\]</span></p>
+<p><strong>Theorem</strong>:
+Under the assumption that <span class="math inline">\(X\)</span> has full rank, the OLS estimator is unique and it is determined by the normal equations. More explicitly, <span class="math inline">\(\hat \beta\)</span> is the OLS estimate precisely when <span class="math inline">\(X&#39;X \hat \beta = X&#39;y\)</span>.</p>
+<p><strong>Proof</strong>:
+Taking the FOC:
+<span class="math display">\[
+    \frac{\partial Q_n (\beta)}{\partial \beta} = -\frac{2}{n} X&#39; y  + \frac{2}{n} X&#39;X\beta = 0 \quad \Leftrightarrow \quad X&#39;X \beta = X&#39;y
+\]</span>
+Since <span class="math inline">\((X&#39;X)^{-1}\)</span> exists by assumption,</p>
+<p>Finally, <span class="math inline">\(\frac{\partial^2 Q_n (\beta)}{\partial \beta \partial \beta&#39;} = X&#39;X/n\)</span> is positive definite since <span class="math inline">\(X&#39;X\)</span> is positive semi-definite and <span class="math inline">\((X&#39;X)^{-1}\)</span> exists because <span class="math inline">\(X\)</span> is full rank. Therefore, <span class="math inline">\(Q_n(\beta)\)</span> minimized at <span class="math inline">\(\hat \beta_n\)</span>.
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<p>The <span class="math inline">\(k\)</span> equations <span class="math inline">\(X&#39;X \hat \beta = X&#39;y\)</span> are called <strong>normal equations</strong>.</p>
+<p>We can now define the following objects:</p>
+<ul>
+<li>Fitted coefficient: <span class="math inline">\(\hat \beta _ {OLS} = (X&#39;X)^{-1} X&#39;y = \mathbb E_n [x_i x_i&#39;] \mathbb E_n [x_i y_i]\)</span></li>
+<li>Fitted residual: <span class="math inline">\(\hat \varepsilon_i = y_i - x_i&#39;\hat \beta\)</span></li>
+<li>Fitted value: <span class="math inline">\(\hat y_i = x_i&#39; \hat \beta\)</span></li>
+<li>Predicted coefficient: <span class="math inline">\(\hat \beta _ {-i} = \mathbb E_n [x _ {-i} x&#39; _ {-i}] \mathbb E_n [x _ {-i} y _ {-i}]\)</span></li>
+<li>Prediction error: <span class="math inline">\(\hat \varepsilon _ {-i} = y_i - x_i&#39;\hat \beta _ {-i}\)</span></li>
+<li>Predicted value: <span class="math inline">\(\hat y_i = x_i&#39; \hat \beta _ {-i}\)</span></li>
+</ul>
+<blockquote>
+<p>Notes on the orthogonality conditions:</p>
+<ul>
+<li>The normal equations are equivalent to the moment condition <span class="math inline">\(\mathbb E_n [x_i \varepsilon_i]= 0\)</span>.</li>
+<li>The algebraic result <span class="math inline">\(\mathbb E_n [x_i \hat \varepsilon_i]= 0\)</span> is called <strong>ortogonality property</strong> of the OLS residual <span class="math inline">\(\hat \varepsilon_i\)</span>.</li>
+<li>If we have included a constant in the regression, <span class="math inline">\(\mathbb E_n [\hat \varepsilon_i] = 0\)</span>.</li>
+<li><span class="math inline">\(\mathbb E \Big[\mathbb E_n [x_i \varepsilon_i ] \Big] = 0\)</span> by strict exogeneity (assumed in GM), but <span class="math inline">\(\mathbb E_n [x_i \varepsilon_i] \ne \mathbb E [x_i \varepsilon_i] = 0\)</span>. This is why <span class="math inline">\(\hat \beta _ {OLS}\)</span> is just an estimate of <span class="math inline">\(\beta_0\)</span>.</li>
+<li>Calculating OLS is like replacing the <span class="math inline">\(j\)</span> equations <span class="math inline">\(\mathbb E [x _ {ij} \varepsilon_i] = 0\)</span> <span class="math inline">\(\forall j\)</span> with <span class="math inline">\(\mathbb E_n [x _ {ij} \varepsilon_i] = 0\)</span> <span class="math inline">\(\forall j\)</span> and forcing them to hold (remindful of GMM).</li>
+</ul>
+</blockquote>
+<p>The <strong>projection matrix</strong> is given by <span class="math inline">\(P = X(X&#39;X)^{-1} X&#39;\)</span>. It has the following properties:</p>
+<ul>
+<li><span class="math inline">\(PX = X\)</span></li>
+<li><span class="math inline">\(P \hat \varepsilon = 0 \quad\)</span> (<span class="math inline">\(P\)</span>, <span class="math inline">\(\varepsilon\)</span> orthogonal)</li>
+<li><span class="math inline">\(P y = X(X&#39;X)^{-1} X&#39;y = X\hat \beta = \hat y\)</span></li>
+<li>Symmetric: <span class="math inline">\(P=P&#39;\)</span>, Idempotent: <span class="math inline">\(PP = P\)</span></li>
+<li><span class="math inline">\(tr(P) = tr( X(X&#39;X)^{-1} X&#39;) = tr( X&#39;X(X&#39;X)^{-1}) = tr(I_k) = k\)</span></li>
+<li>Its diagonal elements are <span class="math inline">\(h_{ii} = x_i (X&#39;X)^{-1} x_i&#39;\)</span> and are called <strong>leverage</strong>.</li>
+</ul>
+<blockquote>
+<p><span class="math inline">\(h _ {ii} \in [0,1]\)</span> is a normalized length of the observed regressor vector <span class="math inline">\(x_i\)</span>. In the OLS regression framework it captures the relative influence of observation <span class="math inline">\(i\)</span> on the estimated coefficient. Note that <span class="math inline">\(\sum _ n h_{ii} = k\)</span>.</p>
+</blockquote>
+<p>The <strong>annihilator matrix</strong> is given by <span class="math inline">\(M = I_n - P\)</span>. It has the following properties:</p>
+<ul>
+<li><span class="math inline">\(MX = 0 \quad\)</span> (<span class="math inline">\(M\)</span>, <span class="math inline">\(X\)</span> orthogonal)</li>
+<li><span class="math inline">\(M \hat \varepsilon = \hat \varepsilon\)</span></li>
+<li><span class="math inline">\(M y = \hat \varepsilon\)</span></li>
+<li>Symmetric: <span class="math inline">\(M=M&#39;\)</span>, idempotent: <span class="math inline">\(MM = M\)</span></li>
+<li><span class="math inline">\(tr(M) = n - k\)</span></li>
+<li>Its diagonal elements are <span class="math inline">\(1 - h_{ii} \in [0,1]\)</span></li>
+</ul>
+<blockquote>
+<p>Then we can equivalently write <span class="math inline">\(\hat y\)</span> (defined by stacking <span class="math inline">\(\hat y_i\)</span> into a vector) as <span class="math inline">\(\hat y = Py\)</span>.</p>
+</blockquote>
+<div id="matlab-1" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> <code>Matlab</code></h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb2-1"><a href="lecture1.html#cb2-1"></a><span class="co">% Estimate beta</span></span>
+<span id="cb2-2"><a href="lecture1.html#cb2-2"></a>b_hat = inv(X&#39;*X)*(X&#39;*y) <span class="co">% = 1.9020, -0.9305</span></span>
+<span id="cb2-3"><a href="lecture1.html#cb2-3"></a></span>
+<span id="cb2-4"><a href="lecture1.html#cb2-4"></a><span class="co">% Equivalent but faster formulation</span></span>
+<span id="cb2-5"><a href="lecture1.html#cb2-5"></a>b_hat = (X&#39;*X)\(X&#39;*y);</span>
+<span id="cb2-6"><a href="lecture1.html#cb2-6"></a></span>
+<span id="cb2-7"><a href="lecture1.html#cb2-7"></a><span class="co">% Even faster (but less intuitive) formulation</span></span>
+<span id="cb2-8"><a href="lecture1.html#cb2-8"></a>b_hat = X\y;</span>
+<span id="cb2-9"><a href="lecture1.html#cb2-9"></a></span>
+<span id="cb2-10"><a href="lecture1.html#cb2-10"></a><span class="co">% Note that is generally not equivalent to Var(X)^-1 * Cov(X,y)...</span></span>
+<span id="cb2-11"><a href="lecture1.html#cb2-11"></a>Var_X = cov(X);</span>
+<span id="cb2-12"><a href="lecture1.html#cb2-12"></a>Cov_Xy = n/(n-<span class="fl">1</span>) * (mean(X .* y) - mean(X).*mean(y));</span>
+<span id="cb2-13"><a href="lecture1.html#cb2-13"></a>b_alternative = inv(Var_X) * Cov_Xy&#39; <span class="co">% = 2.1525, -0.7384</span></span>
+<span id="cb2-14"><a href="lecture1.html#cb2-14"></a></span>
+<span id="cb2-15"><a href="lecture1.html#cb2-15"></a><span class="co">% ...unless you include a constant</span></span>
+<span id="cb2-16"><a href="lecture1.html#cb2-16"></a>a = <span class="fl">3</span>;</span>
+<span id="cb2-17"><a href="lecture1.html#cb2-17"></a>y = a + X*b + e;</span>
+<span id="cb2-18"><a href="lecture1.html#cb2-18"></a>b_hat_1 = [ones(n,<span class="fl">1</span>), X]\y <span class="co">% = 2.1525, -0.7384</span></span>
+<span id="cb2-19"><a href="lecture1.html#cb2-19"></a>Var_X = cov(X);</span>
+<span id="cb2-20"><a href="lecture1.html#cb2-20"></a>Cov_Xy = n/(n-<span class="fl">1</span>) * (mean(X .* y) - mean(X).*mean(y));</span>
+<span id="cb2-21"><a href="lecture1.html#cb2-21"></a>b_alternative = inv(Var_X) * Cov_Xy&#39; <span class="co">% = 2.1525, -0.7384</span></span>
+<span id="cb2-22"><a href="lecture1.html#cb2-22"></a></span>
+<span id="cb2-23"><a href="lecture1.html#cb2-23"></a><span class="co">% Predicted y</span></span>
+<span id="cb2-24"><a href="lecture1.html#cb2-24"></a>y_hat = X*b_hat;</span>
+<span id="cb2-25"><a href="lecture1.html#cb2-25"></a></span>
+<span id="cb2-26"><a href="lecture1.html#cb2-26"></a><span class="co">% Residuals</span></span>
+<span id="cb2-27"><a href="lecture1.html#cb2-27"></a>e_hat = y - X*b_hat;</span>
+<span id="cb2-28"><a href="lecture1.html#cb2-28"></a></span>
+<span id="cb2-29"><a href="lecture1.html#cb2-29"></a><span class="co">% Projection matrix</span></span>
+<span id="cb2-30"><a href="lecture1.html#cb2-30"></a>P = X*inv(X&#39;*X)*X&#39;;</span>
+<span id="cb2-31"><a href="lecture1.html#cb2-31"></a></span>
+<span id="cb2-32"><a href="lecture1.html#cb2-32"></a><span class="co">% Annihilator matrix</span></span>
+<span id="cb2-33"><a href="lecture1.html#cb2-33"></a>M = eye(n) - P;</span>
+<span id="cb2-34"><a href="lecture1.html#cb2-34"></a></span>
+<span id="cb2-35"><a href="lecture1.html#cb2-35"></a><span class="co">% Leverage</span></span>
+<span id="cb2-36"><a href="lecture1.html#cb2-36"></a>h = diag(P);</span></code></pre></div>
+</div>
+</div>
+<div id="ols-residual-properties" class="section level2">
+<h2><span class="header-section-number">4.3</span> OLS residual properties</h2>
+<p>The error is <strong>homoskedastic</strong> if <span class="math inline">\(\mathbb E [\varepsilon^2 | x] = \sigma^2\)</span> does not depend on <span class="math inline">\(x\)</span>.
+<span class="math display">\[
+    Var(\varepsilon) = I \sigma^2 = \begin{bmatrix}
+    \sigma^2 &amp; \dots &amp; 0 \\\\\
+    \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; \dots &amp; \sigma^2
+    \end{bmatrix}
+\]</span></p>
+<p>The error is <strong>heteroskedastic</strong> if <span class="math inline">\(\mathbb E [\varepsilon^2 | x] = \sigma^2(x)\)</span> does depend on <span class="math inline">\(x\)</span>.
+<span class="math display">\[
+    Var(\varepsilon) = I \sigma_i^2 = 
+    \begin{bmatrix}
+    \sigma_1^2 &amp; \dots &amp; 0 \\
+    \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; \dots &amp; \sigma_n^2 
+    \end{bmatrix}
+\]</span></p>
+<p>The OLS <strong>residual variance</strong> can be an object of interest even in a heteroskedastic regression. Its method of moments estimator is given by
+<span class="math display">\[
+  \hat \sigma^2 = \frac{1}{n} \sum _ {i=1}^n \hat \varepsilon_i^2
+\]</span></p>
+<blockquote>
+<p>Note that <span class="math inline">\(\hat \sigma^2\)</span> can be rewritten as
+<span class="math display">\[
+\hat \sigma^2 = \frac{1}{n} \varepsilon&#39; M&#39; M \varepsilon = \frac{1}{n} tr(\varepsilon&#39; M \varepsilon) = \frac{1}{n} tr(M \varepsilon&#39; \varepsilon)
+\]</span></p>
+</blockquote>
+<p>However, the method of moments estimator is a biesed estimator. In fact
+<span class="math display">\[
+  \mathbb E[\hat \sigma^2 | X] = \frac{1}{n} \mathbb E [ tr(M \varepsilon&#39; \varepsilon) | X] =  \frac{1}{n} tr( M\mathbb E[\varepsilon&#39; \varepsilon |X]) = \frac{1}{n} \sum _ {i=1}^n (1-h_{ii}) \sigma^2_i
+\]</span></p>
+<p>Under conditional homoskedasticity, the above expression simplifies to
+<span class="math display">\[
+  \mathbb E[\hat \sigma^2 | X] = \frac{1}{n} tr(M) \sigma^2 = \frac{n-k}{n} \sigma^2
+\]</span></p>
+<p>The OLS <strong>residual sample variance</strong> is denoted by <span class="math inline">\(s^2\)</span> and is given by
+<span class="math display">\[
+  s^2 = \frac{SSR}{n-k} = \frac{\hat \varepsilon&#39;\hat \varepsilon}{n-k} = \frac{1}{n-k}\sum _ {i=1}^n \hat \varepsilon_i^2
+\]</span>
+Furthermore, the square root of <span class="math inline">\(s^2\)</span>, denoted <span class="math inline">\(s\)</span>, is called the standard error of the regression (SER) or the standard error of the equation (SEE). Not to be confused with other notions of standard error to be defined later in the course.</p>
+<blockquote>
+<p>The sum of squared residuals can be rewritten as: <span class="math inline">\(SSR = \hat \varepsilon&#39; \hat \varepsilon = \varepsilon&#39; M \varepsilon\)</span>.</p>
+</blockquote>
+<p>The OLS residual sample variance is an unbiased estimator of the error variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p>Another unbiased estimator of <span class="math inline">\(\sigma^2\)</span> is given by
+<span class="math display">\[
+  \bar \sigma^2 = \frac{1}{n} \sum _ {i=1}^n (1-h_{ii})^{-1} \hat \varepsilon_i^2
+\]</span></p>
+<p>One measure of the variability of the dependent variable <span class="math inline">\(y_i\)</span> is the sum of squares <span class="math inline">\(\sum _ {i=1}^n y_i^2 = y&#39;y\)</span>. There is a decomposition:
+<span class="math display">\[
+\begin{aligned}
+    y&#39;y &amp;= (\hat y + e)&#39; (\hat y + \hat \varepsilon) \\
+    &amp;= \hat y&#39; \hat y + 2 \hat y&#39; \hat \varepsilon + \hat \varepsilon&#39; \hat \varepsilon e \\
+    &amp;= \hat y&#39; \hat y + 2 b&#39;X&#39;\hat \varepsilon + \hat \varepsilon&#39; \hat \varepsilon \ \ (\text{since} \ \hat y = Xb) \\
+    &amp;= \hat y&#39; \hat y + \hat \varepsilon&#39;\hat \varepsilon \ \ (\text{since} \ X&#39;\hat \varepsilon =0)
+\end{aligned}
+\]</span></p>
+<p>The <strong>uncentered</strong> <span class="math inline">\(\mathbf{R^2}\)</span> is defined as:
+<span class="math display">\[
+    R^2 _ {uc} \equiv 1 - \frac{\hat \varepsilon&#39;\hat \varepsilon}{y&#39;y} = 1 - \frac{\mathbb E_n[\hat \varepsilon_i^2]}{\mathbb E_n[y_i^2]} = \frac{ \mathbb E [\hat y_i^2]}{ \mathbb E [y_i^2]}
+\]</span></p>
+<p>A more natural measure of variability is the sum of centered squares <span class="math inline">\(\sum _ {i=1}^n (y_i - \bar y)^2,\)</span> where <span class="math inline">\(\bar y := \frac{1}{n}\sum _ {i=1}^n y_i\)</span>. If the regressors include a constant, it can be decomposed as
+<span class="math display">\[
+  \sum _ {i=1}^n (y_i - \bar y)^2 = \sum _ {i=1}^n (\hat y_i - \bar y)^2 + \sum _ {i=1}^n \hat \varepsilon_i^2
+\]</span></p>
+<p>The <strong>coefficient of determination</strong>, <span class="math inline">\(\mathbf{R^2}\)</span>, is defined as
+<span class="math display">\[
+    R^2 \equiv 1 - \frac{\sum _ {i=1}^n \hat \varepsilon_i^2}{\sum _ {i=1}^n (y_i - \bar y)^2 }= \frac{  \sum _ {i=1}^n (\hat y_i - \bar y)^2 } { \sum _ {i=1}^n (y_i - \bar y)^2} = \frac{\mathbb E_n[(\hat y_i - \bar y)^2]}{\mathbb E_n[(y_i - \bar y)^2]}
+\]</span></p>
+<blockquote>
+<p>Always use the centered <span class="math inline">\(R^2\)</span> unless you really know what you are doing.</p>
+</blockquote>
+<div id="matlab-2" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> <code>Matlab</code></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb3-1"><a href="lecture1.html#cb3-1"></a><span class="co">% Biased variance estimator </span></span>
+<span id="cb3-2"><a href="lecture1.html#cb3-2"></a>sigma_hat = e_hat&#39;*e_hat / n;</span>
+<span id="cb3-3"><a href="lecture1.html#cb3-3"></a></span>
+<span id="cb3-4"><a href="lecture1.html#cb3-4"></a><span class="co">% Unbiased estimator 1</span></span>
+<span id="cb3-5"><a href="lecture1.html#cb3-5"></a>sigma_hat_2 = e_hat&#39;*e_hat / (n-k);</span>
+<span id="cb3-6"><a href="lecture1.html#cb3-6"></a></span>
+<span id="cb3-7"><a href="lecture1.html#cb3-7"></a><span class="co">% Unbiased estimator 2</span></span>
+<span id="cb3-8"><a href="lecture1.html#cb3-8"></a>sigma_hat_3 = mean( e_hat.^<span class="fl">2</span> ./ (<span class="fl">1</span>-h) );</span>
+<span id="cb3-9"><a href="lecture1.html#cb3-9"></a></span>
+<span id="cb3-10"><a href="lecture1.html#cb3-10"></a><span class="co">% R squared - uncentered</span></span>
+<span id="cb3-11"><a href="lecture1.html#cb3-11"></a>R2_uc = (y_hat&#39;*y_hat)/ (y&#39;*y);</span>
+<span id="cb3-12"><a href="lecture1.html#cb3-12"></a></span>
+<span id="cb3-13"><a href="lecture1.html#cb3-13"></a><span class="co">% R squared</span></span>
+<span id="cb3-14"><a href="lecture1.html#cb3-14"></a>y_bar = mean(y);</span>
+<span id="cb3-15"><a href="lecture1.html#cb3-15"></a>R2 = ((y_hat-y_bar)&#39;*(y_hat-y_bar))/ ((y-y_bar)&#39;*(y-y_bar));</span></code></pre></div>
+</div>
+</div>
+<div id="finite-sample-properties-of-the-ols-estimator" class="section level2">
+<h2><span class="header-section-number">4.4</span> Finite Sample Properties of the OLS estimator</h2>
+<p><strong>Theorem</strong>:
+Under the GM assumptions (1)-(3), the OLS estimator is <strong>conditionally unbiased</strong>, i.e. the distribution of <span class="math inline">\(\hat \beta _ {OLS}\)</span> is centered at <span class="math inline">\(\beta_0\)</span>: <span class="math inline">\(\mathbb E [\hat \beta | X] = \beta_0\)</span>.</p>
+<p><strong>Proof</strong>:
+<span class="math display">\[
+\begin{aligned}
+    \mathbb E [\hat \beta  | X] &amp;= \mathbb E [ (X&#39;X)^{-1} X&#39;y | X] = \\
+    &amp;= (X&#39;X)^{-1} X &#39; \mathbb E  [y | X] = \\
+    &amp;= (X&#39;X)^{-1} X&#39; \mathbb E  [X \beta + \varepsilon | X] = \\
+    &amp;= (X&#39;X)^{-1} X&#39;X \beta + (X&#39;X)^{-1} X&#39; \mathbb E  [\varepsilon | X] = \\
+    &amp;= \beta 
+\end{aligned}
+\]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<p><strong>Theorem</strong>:
+Under the GM assumptions (1)-(3), <span class="math inline">\(Var(\hat \beta |X) = \sigma^2 (X&#39;X)^{-1}\)</span>.</p>
+<p><strong>Proof</strong>:
+<span class="math display">\[
+\begin{aligned}
+    Var(\hat \beta |X) &amp;= Var( (X&#39;X)^{-1} X&#39;y|X) = \\
+    &amp;= ((X&#39;X)^{-1} X&#39; ) Var(y|X) ((X&#39;X)^{-1} X&#39; )&#39; = \\
+    &amp;= ((X&#39;X)^{-1} X&#39; ) Var(X\beta + \varepsilon|X) ((X&#39;X)^{-1} X&#39; )&#39; = \\
+    &amp;= ((X&#39;X)^{-1} X&#39; ) Var(\varepsilon|X) ((X&#39;X)^{-1} X&#39; )&#39; = \\
+    &amp;= ((X&#39;X)^{-1} X&#39; ) \sigma^2 I ((X&#39;X)^{-1} X&#39; )&#39; =  \\
+    &amp;= \sigma^2 (X&#39;X)^{-1}
+\end{aligned}
+\]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<p>Higher correlation of the <span class="math inline">\(X\)</span> implies higher variance of the OLS estimator.</p>
+<blockquote>
+<p>Intuition: individual observations carry less information. You are exploring a smaller region of the <span class="math inline">\(X\)</span> space.</p>
+</blockquote>
+<p><strong>Theorem</strong>:
+Under the GM assumptions (1)-(3), <span class="math inline">\(Cov (\hat \beta, \hat \varepsilon ) = 0\)</span>.</p>
+<p><strong>Theorem</strong>:
+Under the GM assumptions (1)-(3), <span class="math inline">\(\hat \beta _ {OLS}\)</span> is the best (most efficient) linear, unbiased estimator (<strong>BLUE</strong>), i.e., for any unbiased linear estimator <span class="math inline">\(b\)</span>: <span class="math inline">\(Var (b|X) \geq Var (\hat \beta |X)\)</span>.</p>
+<p><strong>Proof</strong>:<br />
+Consider four steps:</p>
+<ol style="list-style-type: decimal">
+<li>Define three objects: (i) <span class="math inline">\(b= Cy\)</span>, (ii) <span class="math inline">\(A = (X&#39;X)^{-1} X&#39;\)</span> such that <span class="math inline">\(\hat \beta = A y\)</span>, and (iii) <span class="math inline">\(D = C-A\)</span>.</li>
+<li>Decompose <span class="math inline">\(b\)</span> as
+<span class="math display">\[
+\begin{aligned}
+ b &amp;= (D + A) y = \\
+ &amp;=  Dy + Ay = \\\
+ &amp;= D (X\beta + \varepsilon) + \hat \beta = \\
+ &amp;= DX\beta + D \varepsilon + \hat \beta
+\end{aligned}
+\]</span></li>
+<li>By assumption, <span class="math inline">\(b\)</span> must be unbiased:
+<span class="math display">\[
+\begin{aligned}
+ \mathbb E [b|X] &amp;= \mathbb E [D(X\beta + \varepsilon) + Ay |X] = \\
+ &amp;= \mathbb E [DX\beta|X] + \mathbb E [D\varepsilon |X] + \mathbb E [\hat \beta |X] = \\
+ &amp;= DX\beta + D \mathbb E [\varepsilon |X] +\beta \\\
+ &amp;= DX\beta + \beta
+\end{aligned}
+\]</span>
+Hence, it must be that <span class="math inline">\(DX = 0\)</span></li>
+<li>We know by (2)-(3) that <span class="math inline">\(b = D \varepsilon + \hat \beta\)</span>. We can now calculate its variance.
+<span class="math display">\[
+\begin{aligned}
+Var (b|X) &amp;= Var (\hat \beta + D\varepsilon|X) = \\
+&amp;= Var (Ay + D\varepsilon|X) = \\
+&amp;= Var (AX\beta + (D + A)\varepsilon|X) = \\
+&amp;= Var((D+A)\varepsilon |X) = \\
+&amp;= (D+A)\sigma^2 I (D+A)&#39; = \\
+&amp;= \sigma^2 I (DD&#39; + AA&#39; + DA&#39; + AD&#39;) = \\
+&amp;= \sigma^2 I (DD&#39; + AA&#39;) \geq \\
+&amp;\geq \sigma^2 AA&#39;= \\
+&amp;= \sigma^2 (X&#39;X)^{-1} = \\
+&amp;= Var (\hat \beta|X)
+\end{aligned}
+\]</span>
+since <span class="math inline">\(DA&#39;= AD&#39; = 0\)</span>, <span class="math inline">\(DX = 0\)</span> and <span class="math inline">\(AA&#39; = (X&#39;X)^{-1}\)</span>.
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></li>
+</ol>
+<blockquote>
+<p><span class="math inline">\(Var(b | X) \geq Var (\hat{\beta} | X)\)</span> is meant in a positive definite sense.</p>
+</blockquote>
+<div id="matlab-3" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> <code>Matlab</code></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb4-1"><a href="lecture1.html#cb4-1"></a><span class="co">% Ideal variance of the OLS estimator</span></span>
+<span id="cb4-2"><a href="lecture1.html#cb4-2"></a>var_b = sigma*inv(X&#39;*X);</span>
+<span id="cb4-3"><a href="lecture1.html#cb4-3"></a></span>
+<span id="cb4-4"><a href="lecture1.html#cb4-4"></a><span class="co">% Standard errors</span></span>
+<span id="cb4-5"><a href="lecture1.html#cb4-5"></a>std_b = sqrt(diag(var_b));</span></code></pre></div>
+</div>
+</div>
+<div id="references-4" class="section level2">
+<h2><span class="header-section-number">4.5</span> References</h2>
+<ul>
+<li>Kozbur (2019). PhD Econometrics - Lecture Notes.</li>
+<li>Hansen (2019). “<em>Econometrics</em>”.</li>
+<li>Wooldridge (2010). “<em>Econometric Analysis of Cross Section and Panel Data</em>”.</li>
+<li>Greene (2006). “<em>Econometric Analysis</em>”.</li>
+<li>Hayiashi (2000). “<em>Econometrics</em>”.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="appendix3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lecture2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": [["notes.pdf", "PDF"]],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

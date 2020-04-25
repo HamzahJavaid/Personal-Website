@@ -1,0 +1,10 @@
+book_filename: notes
+output_dir: ../../static/econometrics
+clean: [packages.bib, blogdown.bbl]
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    chapter_name: "Lecture "
+delete_merged_file: true

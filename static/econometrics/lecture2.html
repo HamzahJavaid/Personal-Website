@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 5 OLS Inference | Econometrics Notes</title>
+  <meta name="description" content="Lecture 5 OLS Inference | Econometrics Notes" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 5 OLS Inference | Econometrics Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture 5 OLS Inference | Econometrics Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 5 OLS Inference | Econometrics Notes" />
+  
+  <meta name="twitter:description" content="Lecture 5 OLS Inference | Econometrics Notes" />
+  
+
+<meta name="author" content="Matteo Courthoud" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lecture1.html">
+<link rel="next" href="lecture3.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="../" target="_self">MATTEO COURTHOUD</a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="appendix1.html"><a href="appendix1.html"><i class="fa fa-check"></i><b>1</b> Matrix Algebra</a><ul>
+<li class="chapter" data-level="1.1" data-path="appendix1.html"><a href="appendix1.html#basics"><i class="fa fa-check"></i><b>1.1</b> Basics</a></li>
+<li class="chapter" data-level="1.2" data-path="appendix1.html"><a href="appendix1.html#spectral-decomposition"><i class="fa fa-check"></i><b>1.2</b> Spectral Decomposition</a></li>
+<li class="chapter" data-level="1.3" data-path="appendix1.html"><a href="appendix1.html#quadratic-forms-and-definite-matrices"><i class="fa fa-check"></i><b>1.3</b> Quadratic Forms and Definite Matrices</a></li>
+<li class="chapter" data-level="1.4" data-path="appendix1.html"><a href="appendix1.html#matrix-calculus"><i class="fa fa-check"></i><b>1.4</b> Matrix Calculus</a></li>
+<li class="chapter" data-level="1.5" data-path="appendix1.html"><a href="appendix1.html#references-1"><i class="fa fa-check"></i><b>1.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="appendix2.html"><a href="appendix2.html"><i class="fa fa-check"></i><b>2</b> Probability Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="appendix2.html"><a href="appendix2.html#probability"><i class="fa fa-check"></i><b>2.1</b> Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="appendix2.html"><a href="appendix2.html#random-variables"><i class="fa fa-check"></i><b>2.2</b> Random Variables</a></li>
+<li class="chapter" data-level="2.3" data-path="appendix2.html"><a href="appendix2.html#moments"><i class="fa fa-check"></i><b>2.3</b> Moments</a></li>
+<li class="chapter" data-level="2.4" data-path="appendix2.html"><a href="appendix2.html#inequalities"><i class="fa fa-check"></i><b>2.4</b> Inequalities</a></li>
+<li class="chapter" data-level="2.5" data-path="appendix2.html"><a href="appendix2.html#theorems"><i class="fa fa-check"></i><b>2.5</b> Theorems</a></li>
+<li class="chapter" data-level="2.6" data-path="appendix2.html"><a href="appendix2.html#statistical-models"><i class="fa fa-check"></i><b>2.6</b> Statistical Models</a></li>
+<li class="chapter" data-level="2.7" data-path="appendix2.html"><a href="appendix2.html#references-2"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="appendix3.html"><a href="appendix3.html"><i class="fa fa-check"></i><b>3</b> Asymptotic Theory</a><ul>
+<li class="chapter" data-level="3.1" data-path="appendix3.html"><a href="appendix3.html#convergence"><i class="fa fa-check"></i><b>3.1</b> Convergence</a></li>
+<li class="chapter" data-level="3.2" data-path="appendix3.html"><a href="appendix3.html#theorems-1"><i class="fa fa-check"></i><b>3.2</b> Theorems</a></li>
+<li class="chapter" data-level="3.3" data-path="appendix3.html"><a href="appendix3.html#ergodic-theory"><i class="fa fa-check"></i><b>3.3</b> Ergodic Theory</a></li>
+<li class="chapter" data-level="3.4" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-estimators"><i class="fa fa-check"></i><b>3.4</b> Asymptotic Properties of Estimators</a></li>
+<li class="chapter" data-level="3.5" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-test-statistics"><i class="fa fa-check"></i><b>3.5</b> Asymptotic Properties of Test Statistics</a></li>
+<li class="chapter" data-level="3.6" data-path="appendix3.html"><a href="appendix3.html#references-3"><i class="fa fa-check"></i><b>3.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture1.html"><a href="lecture1.html"><i class="fa fa-check"></i><b>4</b> OLS Algebra</a><ul>
+<li class="chapter" data-level="4.1" data-path="lecture1.html"><a href="lecture1.html#the-gauss-markov-model"><i class="fa fa-check"></i><b>4.1</b> The Gauss Markov Model</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="lecture1.html"><a href="lecture1.html#matlab"><i class="fa fa-check"></i><b>4.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lecture1.html"><a href="lecture1.html#the-ols-estimator"><i class="fa fa-check"></i><b>4.2</b> The OLS estimator</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lecture1.html"><a href="lecture1.html#matlab-1"><i class="fa fa-check"></i><b>4.2.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lecture1.html"><a href="lecture1.html#ols-residual-properties"><i class="fa fa-check"></i><b>4.3</b> OLS residual properties</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="lecture1.html"><a href="lecture1.html#matlab-2"><i class="fa fa-check"></i><b>4.3.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="lecture1.html"><a href="lecture1.html#finite-sample-properties-of-the-ols-estimator"><i class="fa fa-check"></i><b>4.4</b> Finite Sample Properties of the OLS estimator</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="lecture1.html"><a href="lecture1.html#matlab-3"><i class="fa fa-check"></i><b>4.4.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="lecture1.html"><a href="lecture1.html#references-4"><i class="fa fa-check"></i><b>4.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lecture2.html"><a href="lecture2.html"><i class="fa fa-check"></i><b>5</b> OLS Inference</a><ul>
+<li class="chapter" data-level="5.1" data-path="lecture2.html"><a href="lecture2.html#asymptotic-theory-of-the-ols-estimator"><i class="fa fa-check"></i><b>5.1</b> Asymptotic Theory of the OLS Estimator</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lecture2.html"><a href="lecture2.html#gaussian-error-term"><i class="fa fa-check"></i><b>5.1.1</b> Gaussian Error Term</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lecture2.html"><a href="lecture2.html#homoskedastic-error-term"><i class="fa fa-check"></i><b>5.1.2</b> Homoskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-error-term"><i class="fa fa-check"></i><b>5.1.3</b> Heteroskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-and-autocorrelated-error-term"><i class="fa fa-check"></i><b>5.1.4</b> Heteroskedastic and Autocorrelated Error Term</a></li>
+<li class="chapter" data-level="5.1.5" data-path="lecture2.html"><a href="lecture2.html#fixed-b-asymptotics"><i class="fa fa-check"></i><b>5.1.5</b> Fixed b asymptotics</a></li>
+<li class="chapter" data-level="5.1.6" data-path="lecture2.html"><a href="lecture2.html#fixed-g-asymptotics"><i class="fa fa-check"></i><b>5.1.6</b> Fixed G asymptotics</a></li>
+<li class="chapter" data-level="5.1.7" data-path="lecture2.html"><a href="lecture2.html#matlab-4"><i class="fa fa-check"></i><b>5.1.7</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="lecture2.html"><a href="lecture2.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="lecture2.html"><a href="lecture2.html#hypothesis-testing"><i class="fa fa-check"></i><b>5.2.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lecture2.html"><a href="lecture2.html#confidence-intervals"><i class="fa fa-check"></i><b>5.2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="5.2.3" data-path="lecture2.html"><a href="lecture2.html#matlab-5"><i class="fa fa-check"></i><b>5.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lecture2.html"><a href="lecture2.html#references-5"><i class="fa fa-check"></i><b>5.3</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lecture3.html"><a href="lecture3.html"><i class="fa fa-check"></i><b>6</b> Endogeneity</a><ul>
+<li class="chapter" data-level="6.1" data-path="lecture3.html"><a href="lecture3.html#instrumental-variables"><i class="fa fa-check"></i><b>6.1</b> Instrumental Variables</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lecture3.html"><a href="lecture3.html#matlab-6"><i class="fa fa-check"></i><b>6.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lecture3.html"><a href="lecture3.html#gmm"><i class="fa fa-check"></i><b>6.2</b> GMM</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="lecture3.html"><a href="lecture3.html#step-gmm"><i class="fa fa-check"></i><b>6.2.1</b> 1-step GMM</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lecture3.html"><a href="lecture3.html#step-gmm-1"><i class="fa fa-check"></i><b>6.2.2</b> 2-step GMM</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lecture3.html"><a href="lecture3.html#matlab-7"><i class="fa fa-check"></i><b>6.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lecture3.html"><a href="lecture3.html#testing-overidentifying-restrictions"><i class="fa fa-check"></i><b>6.3</b> Testing Overidentifying Restrictions</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="lecture3.html"><a href="lecture3.html#naive-test"><i class="fa fa-check"></i><b>6.3.1</b> Naive Test</a></li>
+<li class="chapter" data-level="6.3.2" data-path="lecture3.html"><a href="lecture3.html#hansens-test"><i class="fa fa-check"></i><b>6.3.2</b> Hansen’s Test</a></li>
+<li class="chapter" data-level="6.3.3" data-path="lecture3.html"><a href="lecture3.html#special-case-conditional-homoskedasticity"><i class="fa fa-check"></i><b>6.3.3</b> Special Case: Conditional Homoskedasticity</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="lecture3.html"><a href="lecture3.html#small-sample-properties-of-2sls"><i class="fa fa-check"></i><b>6.4</b> Small-Sample Properties of 2SLS</a></li>
+<li class="chapter" data-level="6.5" data-path="lecture3.html"><a href="lecture3.html#many-instrument-robust-estimation"><i class="fa fa-check"></i><b>6.5</b> Many Instrument Robust Estimation</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="lecture3.html"><a href="lecture3.html#liml"><i class="fa fa-check"></i><b>6.5.1</b> LIML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lecture3.html"><a href="lecture3.html#jive"><i class="fa fa-check"></i><b>6.5.2</b> JIVE</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="lecture3.html"><a href="lecture3.html#hausman-test"><i class="fa fa-check"></i><b>6.6</b> Hausman Test</a></li>
+<li class="chapter" data-level="6.7" data-path="lecture3.html"><a href="lecture3.html#references-6"><i class="fa fa-check"></i><b>6.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lecture4.html"><a href="lecture4.html"><i class="fa fa-check"></i><b>7</b> Non-Parametric Estimation</a><ul>
+<li class="chapter" data-level="7.1" data-path="lecture4.html"><a href="lecture4.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture4.html"><a href="lecture4.html#discrete-x---cell-estimator"><i class="fa fa-check"></i><b>7.2</b> Discrete x - Cell Estimator</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture4.html"><a href="lecture4.html#local-non-parametric-estimation---kernels"><i class="fa fa-check"></i><b>7.3</b> Local Non-Parametric Estimation - Kernels</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="lecture4.html"><a href="lecture4.html#estimator-examples"><i class="fa fa-check"></i><b>7.3.1</b> Estimator examples:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lecture4.html"><a href="lecture4.html#kernel-examples"><i class="fa fa-check"></i><b>7.3.2</b> Kernel examples:</a></li>
+<li class="chapter" data-level="7.3.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-bandwidth"><i class="fa fa-check"></i><b>7.3.3</b> Choice of the optimal bandwidth</a></li>
+<li class="chapter" data-level="7.3.4" data-path="lecture4.html"><a href="lecture4.html#inference-1"><i class="fa fa-check"></i><b>7.3.4</b> Inference</a></li>
+<li class="chapter" data-level="7.3.5" data-path="lecture4.html"><a href="lecture4.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>7.3.5</b> Bias-variance trade-off</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lecture4.html"><a href="lecture4.html#global-non-parametric-estimation---series"><i class="fa fa-check"></i><b>7.4</b> Global Non-Parametric Estimation - Series</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lecture4.html"><a href="lecture4.html#examples"><i class="fa fa-check"></i><b>7.4.1</b> Examples</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lecture4.html"><a href="lecture4.html#estimation"><i class="fa fa-check"></i><b>7.4.2</b> Estimation</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-k"><i class="fa fa-check"></i><b>7.4.3</b> Choice of the optimal <span class="math inline">\(K\)</span></a></li>
+<li class="chapter" data-level="7.4.4" data-path="lecture4.html"><a href="lecture4.html#inference-2"><i class="fa fa-check"></i><b>7.4.4</b> Inference</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lecture4.html"><a href="lecture4.html#kernel-vs-series"><i class="fa fa-check"></i><b>7.4.5</b> Kernel vs Series</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lecture4.html"><a href="lecture4.html#references-7"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lecture5.html"><a href="lecture5.html"><i class="fa fa-check"></i><b>8</b> Variable Selection</a><ul>
+<li class="chapter" data-level="8.1" data-path="lecture5.html"><a href="lecture5.html#lasso"><i class="fa fa-check"></i><b>8.1</b> Lasso</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lecture5.html"><a href="lecture5.html#choosing-the-optimal-lambda"><i class="fa fa-check"></i><b>8.1.1</b> Choosing the optimal lambda</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lecture5.html"><a href="lecture5.html#pre-testing"><i class="fa fa-check"></i><b>8.2</b> Pre-Testing</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="lecture5.html"><a href="lecture5.html#omitted-variable-bias"><i class="fa fa-check"></i><b>8.2.1</b> Omitted Variable Bias</a></li>
+<li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
+<li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
+<li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
+<li class="chapter" data-level="9.1" data-path="matlabcode.html"><a href="matlabcode.html#lecture-1"><i class="fa fa-check"></i><b>9.1</b> Lecture 1</a></li>
+<li class="chapter" data-level="9.2" data-path="matlabcode.html"><a href="matlabcode.html#lecture-2"><i class="fa fa-check"></i><b>9.2</b> Lecture 2</a></li>
+<li class="chapter" data-level="9.3" data-path="matlabcode.html"><a href="matlabcode.html#lecture-3"><i class="fa fa-check"></i><b>9.3</b> Lecture 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Econometrics Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lecture2" class="section level1">
+<h1><span class="header-section-number">Lecture 5</span> OLS Inference</h1>
+<div id="asymptotic-theory-of-the-ols-estimator" class="section level2">
+<h2><span class="header-section-number">5.1</span> Asymptotic Theory of the OLS Estimator</h2>
+<p><strong>Theorem</strong>:
+Assume that <span class="math inline">\((x_i, y_i) _ {i=1}^n\)</span> i.i.d. , <span class="math inline">\(\mathbb E[x_i x_i&#39;] = Q\)</span> positive definite, <span class="math inline">\(\mathbb E[x_i x_i&#39;] &lt; \infty\)</span> and <span class="math inline">\(\mathbb E [y_i^2] &lt; \infty\)</span>, then <span class="math inline">\(\hat \beta _ {OLS}\)</span> is a <strong>consistent</strong> estimator of <span class="math inline">\(\beta_0\)</span>, i.e. <span class="math inline">\(\hat \beta = \mathbb E_n [x_i x_i&#39;] \mathbb E_n [x_i y_i]\overset{p}{\to} \beta_0\)</span>.</p>
+<p><strong>Proof</strong>:<br />
+We consider 4 steps:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathbb E_n [x_i x_i&#39;] \xrightarrow{p} \mathbb E [x_i x_i&#39;]\)</span> by WLLN since <span class="math inline">\(x_i x_i&#39;\)</span> iid and <span class="math inline">\(\mathbb E[x_i x_i&#39;] &lt; \infty\)</span>.</li>
+<li><span class="math inline">\(\mathbb E_n [x_i y_i] \xrightarrow{p} \mathbb E [x_i y_i]\)</span> by WLLN, due to <span class="math inline">\(x_i y_i\)</span> iid, Cauchy-Schwarz and finite second moments of <span class="math inline">\(x_i\)</span> and <span class="math inline">\(y_i\)</span>
+<span class="math display">\[
+   \mathbb E \left[ x_i y_i \right]  \leq \sqrt{ \mathbb E[x_i^2] \mathbb E[y_i^2]} &lt; \infty
+  \]</span></li>
+<li><span class="math inline">\(\mathbb E_n [x_i x_i&#39;]^{-1} \xrightarrow{p} \mathbb E [x_i x_i&#39;]^{-1}\)</span> by CMT.</li>
+<li><span class="math inline">\(\mathbb E_n [x_i x_i&#39;]^{-1} \mathbb E_n [x_i y_i] \xrightarrow{p} \mathbb E [x_i x_i&#39;]^{-1} \mathbb E [x_i y_i] = \beta\)</span> by CMT.
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></li>
+</ol>
+<p>Now we are going to investigate the variance of <span class="math inline">\(\hat \beta _ {OLS}\)</span> progressively relaxing the underlying assumptions.</p>
+<ul>
+<li>Gaussian error term.</li>
+<li>Homoskedastic error term.</li>
+<li>Heteroskedastic error term.</li>
+<li>Heteroskedastic and autocorrelated error term.</li>
+</ul>
+<div id="gaussian-error-term" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Gaussian Error Term</h3>
+<p><strong>Theorem</strong>:
+Under the GM assumption (1)-(5), <span class="math inline">\(\hat \beta - \beta |X \sim N(0, \sigma^2 (X&#39;X)^{-1})\)</span></p>
+<p><strong>Proof</strong>:<br />
+We follow 2 steps:</p>
+<ol style="list-style-type: decimal">
+<li>We can rewrite <span class="math inline">\(\hat \beta\)</span> as
+<span class="math display">\[
+ \begin{aligned}
+     \hat \beta &amp; = (X&#39;X)^{-1} X&#39;y = (X&#39;X)^{-1} X&#39;(X\beta + \varepsilon) \\
+     &amp;= \beta + (X&#39;X)^{-1} X&#39; \varepsilon = \\
+     &amp;= \beta + \mathbb E_n [x_i x_i&#39;]^{-1} \mathbb E_n [x_i \varepsilon_i]
+ \end{aligned}
+ \]</span></li>
+<li>Therefore: <span class="math inline">\(\hat \beta-\beta = \mathbb E_n [x_i x_i&#39;]^{-1} \mathbb E_n [x_i \varepsilon_i]\)</span>.
+<span class="math display">\[
+ \begin{aligned}
+     \hat \beta-\beta |X &amp; \sim (X&#39;X)^{-1} X&#39; N(0, \sigma^2 I_n) = \\
+     &amp;= N(0, \sigma^2 (X&#39;X)^{-1} X&#39;X (X&#39;X)^{-1}) = \\
+     &amp;= N(0, \sigma^2 (X&#39;X)^{-1})
+ \end{aligned}
+ \]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></li>
+</ol>
+<blockquote>
+<p>Does it make sense to assume that <span class="math inline">\(\varepsilon\)</span> is gaussian? Not much. But does it make sense to assume that <span class="math inline">\(\hat \beta\)</span> is gaussian? Yes, because it’s an average.</p>
+</blockquote>
+</div>
+<div id="homoskedastic-error-term" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Homoskedastic Error Term</h3>
+<p><strong>Theorem</strong>:
+Under the assumptions of the previous theorem, plus <span class="math inline">\(\mathbb E[x^4] &lt; \infty\)</span>, the OLS estimate has an asymptotic normal distribution: <span class="math inline">\(\hat \beta|X \overset{d}{\to} N(\beta, \sigma^2 (X&#39;X)^{-1})\)</span>.</p>
+<p><strong>Proof</strong>:
+<span class="math display">\[
+    \sqrt{n} (\hat \beta - \beta ) = \underbrace{\mathbb E_n [x_i x_i&#39;]^{-1}} _ {\xrightarrow{p} Q^{-1} }   \underbrace{\sqrt{n} \mathbb E_n [x_i \varepsilon_i ]} _ {\xrightarrow{d} N(0, \Omega)} \rightarrow N(0, \Sigma )
+    \]</span>
+where in general <span class="math inline">\(\Omega = Var (x_i \varepsilon_i) = \mathbb E [(x_i \varepsilon_i)^2]\)</span> and <span class="math inline">\(\Sigma = Q^{-1} \Omega Q^{-1}\)</span>. \
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+<blockquote>
+<p>Given that <span class="math inline">\(Q = \mathbb E [x_i x_i&#39;]\)</span> is unobserved, we estimate it with <span class="math inline">\(\hat{Q} = \mathbb E_n [x_i x_i&#39;]\)</span>. Since we have assumed homoskedastic error term, we have <span class="math inline">\(\Omega = \sigma^2 (X&#39;X)^{-1}\)</span>. Since we do not observe <span class="math inline">\(\sigma^2\)</span> we estimate it as <span class="math inline">\(\hat{\sigma}^2 = \mathbb E_n[\hat{\varepsilon}_i^2]\)</span>.</p>
+</blockquote>
+<p>The terms <span class="math inline">\(x_i \varepsilon_i\)</span> are called <strong>scores</strong> and we can already see their central importance for inference.</p>
+</div>
+<div id="heteroskedastic-error-term" class="section level3">
+<h3><span class="header-section-number">5.1.3</span> Heteroskedastic Error Term</h3>
+<p><strong>Assumption</strong>:
+<span class="math inline">\(\mathbb E [\varepsilon_i x_i \varepsilon_j&#39; x_j&#39;] = 0\)</span>, for all <span class="math inline">\(j \ne i\)</span> and <span class="math inline">\(\mathbb E [\varepsilon_i^4] \leq \infty\)</span>, <span class="math inline">\(\mathbb E [|| x_i||^4] \leq C &lt; \infty\)</span> a.s.</p>
+<p><strong>Theorem</strong>:
+Under GM assumptions (1)-(4) plus heteroskedastic error term, the following estimators are consistent, i.e. <span class="math inline">\(\hat{\Sigma}\xrightarrow{p} \Sigma\)</span>.</p>
+<blockquote>
+<p>Note that we are only specifying <span class="math inline">\(\Omega\)</span> of the <span class="math inline">\(\Sigma = Q^{-1} \Omega Q^{-1}\)</span> matrix.</p>
+</blockquote>
+<ul>
+<li><strong>HC0</strong>: use the observed residual <span class="math inline">\(\hat{\varepsilon}_i\)</span>
+<span class="math display">\[
+      \Omega _ {HC0} = \mathbb E_n [x_i x_i&#39; \hat{\varepsilon}_i^2]
+  \]</span>
+When <span class="math inline">\(k\)</span> is too big relative to <span class="math inline">\(n\)</span> – i.e., <span class="math inline">\(k/n \rightarrow c &gt;0\)</span> – <span class="math inline">\(\hat{\varepsilon}_i^2\)</span> are too small (<span class="math inline">\(\Omega _ {HC0}\)</span> biased towards zero). <span class="math inline">\(\Omega _ {HC1}\)</span>, <span class="math inline">\(\Omega _ {HC2}\)</span> and <span class="math inline">\(\Omega _ {HC3}\)</span> try to correct this small sample bias. \</li>
+<li><strong>HC1</strong>: degree of freedom correction (default <code>robust</code> in Stata)
+<span class="math display">\[
+      \Omega _ {HC1} = \frac{1}{n - k }\mathbb E_n [x_i x_i&#39; \hat{\varepsilon}_i^2] 
+  \]</span></li>
+<li><strong>HC2</strong>: use standardized residuals
+<span class="math display">\[
+      \Omega _ {HC2} = \mathbb E_n [x_i x_i&#39; \hat{\varepsilon}_i^2 (1-h _ {ii})^{-1}]
+  \]</span>
+where <span class="math inline">\(h _ {ii} = [X(X&#39;X)^{-1} X&#39;] _ {ii}\)</span> is the <strong>leverage</strong> of the <span class="math inline">\(i^{th}\)</span> observation. A large <span class="math inline">\(h _ {ii}\)</span> means that observation <span class="math inline">\(i\)</span> is unusual in the sense that the regressor <span class="math inline">\(x_i\)</span> is far from its sample mean.</li>
+<li><strong>HC3</strong>: use prediction error, equivalent to Jack-knife estimator, i.e., <span class="math inline">\(\mathbb E_n [x_i x_i&#39; \hat{\varepsilon} _ {(-i)}^2]\)</span>
+<span class="math display">\[
+      \Omega _ {HC3} = \mathbb E_n [x_i x_i&#39; \hat{\varepsilon}_i^2 (1-h _ {ii})^{-2}]
+  \]</span>
+This estimator does not overfit when <span class="math inline">\(k\)</span> is relatively big with respect to <span class="math inline">\(n\)</span>. Idea: you exclude the corresponding observation when estimating a particular <span class="math inline">\(\varepsilon_i\)</span>: <span class="math inline">\(\hat{\varepsilon}_i = y_i - x_i&#39; \hat \beta _ {-i}\)</span>.</li>
+</ul>
+<p><strong>Theorem</strong>:
+Under regularity conditions HC0 is consistent, i.e. <span class="math inline">\(\hat{\Sigma} _ {HC0} \overset{p}{\to} \Sigma\)</span>.
+<span class="math display">\[
+    \hat{\Sigma} = \hat{Q}^{-1} \hat{\Omega} \hat{Q}^{-1} \xrightarrow{p} \Sigma \qquad  \text{ with } \hat{\Omega} = \mathbb E_n [x_i x_i&#39;     \hat{\varepsilon}_i^2] \quad \text{ and } \hat{Q} = \mathbb E_n [x_i x_i&#39;]^{-1} 
+\]</span></p>
+<blockquote>
+<p>Why is the proof relevant? You cannot directly apply the WLLN to <span class="math inline">\(\hat \Sigma\)</span>.</p>
+</blockquote>
+<p><strong>Proof</strong>:<br />
+For the case <span class="math inline">\(\mathrm{dim}(x_i) =1\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\hat{Q}^{-1} \xrightarrow{p} Q^{-1}\)</span> by WLLN since <span class="math inline">\(x_i\)</span> is iid, <span class="math inline">\(\mathbb E[x_i^4] &lt; \infty\)</span></li>
+<li><span class="math inline">\(\bar{\Omega} = \mathbb E_n [\varepsilon_i^2 x_i x_i&#39;] \xrightarrow{p} \Omega\)</span> by WLLN since <span class="math inline">\(\mathbb E_n [\varepsilon_i^4] &lt; c\)</span> and <span class="math inline">\(x_i\)</span> bounded.</li>
+<li>By the triangle inequality,
+<span class="math display">\[
+     | \hat{\Omega} - \hat{\Omega}| \leq \underbrace{|\Omega - \bar{\Omega}|} _ {\overset{p}{\to} 0} + \underbrace{|\bar{\Omega} - \hat{\Omega}|} _ {\text{WTS:} \overset{p}{\to} 0} 
+ \]</span></li>
+<li>We want to show <span class="math inline">\(|\bar{\Omega} - \hat{\Omega}| \overset{p}{\to} 0\)</span>
+<span class="math display">\[
+ \begin{aligned}
+     |\bar{\Omega} - \hat{\Omega}| &amp;= \mathbb E_n [\varepsilon_i^2 x_i^2] - \mathbb E_n [\hat{\varepsilon}_i^2 x_i^2]  = \\
+     &amp;= \mathbb E_n [\left( \varepsilon_i^2 - \hat{\varepsilon}_i^2 \right) x_i^2] \leq \\
+     &amp; \leq \mathbb E_n \left[ \left( \varepsilon_i^2 - \hat{\varepsilon}_i^2 \right)^2\right]^{\frac{1}{2}} \mathbb E_n [x_i^4]^{\frac{1}{2}}
+ \end{aligned}
+ \]</span>
+where <span class="math inline">\(\mathbb E_n [x_i^4]^{\frac{1}{2}} \xrightarrow{p} \mathbb E [x_i^4]^{\frac{1}{2}}\)</span> by <span class="math inline">\(x_i\)</span> bounded, iid and CMT.</li>
+<li>We want to show that <span class="math inline">\(\mathbb E_n \left[ \left( \varepsilon_i^2 - \hat{\varepsilon}_i^2 \right)^2\right] \leq \eta\)</span> with <span class="math inline">\(\eta \rightarrow 0\)</span>.
+Let <span class="math inline">\(L = \max_i |\hat{\varepsilon}_i - \varepsilon_i|\)</span> (RV depending on <span class="math inline">\(n\)</span>), with <span class="math inline">\(L \xrightarrow{p} 0\)</span> since
+<span class="math display">\[
+     |\hat{\varepsilon}_i - \varepsilon_i| = |x_i \hat \beta - x_i \beta| \leq |x_i||\hat \beta - \beta|\xrightarrow{p} c \cdot 0 
+ \]</span>
+We can depompose
+<span class="math display">\[
+ \begin{aligned}
+     \left(\varepsilon_i^2 - \hat{\varepsilon}_i^2 \right)^2 &amp; = \left(\varepsilon_i - \hat{\varepsilon}_i \right)^2 \left(\varepsilon_i + \hat{\varepsilon}_i \right)^2 \leq \\\
+     &amp; \leq \left(\varepsilon_i + \hat{\varepsilon}_i \right)^2 L^2 = \\
+      &amp;= \left(2\varepsilon_i - \varepsilon_i + \hat{\varepsilon}_i \right)^2 L^2\leq  \\
+      &amp; \leq  \left( 2(2\varepsilon_i)^2 + 2(\hat{\varepsilon}_i - \varepsilon_i)^2 \right)^2 L^2 \leq \\
+      &amp; \leq (8 \varepsilon_i^2 + 2 L^2) L^2
+  \end{aligned}
+ \]</span>
+Hence
+<span class="math display">\[
+  \mathbb E \left[ \left(\varepsilon_i^2 - \hat{\varepsilon}_i^2 \right)^2 \right] \leq  L^2 \left( 8 \mathbb E_n [ \varepsilon_i^2] + 2 \mathbb E_n [L^2] \right)  \xrightarrow{p}0
+ \]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></li>
+</ol>
+</div>
+<div id="heteroskedastic-and-autocorrelated-error-term" class="section level3">
+<h3><span class="header-section-number">5.1.4</span> Heteroskedastic and Autocorrelated Error Term</h3>
+<p><strong>Assumption</strong>:
+There esists a <span class="math inline">\(\bar{d}\)</span> such that:</p>
+<ul>
+<li><span class="math inline">\(\mathbb E[\varepsilon_i x_i \varepsilon&#39; _ {i-d} x&#39; _ {i-d}] \neq 0 \quad\)</span> for <span class="math inline">\(d \leq \bar{d}\)</span></li>
+<li><span class="math inline">\(\mathbb E[\varepsilon_i x_i \varepsilon&#39; _ {i-d} x&#39; _ {i-d}] = 0 \quad\)</span> for <span class="math inline">\(d &gt; \bar{d}\)</span></li>
+</ul>
+<blockquote>
+<p>Intuition: observations far enough from each other are not correlated.\</p>
+</blockquote>
+<p>We can express the variance of the score as
+<span class="math display">\[
+\begin{aligned}
+    \Omega_n &amp;= Var(\sqrt{n} \mathbb E_n[x_i \varepsilon_i]) = \\
+    &amp;= \mathbb E \left[ \left( \frac{1}{n} \sum _ {i=1}^n x_i \varepsilon_i \right) \left( \frac{1}{n} \sum _ {j=1}^n x_j \varepsilon_j \right) \right] = \\
+    &amp;= \frac{1}{n} \sum _ {i=1}^n \sum _ {j=1}^n \mathbb E[x_i \varepsilon_i x_j&#39; \varepsilon_j&#39;] = \\
+    &amp;= \frac{1}{n} \sum _ {i=1}^n \sum _ {j : |i-j|\leq \bar{d}} \mathbb E[x_i \varepsilon_i x_j&#39; \varepsilon_j&#39;] = \\
+    &amp;= \frac{1}{n} \sum _ {d=0}^{\bar{d}} \sum _ {i = d}^{n} \mathbb E[x_i \varepsilon_i x _ {i-d}&#39; \varepsilon _ {i-d}&#39;] 
+\end{aligned}
+\]</span></p>
+<p>We estimate <span class="math inline">\(\Omega_n\)</span> by
+<span class="math display">\[
+    \hat{\Omega}_n = \frac{1}{n} \sum _ {d=0}^{\bar{d}} \sum _ {i = d}^{n} x_i \hat{\varepsilon}_i x _ {i-d}&#39; \hat{\varepsilon} _ {i-d}&#39;
+\]</span></p>
+<p><strong>Theorem</strong>:
+If <span class="math inline">\(\bar{d}\)</span> is a fixed integer, then
+<span class="math display">\[
+    \hat{\Omega}_n - \Omega_n \overset{p}{\to} 0
+\]</span></p>
+<blockquote>
+<p>What if <span class="math inline">\(\bar{d}\)</span> does not exist (all <span class="math inline">\(x_i, x_j\)</span> are correlated)?
+<span class="math display">\[
+\hat{\Omega}_n = \frac{1}{n} \sum _ {d=0}^{n} \sum _ {i = d}^{n} x_i \hat{\varepsilon}_i x _ {i-d}&#39; \hat{\varepsilon} _ {i-d}&#39; = n \mathbb E_n[x_i \hat{\varepsilon}_i]^2 = 0
+\]</span>
+By the orthogonality property of the OLS residual.</p>
+</blockquote>
+<p><strong>HAC with Uniform Kernel</strong>
+<span class="math display">\[
+    \hat{\Omega}_h = \frac{1}{n} \sum _ {i,j} x_i \hat{\varepsilon}_i x_j&#39; \hat{\varepsilon}_j&#39; \mathbb{I} \\{ |i-j| \leq h\\}  
+\]</span>
+where <span class="math inline">\(h\)</span> is the <strong>bandwidth</strong> of the kernel. The bandwidth is chosen such that <span class="math inline">\(\mathbb E[x_i \varepsilon_i x _ {i-d}&#39; \varepsilon _ {i-d}&#39; ]\)</span> is small for <span class="math inline">\(d &gt; h\)</span>. How small? Small enough for the estimates to be consistent.</p>
+<p><strong>HAC with General Kernel</strong>
+<span class="math display">\[
+\hat{\Omega}^{HAC} _ {k,h} = \frac{1}{n} \sum _ {i,j} x_i \hat{\varepsilon}_i x_j&#39; \hat{\varepsilon}_j&#39; k \left( \frac{|i-j|}{n} \right) \\
+\]</span></p>
+<p><strong>Theorem</strong>:
+If the joint distribution is stationary and <span class="math inline">\(\alpha\)</span>-mixing with <span class="math inline">\(\sum _ {k=1}^\infty k^2 \alpha(k) &lt; \infty\)</span> and</p>
+<ul>
+<li><span class="math inline">\(\mathbb E[ | x _ {ij} \varepsilon_i |^\nu ] &lt; \infty\)</span> <span class="math inline">\(\forall \nu\)</span></li>
+<li><span class="math inline">\(\hat{\varepsilon}_i = y_i - x_i&#39; \hat \beta\)</span> for some <span class="math inline">\(\hat \beta \overset{p}{\to} \beta_0\)</span></li>
+<li><span class="math inline">\(k\)</span> smooth, symmetric, <span class="math inline">\(k(0) \to \infty\)</span> as <span class="math inline">\(z \to \infty\)</span>, <span class="math inline">\(\int k^2 &lt; \infty\)</span></li>
+<li><span class="math inline">\(\frac{h}{n} \to 0\)</span></li>
+<li><span class="math inline">\(h \to \infty\)</span></li>
+</ul>
+<p>Then the HAC estimator is <strong>consistent</strong>.
+<span class="math display">\[
+    \hat{\Omega}^{HAC} _ {k,h} - \Omega_n \overset{p}{\to} 0
+\]</span></p>
+<p>We want to choose <span class="math inline">\(h\)</span> small relative to <span class="math inline">\(n\)</span> in order to avoid estimation problems. But we also want to choose <span class="math inline">\(h\)</span> large so that the remainder is small:
+<span class="math display">\[
+\begin{aligned}
+  \Omega_n &amp;= Var(\sqrt{n} \mathbb E_n[x_i \varepsilon_i]) = \\
+  &amp;= \underbrace{\frac{1}{n} \sum _ {i,j : |i-j|\leq h} \mathbb E[x_i \varepsilon_i x_j&#39; \varepsilon_j&#39;]} _ {\Omega^h_n} + \underbrace{\frac{1}{n} \sum _ {i,j : |i-j|&gt; h} \mathbb E[x_i \varepsilon_i x_j&#39; \varepsilon_j&#39;]} _ {\text{remainder: } R_n} = \\
+  &amp;= \Omega_n^h + R_n
+\end{aligned}
+\]</span></p>
+<p>In particular, HAC theory requires:
+<span class="math display">\[
+    \hat{\Omega}^{HAC} \overset{p}{\to} \Omega \quad \text{ if } \quad 
+    \begin{cases}
+    &amp; \frac{h}{n} \to 0 \\
+    &amp; h \to \infty
+    \end{cases}
+\]</span></p>
+<p>But in practice, long-run estimation implies <span class="math inline">\(\frac{h}{n} \simeq 0\)</span> which is not ``safe" in the sense that it does not imply <span class="math inline">\(R_n \simeq 0\)</span>.
+On the other hand, if <span class="math inline">\(h \simeq n\)</span>, <span class="math inline">\(\hat{\Omega}^{HAC}\)</span> does not converge in probability because it’s too noisy.</p>
+<p><strong>Example</strong>:
+How to choose <span class="math inline">\(h\)</span>? Look at the score autocorrelation function (ACF).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="lecture2.html#cb5-1"></a><span class="co">% Set seed</span></span>
+<span id="cb5-2"><a href="lecture2.html#cb5-2"></a>seed(<span class="fl">123</span>)</span>
+<span id="cb5-3"><a href="lecture2.html#cb5-3"></a></span>
+<span id="cb5-4"><a href="lecture2.html#cb5-4"></a><span class="co">% Autocorrelated process</span></span>
+<span id="cb5-5"><a href="lecture2.html#cb5-5"></a>X = rand(<span class="fl">1000</span>,<span class="fl">1</span>);</span>
+<span id="cb5-6"><a href="lecture2.html#cb5-6"></a>for t=<span class="fl">11</span>:length(X)</span>
+<span id="cb5-7"><a href="lecture2.html#cb5-7"></a>    for p=<span class="fl">1</span>:<span class="fl">10</span></span>
+<span id="cb5-8"><a href="lecture2.html#cb5-8"></a>        X(t,:) = X(t,:) + X(t-p,:)*<span class="fl">0.3</span>;</span>
+<span id="cb5-9"><a href="lecture2.html#cb5-9"></a>    end</span>
+<span id="cb5-10"><a href="lecture2.html#cb5-10"></a>end</span>
+<span id="cb5-11"><a href="lecture2.html#cb5-11"></a>autocorr(X)</span></code></pre></div>
+<div class="figure">
+<img src="figures/Fig_331.jpg" alt="" />
+<p class="caption">Autocorrelation Function</p>
+</div>
+<p>It looks like after 10 periods the empirical autocorrelation is quite small but still not zero.</p>
+</div>
+<div id="fixed-b-asymptotics" class="section level3">
+<h3><span class="header-section-number">5.1.5</span> Fixed b asymptotics</h3>
+<p>[Neave, 1970]: “<em>When proving results on the asymptotic behavior of estimates of the spectrum of a stationary time series, it is invariably assumed that as the sample size <span class="math inline">\(n\)</span> tends to infinity, so does the truncation point <span class="math inline">\(h\)</span>, but at a slower rate, so that <span class="math inline">\(\frac{h}{n}\)</span> tends to zero. This is a convenient assumption mathematically in that, in particular, it ensures consistency of the estimates, but it is unrealistic when such results are used as approximations to the finite case where the value of <span class="math inline">\(\frac{h}{n}\)</span> cannot be zero.</em>”"</p>
+<p><strong>Theorem</strong>:
+Under regularity conditions,
+<span class="math display">\[
+    \sqrt{n} \Big( V^{HAC} _ {k,h} \Big)(\hat \beta - \beta_0) \overset{d}{\to} F \\
+\]</span></p>
+<p>The asymptotic critical values of the <span class="math inline">\(F\)</span> statistic depend on the choice of the kernel. In order to do hypothesis testing, Kiefer and Vogelsang(2005) provide critical value functions for the t-statistic for each kernel-confidence level combination using a cubic equation:
+<span class="math display">\[
+    cv(b) = a_0 + a_1 b + a_2 b^2 + a_3 b^3
+\]</span></p>
+<p>Example for the Bartlett kernel:</p>
+<div class="figure">
+<img src="figures/Fig_332.png" alt="" />
+<p class="caption">Fixed-b</p>
+</div>
+</div>
+<div id="fixed-g-asymptotics" class="section level3">
+<h3><span class="header-section-number">5.1.6</span> Fixed G asymptotics</h3>
+<p>[Bester, 2013]: “<em>Cluster covariance estimators are routinely used with data that has a group structure with independence assumed across groups. Typically, inference is conducted in such settings under the assumption that there are a large number of these independent groups.</em>”"</p>
+<p>“<em>However, with enough weakly dependent data, we show that groups can be chosen by the researcher so that group-level averages are approximately independent. Intuitively, if groups are large enough and well shaped (e.g. do not have gaps), the majority of points in a group will be far from other groups, and hence approximately independent of observations from other groups provided the data are weakly dependent. The key prerequisite for our methods is the researcher’s ability to construct groups whose averages are approximately independent. As we show later, this often requires that the number of groups be kept relatively small, which is why our main results explicitly consider a fixed (small) number of groups.</em>”"</p>
+<p><strong>Assumption</strong>:
+Suppose you have data <span class="math inline">\(D = (y _ {it} , x _ {it}) _ {i=1, t=1}^{N, T}\)</span> where <span class="math inline">\(y _ {it} = x _ {it}&#39; \beta + \alpha_i + \varepsilon _ {it}\)</span> where <span class="math inline">\(i\)</span> indexes the observational unit and <span class="math inline">\(t\)</span> indexes time (could also be space).</p>
+<p>Let
+<span class="math display">\[
+\begin{aligned}
+  &amp; \tilde{y} _ {it} = y _ {it} - \frac{1}{T} \sum _ {t=1}^T y _ {it} \\
+  &amp; \tilde{x} _ {it} = x _ {it} - \frac{1}{T} \sum _ {t=1}^T x _ {it} \\
+  &amp; \tilde{\varepsilon} _ {it} = \varepsilon _ {it} - \frac{1}{T} \sum _ {t=1}^T \varepsilon _ {it}
+\end{aligned}
+\]</span>
+Then
+<span class="math display">\[
+\tilde{y} _ {it} = \tilde{x} _ {it}&#39; \beta + \tilde{\varepsilon} _ {it}
+\]</span></p>
+<p>The <span class="math inline">\(\tilde{\varepsilon} _ {it}\)</span> are by construction correlated between each other even if the original <span class="math inline">\(\varepsilon\)</span> was iid. The <strong>cluster score variance estimator</strong> is given by:
+<span class="math display">\[
+  \hat{\Omega}^{CL} = \frac{1}{T-1} \sum _ {i=1}^n  \sum _ {t=1}^T  \sum _ {s=1}^T \tilde{x} _ {it} \hat{\tilde{\varepsilon}} _ {it} \tilde{x} _ {is}     \hat{\tilde{\varepsilon}} _ {is}
+\]</span></p>
+<blockquote>
+<p>It’s very similar too the HAC estimator since we have <em>dependent cross-products</em> here as well. However, here we do not consider the <span class="math inline">\(i \times j\)</span> cross-products. We only have time-dependency (state).</p>
+</blockquote>
+<p>On <span class="math inline">\(T\)</span> and <span class="math inline">\(n\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(T\)</span> is fixed and <span class="math inline">\(n \to \infty\)</span>, then the number of cross-products considered is much smaller than the total number of cross-products.</li>
+<li>If <span class="math inline">\(T &gt;&gt; n\)</span> issues arise since the number of cross products considered is close to the total number of cross products. As in HAC estimation, this is a problem because it implies that the algebraic estimate of the cluster score variance gets close to zero because of the orthogonality property of the residuals.</li>
+<li>The panel assumption is that observations across individuals are not correlated.</li>
+</ul>
+<blockquote>
+<p>Strategy: as in HAC, we want to limit the correlation across clusters (individuals). We hope that observations are <strong>negligibly dependent</strong> between cluster sufficiently distant from each other.</p>
+</blockquote>
+<p>Classical cluster robust estimator:
+<span class="math display">\[
+  \hat{\Omega}^{CL} = \frac{1}{n} \sum _ {i=1}^n x_i \varepsilon_i x_j&#39; \varepsilon_j&#39; \mathbb{I}   \\{ i,j \text{ in the same cluster} \\}
+\]</span></p>
+<blockquote>
+<p>On clusters:</p>
+<ul>
+<li>If the number of observations near a boundary is small relative to the sample size, ignoring the dependence should not affect inference too adversely.</li>
+<li>The higher the dimension of the data, the easier it is to have observations near boundaries (<em>curse of dimensionality</em>).</li>
+<li>We would like to have few clusters in order to make less independence assumptions. However, few clusters means bigger blocks and hence a larger number of cross-products to estimate. If the number of cross-products is too large (relative to the sample size), <span class="math inline">\(\hat{\Omega}^{CL}\)</span> does not converge</li>
+</ul>
+</blockquote>
+<p><strong>Theorem</strong>:
+Under regularity conditions:
+<span class="math display">\[
+    \hat{t} \overset{d}{\to} \sqrt{\frac{G}{G-1}} t _ {G-1}
+\]</span></p>
+</div>
+<div id="matlab-4" class="section level3">
+<h3><span class="header-section-number">5.1.7</span> <code>Matlab</code></h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb6-1"><a href="lecture2.html#cb6-1"></a><span class="co">% Homoskedastic standard errors</span></span>
+<span id="cb6-2"><a href="lecture2.html#cb6-2"></a>std_h = var(e_hat) * inv(X&#39;*X);</span>
+<span id="cb6-3"><a href="lecture2.html#cb6-3"></a></span>
+<span id="cb6-4"><a href="lecture2.html#cb6-4"></a><span class="co">% HC0 variance and standard errors</span></span>
+<span id="cb6-5"><a href="lecture2.html#cb6-5"></a>omega_hc0 = X&#39; * diag(e_hat.^<span class="fl">2</span>) * X;</span>
+<span id="cb6-6"><a href="lecture2.html#cb6-6"></a>std_hc0 = sqrt(diag(inv(X&#39;*X) * omega_hc0 * inv(X&#39;*X))) <span class="co">% = 0.9195, 0.8631</span></span>
+<span id="cb6-7"><a href="lecture2.html#cb6-7"></a></span>
+<span id="cb6-8"><a href="lecture2.html#cb6-8"></a><span class="co">% HC1 variance and standard errors</span></span>
+<span id="cb6-9"><a href="lecture2.html#cb6-9"></a>omega_hc1 = n/(n-k) * X&#39; *  diag(e_hat.^<span class="fl">2</span>) * X;</span>
+<span id="cb6-10"><a href="lecture2.html#cb6-10"></a>std_hc1 = sqrt(diag(inv(X&#39;*X) * omega_hc1 * inv(X&#39;*X))) <span class="co">% = 0.9289, 0.8719</span></span>
+<span id="cb6-11"><a href="lecture2.html#cb6-11"></a></span>
+<span id="cb6-12"><a href="lecture2.html#cb6-12"></a><span class="co">% HC2 variance and standard errors</span></span>
+<span id="cb6-13"><a href="lecture2.html#cb6-13"></a>omega_hc2 = X&#39; * diag(e_hat.^<span class="fl">2</span>./(<span class="fl">1</span>-h)) * X;</span>
+<span id="cb6-14"><a href="lecture2.html#cb6-14"></a>std_hc2 = sqrt(diag(inv(X&#39;*X) * omega_hc2 * inv(X&#39;*X))) <span class="co">% = 0.9348, 0.8768</span></span>
+<span id="cb6-15"><a href="lecture2.html#cb6-15"></a></span>
+<span id="cb6-16"><a href="lecture2.html#cb6-16"></a><span class="co">% HC3 variance and standard errors</span></span>
+<span id="cb6-17"><a href="lecture2.html#cb6-17"></a>omega_hc3 = X&#39; * diag(e_hat.^<span class="fl">2</span>./(<span class="fl">1</span>-h).^<span class="fl">2</span>) * X;</span>
+<span id="cb6-18"><a href="lecture2.html#cb6-18"></a>std_hc3 = sqrt(diag(inv(X&#39;*X) * omega_hc3 * inv(X&#39;*X))) <span class="co">% = 0.9504, 0.8907</span></span>
+<span id="cb6-19"><a href="lecture2.html#cb6-19"></a></span>
+<span id="cb6-20"><a href="lecture2.html#cb6-20"></a><span class="co">% Note what happens if you allow for full autocorrelation</span></span>
+<span id="cb6-21"><a href="lecture2.html#cb6-21"></a>omega_full = X&#39;*e_hat*e_hat&#39;*X;</span></code></pre></div>
+</div>
+</div>
+<div id="inference" class="section level2">
+<h2><span class="header-section-number">5.2</span> Inference</h2>
+<p>In order to do inference on <span class="math inline">\(\hat \beta\)</span> we need to know its distribution. We have two options: (i) assume gaussian error term (extended GM) or (ii) rely on asymptotic approximations (CLT).</p>
+<div id="hypothesis-testing" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Hypothesis Testing</h3>
+<p>A statistical hypothesis is a subset of a statistical model, <span class="math inline">\(\mathcal K \subset \mathcal F\)</span>. A hypothesis test is a map <span class="math inline">\(\mathcal D \rightarrow \{ 0,1 \}\)</span>, <span class="math inline">\(D \mapsto T\)</span>. If <span class="math inline">\(\mathcal F\)</span> is the statistical model and <span class="math inline">\(\mathcal K\)</span> is the statistical hypothesis, we use the notation <span class="math inline">\(H_0: \Pr \in \mathcal K\)</span>.</p>
+<blockquote>
+<p>Generally, we are interested in understanding whether it is likely that data <span class="math inline">\(D\)</span> are drawn from <span class="math inline">\(\mathcal K\)</span> or not.</p>
+</blockquote>
+<p>A hypothesis test, <span class="math inline">\(T\)</span> is our tool for deciding whether the hypothesis is consistent with the data. <span class="math inline">\(T(D)= 0\)</span> implies fail to reject <span class="math inline">\(H_0\)</span> and test inconclusive <span class="math inline">\(T(D)=1\)</span> <span class="math inline">\(\implies\)</span> reject <span class="math inline">\(H_0\)</span> and <span class="math inline">\(D\)</span> is inconsistent with any <span class="math inline">\(\Pr \in \mathcal K\)</span>.</p>
+<p>Let <span class="math inline">\(\mathcal K \subseteq \mathcal F\)</span> be a statistical hypothesis and <span class="math inline">\(T\)</span> a hypothesis test.</p>
+<ol style="list-style-type: decimal">
+<li>Suppose <span class="math inline">\(\Pr \in \mathcal K\)</span>. A Type I error (relative to <span class="math inline">\(\Pr\)</span>) is an event <span class="math inline">\(T(D)=1\)</span> under <span class="math inline">\(\Pr\)</span>.<br />
+</li>
+<li>Suppose <span class="math inline">\(\Pr \in \mathcal K^c\)</span>. A Type II error (relative to <span class="math inline">\(\Pr\)</span>) is an event <span class="math inline">\(T(D)=0\)</span> under <span class="math inline">\(\Pr\)</span>.</li>
+</ol>
+<p>The corresponding probability of a type I error is called <strong>size</strong>. The corresponding probability of a type II error is called <strong>power</strong> (against the alternative <span class="math inline">\(\Pr\)</span>).</p>
+<p>In this section, we are interested in testing three hypotheses, under the assumptions of linearity, strict exogeneity, no multicollinearity, normality on the error term. They are:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(H_0: \beta _ {0k} = \bar \beta _ {0k}\)</span> (single coefficient, <span class="math inline">\(\bar \beta _ {0k} \in \mathbb R\)</span>, <span class="math inline">\(k \leq K\)</span>)</li>
+<li><span class="math inline">\(a&#39; \beta_0 = c\)</span> (linear combination, <span class="math inline">\(a \in \mathbb R^K, c \in \mathbb R\)</span>)</li>
+<li><span class="math inline">\(R \beta_0 = r\)</span> (linear restrictions, <span class="math inline">\(R \in \mathbb R^{p \times K}\)</span>, full rank, <span class="math inline">\(r \in \mathbb R^p\)</span>) \</li>
+</ol>
+<p>Consider the testing problem
+<span class="math inline">\(H_0: \beta _ {0k} = \bar \beta _ {0k}\)</span> where <span class="math inline">\(\bar \beta _ {0k}\)</span> is a pre-specified value under the null.
+The t-statistic for this problem is defined by
+<span class="math display">\[
+  t_k:= \frac{b_k - \bar \beta _ {0k}}{SE(b_k)}, \ \ SE(b_k):= \sqrt{s^2 [(X&#39;X)^{-1}] _ {kk}}
+\]</span></p>
+<p><strong>Theorem</strong>: In the testing procedure above, the sampling distribution under the null <span class="math inline">\(H_0\)</span> is given by
+<span class="math display">\[
+    t_k|X \sim t _ {n-k} \ \ \text{and so} \ \ t_k \sim t _ {n-k} \\
+\]</span></p>
+<p><span class="math inline">\(t _ {(n-K)}\)</span> denotes the t-distribution with <span class="math inline">\((n-k)\)</span> degress of freedom. The test can be one sided or two sided. The above sampling distribution can be used to construct a confidence interval.</p>
+<p><strong>Example</strong>:
+We want to asses whether or not the ``true" coefficient <span class="math inline">\(\beta_0\)</span> equals a specific value <span class="math inline">\(\hat \beta\)</span>. Specifically, we are interested in testing <span class="math inline">\(H_0\)</span> against <span class="math inline">\(H_1\)</span>, where:</p>
+<ul>
+<li><em>Null Hypothesis</em>: <span class="math inline">\(H_0: \beta_0 = \hat \beta\)</span></li>
+<li><em>Alternative Hypothesis</em>: <span class="math inline">\(H_1: \beta_0 \ne \hat \beta\)</span>.</li>
+</ul>
+<p>Hence, we are interested in a statistic informative about <span class="math inline">\(H_1\)</span>, which is the Wald test statistic
+<span class="math display">\[
+    |T^*| = \bigg| \frac{\hat \beta - \beta_0}{\sigma(\hat \beta)}\bigg|  \sim N(0,1)
+\]</span></p>
+<p>However, the true variance <span class="math inline">\(\sigma^2(\hat \beta )\)</span> is not known and has to be estimated. Therefore we plug in the sample variance <span class="math inline">\(\hat \sigma^2(\hat \beta) = \frac{n}{n-1} \mathbb E_n[\hat e_i^2]\)</span> and we use
+<span class="math display">\[
+    |T| = \bigg| \frac{\hat \beta - \beta_0}{\hat \sigma (\hat \beta)}\bigg|  \sim t _ {(n-k)}
+\]</span></p>
+<p>Hypothesis testing is like proof by contradiction. Imagine the sampling distribution was generated by <span class="math inline">\(\beta\)</span>. If it is highly improbable to observe <span class="math inline">\(\hat \beta\)</span> given <span class="math inline">\(\beta_0 = \beta\)</span> then we reject the hypothesis that the sampling distribution was generated by <span class="math inline">\(\beta\)</span>.</p>
+<p>Then, given a realized value of the statistic <span class="math inline">\(|T|\)</span>, we take the following decision:</p>
+<ul>
+<li><em>Do not reject <span class="math inline">\(H_0\)</span></em>: it is consistent with random variation under true <span class="math inline">\(H_0\)</span>—i.e., <span class="math inline">\(|T|\)</span> small as it has an exact student t distribution with <span class="math inline">\((n-k)\)</span> degree of freedom in the normal regression model.</li>
+<li><em>Reject <span class="math inline">\(H_0\)</span> in favor of <span class="math inline">\(H_1\)</span></em>: <span class="math inline">\(|T| &gt; c\)</span>, with <span class="math inline">\(c\)</span> being the critical values selected to control for false rejections: <span class="math inline">\(\Pr(|t _ {n-k}| \geq c) = \alpha\)</span>. Moreover, you can also reject <span class="math inline">\(H_0\)</span> if the p-value <span class="math inline">\(p\)</span> is such that: <span class="math inline">\(p &lt; \alpha\)</span>.</li>
+</ul>
+<p>The probability of false rejection is decreasing in <span class="math inline">\(c\)</span>, i.e. the critical value for a given significant level.
+<span class="math display">\[
+\begin{aligned}
+    \Pr (\text{Reject } H_0 | H_0)  &amp; = \Pr (|T|&gt; c | H_0 ) = \\
+    &amp; = \Pr (T &gt; c | H_0 ) +     \Pr (T &lt; -c | H_0 ) = \\
+    &amp; = 1 - F(c) + F(-c) = 2(1-F(c))
+\end{aligned}
+\]</span></p>
+<p><strong>Example</strong>:
+Consider the testing problem <span class="math inline">\(H_0: a&#39;\beta_0=c\)</span> where <span class="math inline">\(a\)</span> is a pre-specified linear combination under study. The t-statistic for this problem is defined by:
+<span class="math display">\[
+  t_k:= \frac{a&#39;b - c}{SE(a&#39;b)}, \ \ SE(a&#39;b):= \sqrt{s^2 a&#39;(X&#39;X)^{-1}a}
+\]</span></p>
+<p><strong>Theorem</strong>:
+In the testing procedure above, the sampling distribution under the null <span class="math inline">\(H_0\)</span> is given by
+<span class="math display">\[
+    t_a|X \sim t _ {n-K} \quad\text{and so} \quad t_a \sim t _ {n-K} 
+\]</span></p>
+<p>Like in the previous test, <span class="math inline">\(t _ {(n-K)}\)</span> denotes the t-distribution with <span class="math inline">\((n-K)\)</span> degress of freedom. The test can again be one sided or two sided. The above sampling distribution can be used to construct a confidence interval.</p>
+<p><strong>Example</strong>:
+Consider the testing problem
+<span class="math display">\[
+    H_0: R \beta_0 = r
+\]</span>
+where <span class="math inline">\(R \in \mathbb R^{p \times k}\)</span> is a presepecified set of linear combinations and <span class="math inline">\(r \in \mathbb R^p\)</span> is a restriction vector.</p>
+<p>The F-statistic for this problem is given by
+<span class="math display">\[
+    F:= \frac{(Rb-r)&#39;[R(X&#39;X)R&#39;]^{-1}(Rb-r)/p }{s^2}
+\]</span></p>
+<p><strong>Theorem</strong>:<br />
+For the problem, the sampling distribution of the F-statistic under the null <span class="math inline">\(H_0:\)</span>
+<span class="math display">\[
+    F|X \sim F _ {p,n-K} \ \ \text{and so} \ \ F \sim F _ {p,n-K} \\
+\]</span></p>
+<p>The test is intrinsically two-sided. The above sampling distribution can be used to construct a confidence interval.</p>
+<p><strong>Theorem</strong>:<br />
+Consider the testing problem <span class="math inline">\(H_0: R \beta_0 = r\)</span> where <span class="math inline">\(R \in \mathbb R^{p\times K}\)</span> is a presepecified set of linear combinations and <span class="math inline">\(r \in \mathbb R^p\)</span> is a restriction vector.</p>
+<p>Consider the restricted least squares estimator, denoted <span class="math inline">\(\hat \beta_R\)</span>: <span class="math inline">\(\hat \beta_R: = \text{arg} \min _ { \beta: R \beta = r } Q( \beta)\)</span>. Let <span class="math inline">\(SSR_U = Q(b), \ \ SSR_R=Q(\hat \beta_R)\)</span>. Then the <span class="math inline">\(F\)</span> statistic is numerically equivalent to the following expression: <span class="math inline">\(F = \frac{(SSR_R - SSR_U)/p}{SSR_U/(n-K)}\)</span>.</p>
+</div>
+<div id="confidence-intervals" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Confidence Intervals</h3>
+<p>A <strong>confidence interval at <span class="math inline">\((1-\alpha)\)</span></strong> is a random set <span class="math inline">\(C\)</span> such that
+<span class="math display">\[
+     \Pr(\beta_0 \in C) \geq 1- \alpha
+\]</span>
+i.e. the probability that <span class="math inline">\(C\)</span> covers the true value <span class="math inline">\(\beta\)</span> is fixed at <span class="math inline">\((1-\alpha)\)</span>.</p>
+<p>Since <span class="math inline">\(C\)</span> is not known, it has to be estimated (<span class="math inline">\(\hat{C}\)</span>). We construct confidence intervals such that:</p>
+<ul>
+<li>they are symmetric around <span class="math inline">\(\hat \beta\)</span>;</li>
+<li>their length is proportional to <span class="math inline">\(\sigma(\hat \beta) = \sqrt{Var(\hat \beta)}\)</span>.</li>
+</ul>
+<p>A CI is equivalent to the set of parameter values such that the t-statistic is less than <span class="math inline">\(c\)</span>, i.e.,
+<span class="math display">\[
+\hat{C} = \bigg\{ \beta: |T(\beta) | \leq c \bigg\} = \bigg\{ \beta: - c\leq \frac{\beta - \hat \beta}{\sigma(\hat \beta)} \leq c \bigg\}
+\]</span></p>
+<p>In practice, to construct a 95% confidence interval for a single coefficient estimate <span class="math inline">\(\hat \beta_j\)</span>, we use the fact that
+<span class="math display">\[
+    \Pr \left( \frac{| \hat \beta_j - \beta _ {0,j} |}{ \sqrt{\sigma^2 [(X&#39;X)^{-1}] _ {jj} }} &gt; 1.96 \right) = 0.05
+\]</span></p>
+</div>
+<div id="matlab-5" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> <code>Matlab</code></h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb7-1"><a href="lecture2.html#cb7-1"></a><span class="co">% t-test for beta=0</span></span>
+<span id="cb7-2"><a href="lecture2.html#cb7-2"></a>t = abs(b_hat./(std_hc1));</span>
+<span id="cb7-3"><a href="lecture2.html#cb7-3"></a></span>
+<span id="cb7-4"><a href="lecture2.html#cb7-4"></a><span class="co">% p-value</span></span>
+<span id="cb7-5"><a href="lecture2.html#cb7-5"></a>p_val = <span class="fl">1</span> - normcdf(t);</span>
+<span id="cb7-6"><a href="lecture2.html#cb7-6"></a></span>
+<span id="cb7-7"><a href="lecture2.html#cb7-7"></a><span class="co">% F statistic of joint significance</span></span>
+<span id="cb7-8"><a href="lecture2.html#cb7-8"></a>SSR_u = e_hat&#39;*e_hat;</span>
+<span id="cb7-9"><a href="lecture2.html#cb7-9"></a>SSR_r = y&#39;*y;</span>
+<span id="cb7-10"><a href="lecture2.html#cb7-10"></a>F = (SSR_r - SSR_u)/k / (SSR_u/(n-k));</span>
+<span id="cb7-11"><a href="lecture2.html#cb7-11"></a></span>
+<span id="cb7-12"><a href="lecture2.html#cb7-12"></a><span class="co">% 95% confidente intervals</span></span>
+<span id="cb7-13"><a href="lecture2.html#cb7-13"></a>conf_int = [b_hat - <span class="fl">1.96</span>*std_hc1, b_hat + <span class="fl">1.96</span>*std_hc1];</span></code></pre></div>
+</div>
+</div>
+<div id="references-5" class="section level2">
+<h2><span class="header-section-number">5.3</span> References</h2>
+<ul>
+<li>Kozbur (2019). PhD Econometrics - Lecture Notes.</li>
+<li>Hansen (2019). “<em>Econometrics</em>”.</li>
+<li>Kiefer and Vogelsang (2005). “<em>A new asymptotic theory for heteroskedasticity-autocorrelation robust tests</em>”.</li>
+<li>Wooldridge (2010). “<em>Econometric Analysis of Cross Section and Panel Data</em>”.</li>
+<li>Greene (2006). “<em>Econometric Analysis</em>”.</li>
+<li>Hayiashi (2000). “<em>Econometrics</em>”.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lecture1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lecture3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": [["notes.pdf", "PDF"]],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

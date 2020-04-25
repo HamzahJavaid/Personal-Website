@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lecture 2 Probability Theory | Econometrics Notes</title>
+  <meta name="description" content="Lecture 2 Probability Theory | Econometrics Notes" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Lecture 2 Probability Theory | Econometrics Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Lecture 2 Probability Theory | Econometrics Notes" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lecture 2 Probability Theory | Econometrics Notes" />
+  
+  <meta name="twitter:description" content="Lecture 2 Probability Theory | Econometrics Notes" />
+  
+
+<meta name="author" content="Matteo Courthoud" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="appendix1.html">
+<link rel="next" href="appendix3.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="../" target="_self">MATTEO COURTHOUD</a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="appendix1.html"><a href="appendix1.html"><i class="fa fa-check"></i><b>1</b> Matrix Algebra</a><ul>
+<li class="chapter" data-level="1.1" data-path="appendix1.html"><a href="appendix1.html#basics"><i class="fa fa-check"></i><b>1.1</b> Basics</a></li>
+<li class="chapter" data-level="1.2" data-path="appendix1.html"><a href="appendix1.html#spectral-decomposition"><i class="fa fa-check"></i><b>1.2</b> Spectral Decomposition</a></li>
+<li class="chapter" data-level="1.3" data-path="appendix1.html"><a href="appendix1.html#quadratic-forms-and-definite-matrices"><i class="fa fa-check"></i><b>1.3</b> Quadratic Forms and Definite Matrices</a></li>
+<li class="chapter" data-level="1.4" data-path="appendix1.html"><a href="appendix1.html#matrix-calculus"><i class="fa fa-check"></i><b>1.4</b> Matrix Calculus</a></li>
+<li class="chapter" data-level="1.5" data-path="appendix1.html"><a href="appendix1.html#references-1"><i class="fa fa-check"></i><b>1.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="appendix2.html"><a href="appendix2.html"><i class="fa fa-check"></i><b>2</b> Probability Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="appendix2.html"><a href="appendix2.html#probability"><i class="fa fa-check"></i><b>2.1</b> Probability</a></li>
+<li class="chapter" data-level="2.2" data-path="appendix2.html"><a href="appendix2.html#random-variables"><i class="fa fa-check"></i><b>2.2</b> Random Variables</a></li>
+<li class="chapter" data-level="2.3" data-path="appendix2.html"><a href="appendix2.html#moments"><i class="fa fa-check"></i><b>2.3</b> Moments</a></li>
+<li class="chapter" data-level="2.4" data-path="appendix2.html"><a href="appendix2.html#inequalities"><i class="fa fa-check"></i><b>2.4</b> Inequalities</a></li>
+<li class="chapter" data-level="2.5" data-path="appendix2.html"><a href="appendix2.html#theorems"><i class="fa fa-check"></i><b>2.5</b> Theorems</a></li>
+<li class="chapter" data-level="2.6" data-path="appendix2.html"><a href="appendix2.html#statistical-models"><i class="fa fa-check"></i><b>2.6</b> Statistical Models</a></li>
+<li class="chapter" data-level="2.7" data-path="appendix2.html"><a href="appendix2.html#references-2"><i class="fa fa-check"></i><b>2.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="appendix3.html"><a href="appendix3.html"><i class="fa fa-check"></i><b>3</b> Asymptotic Theory</a><ul>
+<li class="chapter" data-level="3.1" data-path="appendix3.html"><a href="appendix3.html#convergence"><i class="fa fa-check"></i><b>3.1</b> Convergence</a></li>
+<li class="chapter" data-level="3.2" data-path="appendix3.html"><a href="appendix3.html#theorems-1"><i class="fa fa-check"></i><b>3.2</b> Theorems</a></li>
+<li class="chapter" data-level="3.3" data-path="appendix3.html"><a href="appendix3.html#ergodic-theory"><i class="fa fa-check"></i><b>3.3</b> Ergodic Theory</a></li>
+<li class="chapter" data-level="3.4" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-estimators"><i class="fa fa-check"></i><b>3.4</b> Asymptotic Properties of Estimators</a></li>
+<li class="chapter" data-level="3.5" data-path="appendix3.html"><a href="appendix3.html#asymptotic-properties-of-test-statistics"><i class="fa fa-check"></i><b>3.5</b> Asymptotic Properties of Test Statistics</a></li>
+<li class="chapter" data-level="3.6" data-path="appendix3.html"><a href="appendix3.html#references-3"><i class="fa fa-check"></i><b>3.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lecture1.html"><a href="lecture1.html"><i class="fa fa-check"></i><b>4</b> OLS Algebra</a><ul>
+<li class="chapter" data-level="4.1" data-path="lecture1.html"><a href="lecture1.html#the-gauss-markov-model"><i class="fa fa-check"></i><b>4.1</b> The Gauss Markov Model</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="lecture1.html"><a href="lecture1.html#matlab"><i class="fa fa-check"></i><b>4.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="lecture1.html"><a href="lecture1.html#the-ols-estimator"><i class="fa fa-check"></i><b>4.2</b> The OLS estimator</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="lecture1.html"><a href="lecture1.html#matlab-1"><i class="fa fa-check"></i><b>4.2.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="lecture1.html"><a href="lecture1.html#ols-residual-properties"><i class="fa fa-check"></i><b>4.3</b> OLS residual properties</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="lecture1.html"><a href="lecture1.html#matlab-2"><i class="fa fa-check"></i><b>4.3.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="lecture1.html"><a href="lecture1.html#finite-sample-properties-of-the-ols-estimator"><i class="fa fa-check"></i><b>4.4</b> Finite Sample Properties of the OLS estimator</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="lecture1.html"><a href="lecture1.html#matlab-3"><i class="fa fa-check"></i><b>4.4.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="lecture1.html"><a href="lecture1.html#references-4"><i class="fa fa-check"></i><b>4.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lecture2.html"><a href="lecture2.html"><i class="fa fa-check"></i><b>5</b> OLS Inference</a><ul>
+<li class="chapter" data-level="5.1" data-path="lecture2.html"><a href="lecture2.html#asymptotic-theory-of-the-ols-estimator"><i class="fa fa-check"></i><b>5.1</b> Asymptotic Theory of the OLS Estimator</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="lecture2.html"><a href="lecture2.html#gaussian-error-term"><i class="fa fa-check"></i><b>5.1.1</b> Gaussian Error Term</a></li>
+<li class="chapter" data-level="5.1.2" data-path="lecture2.html"><a href="lecture2.html#homoskedastic-error-term"><i class="fa fa-check"></i><b>5.1.2</b> Homoskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.3" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-error-term"><i class="fa fa-check"></i><b>5.1.3</b> Heteroskedastic Error Term</a></li>
+<li class="chapter" data-level="5.1.4" data-path="lecture2.html"><a href="lecture2.html#heteroskedastic-and-autocorrelated-error-term"><i class="fa fa-check"></i><b>5.1.4</b> Heteroskedastic and Autocorrelated Error Term</a></li>
+<li class="chapter" data-level="5.1.5" data-path="lecture2.html"><a href="lecture2.html#fixed-b-asymptotics"><i class="fa fa-check"></i><b>5.1.5</b> Fixed b asymptotics</a></li>
+<li class="chapter" data-level="5.1.6" data-path="lecture2.html"><a href="lecture2.html#fixed-g-asymptotics"><i class="fa fa-check"></i><b>5.1.6</b> Fixed G asymptotics</a></li>
+<li class="chapter" data-level="5.1.7" data-path="lecture2.html"><a href="lecture2.html#matlab-4"><i class="fa fa-check"></i><b>5.1.7</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="lecture2.html"><a href="lecture2.html#inference"><i class="fa fa-check"></i><b>5.2</b> Inference</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="lecture2.html"><a href="lecture2.html#hypothesis-testing"><i class="fa fa-check"></i><b>5.2.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="5.2.2" data-path="lecture2.html"><a href="lecture2.html#confidence-intervals"><i class="fa fa-check"></i><b>5.2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="5.2.3" data-path="lecture2.html"><a href="lecture2.html#matlab-5"><i class="fa fa-check"></i><b>5.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="lecture2.html"><a href="lecture2.html#references-5"><i class="fa fa-check"></i><b>5.3</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="lecture3.html"><a href="lecture3.html"><i class="fa fa-check"></i><b>6</b> Endogeneity</a><ul>
+<li class="chapter" data-level="6.1" data-path="lecture3.html"><a href="lecture3.html#instrumental-variables"><i class="fa fa-check"></i><b>6.1</b> Instrumental Variables</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="lecture3.html"><a href="lecture3.html#matlab-6"><i class="fa fa-check"></i><b>6.1.1</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="lecture3.html"><a href="lecture3.html#gmm"><i class="fa fa-check"></i><b>6.2</b> GMM</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="lecture3.html"><a href="lecture3.html#step-gmm"><i class="fa fa-check"></i><b>6.2.1</b> 1-step GMM</a></li>
+<li class="chapter" data-level="6.2.2" data-path="lecture3.html"><a href="lecture3.html#step-gmm-1"><i class="fa fa-check"></i><b>6.2.2</b> 2-step GMM</a></li>
+<li class="chapter" data-level="6.2.3" data-path="lecture3.html"><a href="lecture3.html#matlab-7"><i class="fa fa-check"></i><b>6.2.3</b> <code>Matlab</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="lecture3.html"><a href="lecture3.html#testing-overidentifying-restrictions"><i class="fa fa-check"></i><b>6.3</b> Testing Overidentifying Restrictions</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="lecture3.html"><a href="lecture3.html#naive-test"><i class="fa fa-check"></i><b>6.3.1</b> Naive Test</a></li>
+<li class="chapter" data-level="6.3.2" data-path="lecture3.html"><a href="lecture3.html#hansens-test"><i class="fa fa-check"></i><b>6.3.2</b> Hansen’s Test</a></li>
+<li class="chapter" data-level="6.3.3" data-path="lecture3.html"><a href="lecture3.html#special-case-conditional-homoskedasticity"><i class="fa fa-check"></i><b>6.3.3</b> Special Case: Conditional Homoskedasticity</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="lecture3.html"><a href="lecture3.html#small-sample-properties-of-2sls"><i class="fa fa-check"></i><b>6.4</b> Small-Sample Properties of 2SLS</a></li>
+<li class="chapter" data-level="6.5" data-path="lecture3.html"><a href="lecture3.html#many-instrument-robust-estimation"><i class="fa fa-check"></i><b>6.5</b> Many Instrument Robust Estimation</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="lecture3.html"><a href="lecture3.html#liml"><i class="fa fa-check"></i><b>6.5.1</b> LIML</a></li>
+<li class="chapter" data-level="6.5.2" data-path="lecture3.html"><a href="lecture3.html#jive"><i class="fa fa-check"></i><b>6.5.2</b> JIVE</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="lecture3.html"><a href="lecture3.html#hausman-test"><i class="fa fa-check"></i><b>6.6</b> Hausman Test</a></li>
+<li class="chapter" data-level="6.7" data-path="lecture3.html"><a href="lecture3.html#references-6"><i class="fa fa-check"></i><b>6.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lecture4.html"><a href="lecture4.html"><i class="fa fa-check"></i><b>7</b> Non-Parametric Estimation</a><ul>
+<li class="chapter" data-level="7.1" data-path="lecture4.html"><a href="lecture4.html#introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture4.html"><a href="lecture4.html#discrete-x---cell-estimator"><i class="fa fa-check"></i><b>7.2</b> Discrete x - Cell Estimator</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture4.html"><a href="lecture4.html#local-non-parametric-estimation---kernels"><i class="fa fa-check"></i><b>7.3</b> Local Non-Parametric Estimation - Kernels</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="lecture4.html"><a href="lecture4.html#estimator-examples"><i class="fa fa-check"></i><b>7.3.1</b> Estimator examples:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lecture4.html"><a href="lecture4.html#kernel-examples"><i class="fa fa-check"></i><b>7.3.2</b> Kernel examples:</a></li>
+<li class="chapter" data-level="7.3.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-bandwidth"><i class="fa fa-check"></i><b>7.3.3</b> Choice of the optimal bandwidth</a></li>
+<li class="chapter" data-level="7.3.4" data-path="lecture4.html"><a href="lecture4.html#inference-1"><i class="fa fa-check"></i><b>7.3.4</b> Inference</a></li>
+<li class="chapter" data-level="7.3.5" data-path="lecture4.html"><a href="lecture4.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>7.3.5</b> Bias-variance trade-off</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lecture4.html"><a href="lecture4.html#global-non-parametric-estimation---series"><i class="fa fa-check"></i><b>7.4</b> Global Non-Parametric Estimation - Series</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="lecture4.html"><a href="lecture4.html#examples"><i class="fa fa-check"></i><b>7.4.1</b> Examples</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lecture4.html"><a href="lecture4.html#estimation"><i class="fa fa-check"></i><b>7.4.2</b> Estimation</a></li>
+<li class="chapter" data-level="7.4.3" data-path="lecture4.html"><a href="lecture4.html#choice-of-the-optimal-k"><i class="fa fa-check"></i><b>7.4.3</b> Choice of the optimal <span class="math inline">\(K\)</span></a></li>
+<li class="chapter" data-level="7.4.4" data-path="lecture4.html"><a href="lecture4.html#inference-2"><i class="fa fa-check"></i><b>7.4.4</b> Inference</a></li>
+<li class="chapter" data-level="7.4.5" data-path="lecture4.html"><a href="lecture4.html#kernel-vs-series"><i class="fa fa-check"></i><b>7.4.5</b> Kernel vs Series</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="lecture4.html"><a href="lecture4.html#references-7"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lecture5.html"><a href="lecture5.html"><i class="fa fa-check"></i><b>8</b> Variable Selection</a><ul>
+<li class="chapter" data-level="8.1" data-path="lecture5.html"><a href="lecture5.html#lasso"><i class="fa fa-check"></i><b>8.1</b> Lasso</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="lecture5.html"><a href="lecture5.html#choosing-the-optimal-lambda"><i class="fa fa-check"></i><b>8.1.1</b> Choosing the optimal lambda</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="lecture5.html"><a href="lecture5.html#pre-testing"><i class="fa fa-check"></i><b>8.2</b> Pre-Testing</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="lecture5.html"><a href="lecture5.html#omitted-variable-bias"><i class="fa fa-check"></i><b>8.2.1</b> Omitted Variable Bias</a></li>
+<li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
+<li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
+<li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
+<li class="chapter" data-level="9.1" data-path="matlabcode.html"><a href="matlabcode.html#lecture-1"><i class="fa fa-check"></i><b>9.1</b> Lecture 1</a></li>
+<li class="chapter" data-level="9.2" data-path="matlabcode.html"><a href="matlabcode.html#lecture-2"><i class="fa fa-check"></i><b>9.2</b> Lecture 2</a></li>
+<li class="chapter" data-level="9.3" data-path="matlabcode.html"><a href="matlabcode.html#lecture-3"><i class="fa fa-check"></i><b>9.3</b> Lecture 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Econometrics Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix2" class="section level1">
+<h1><span class="header-section-number">Lecture 2</span> Probability Theory</h1>
+<div id="probability" class="section level2">
+<h2><span class="header-section-number">2.1</span> Probability</h2>
+<p>A <strong>probability space</strong> is a triple <span class="math inline">\((\Omega, \mathcal A, P)\)</span> where</p>
+<ul>
+<li><span class="math inline">\(\Omega\)</span> is the sample space.</li>
+<li><span class="math inline">\(\mathcal A\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra on <span class="math inline">\(\Omega\)</span>.</li>
+<li><span class="math inline">\(P\)</span> is a probability measure.</li>
+</ul>
+<p>The <strong>sample space</strong> <span class="math inline">\(\Omega\)</span> is the space of all possible events.</p>
+<p>A nonempty set (of subsets of <span class="math inline">\(\Omega\)</span>) <span class="math inline">\(\mathcal A \in 2^\Omega\)</span> is a <strong>sigma algebra</strong> (<span class="math inline">\(\sigma\)</span>-algebra) of <span class="math inline">\(\Omega\)</span> if the following conditions hold:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\Omega \in \mathcal A\)</span></li>
+<li>If <span class="math inline">\(A \in \mathcal A\)</span>, then <span class="math inline">\((\Omega - A) \in \mathcal A\)</span></li>
+<li>If <span class="math inline">\(A_1, A_2, ... \in \mathcal A\)</span>, then <span class="math inline">\(\bigcup _ {i=1}^{\infty} A_i \in \mathcal A\)</span></li>
+</ol>
+<blockquote>
+<p>The smallest <span class="math inline">\(\sigma\)</span>-algebra is <span class="math inline">\(\{ \emptyset, \Omega \}\)</span> and the largest one is <span class="math inline">\(2^\Omega\)</span> (in cardinality terms).</p>
+</blockquote>
+<p>Suppose <span class="math inline">\(\Omega = \mathbb R\)</span>. Let <span class="math inline">\(\mathcal{C} = \{ (a, b],-\infty \leq a&lt;b&lt;\infty \}\)</span>. Then the <strong>Borel</strong> <span class="math inline">\(\sigma\)</span><strong>- algebra</strong> on <span class="math inline">\(\mathbb R\)</span> is defined by
+<span class="math display">\[
+  \mathcal B (\mathbb R) = \sigma (\mathcal C)
+\]</span></p>
+<p>A <strong>probability measure</strong> <span class="math inline">\(P\)</span> is a set function with domain <span class="math inline">\(\mathcal A\)</span> and codomain <span class="math inline">\([0,1]\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P(A) \geq 0 \ \forall A \in \mathcal A\)</span></li>
+<li><span class="math inline">\(P\)</span> is <span class="math inline">\(\sigma\)</span>-additive: is <span class="math inline">\(A_n \in \mathcal A\)</span> are pairwise disjoint events (<span class="math inline">\(A_j \cap A_k = \emptyset\)</span> for <span class="math inline">\(j \neq k\)</span>), then
+<span class="math display">\[
+  P\left(\bigcup _ {n=1}^{\infty} A_{n} \right)=\sum _ {n=1}^{\infty} P\left(A_{n}\right)
+\]</span></li>
+<li><span class="math inline">\(P(\Omega) = 1\)</span></li>
+</ol>
+<blockquote>
+<p>Properties</p>
+<ul>
+<li><span class="math inline">\(P\left(A^{c}\right)=1-P(A)\)</span></li>
+<li><span class="math inline">\(P(\emptyset)=0\)</span></li>
+<li>For <span class="math inline">\(A, B \in \mathcal{A}\)</span>, <span class="math inline">\(P(A \cup B)=P(A)+P(B)-P(A \cap B)\)</span></li>
+<li>For <span class="math inline">\(A, B \in \mathcal{A}\)</span>, if <span class="math inline">\(A \subset B\)</span> then <span class="math inline">\(P(A) \leq P(B)\)</span></li>
+<li>For <span class="math inline">\(A_n \in \mathcal{A}\)</span>, <span class="math inline">\(P \left(\cup _ {n=1}^\infty A_{n} \right) \leq \sum _ {n=1}^\infty P(A_n)\)</span></li>
+<li>For <span class="math inline">\(A_n \in \mathcal{A}\)</span>, if <span class="math inline">\(A_n \uparrow A\)</span> then <span class="math inline">\(\lim _ {n \to \infty} P(A_n) = P(A)\)</span></li>
+</ul>
+</blockquote>
+<p>Let <span class="math inline">\(A, B \in \mathcal A\)</span> and <span class="math inline">\(P(B) &gt; 0\)</span>, the <strong>conditional probability</strong> of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span> is
+<span class="math display">\[
+  P(A | B)=\frac{P(A \cap B)}{P(B)}
+\]</span></p>
+<p>Two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>independent</strong> if <span class="math inline">\(P(A \cap B)=P(A) P(B)\)</span>.</p>
+<p><strong>Theorem</strong> (Law of Total Probability):
+Let <span class="math inline">\((E_n) _ {n \geq 1}\)</span> be a finite or countable partition of <span class="math inline">\(\Omega\)</span>. Then, if <span class="math inline">\(A \in \mathcal A\)</span>,
+<span class="math display">\[
+  P(A) = \sum_n P(A | E_n ) P(E_n)
+\]</span></p>
+<p><strong>Theorem</strong> (Bayes Theorem):
+Let <span class="math inline">\((E_n) _ {n \geq 1}\)</span> be a finite or countable partition of <span class="math inline">\(\Omega\)</span>, and suppose <span class="math inline">\(P(A) &gt; 0\)</span>. Then,
+<span class="math display">\[
+  P(E_n | A) = \frac{P(A | E_n) P(E_n)}{\sum_m P(A | E_m) P(E_m)}
+\]</span></p>
+</div>
+<div id="random-variables" class="section level2">
+<h2><span class="header-section-number">2.2</span> Random Variables</h2>
+<p>A <strong>random variable</strong> <span class="math inline">\(X\)</span> on a probability space <span class="math inline">\((\Omega,\mathcal A, P)\)</span> is a (measurable) mapping <span class="math inline">\(X : \Omega \to \mathbb{R}\)</span> such that
+<span class="math display">\[
+  \forall B \in \mathcal{B}(\mathbb{R}), \quad X^{-1}(B) \in \mathcal{A}
+\]</span></p>
+<blockquote>
+<p>The measurability condition states that the inverse image is a measurable set of <span class="math inline">\(\Omega\)</span> i.e. <span class="math inline">\(X^{-1}(B) \in \mathcal A\)</span>. This is essential since probabilities are defined only on <span class="math inline">\(\mathcal A\)</span>.</p>
+</blockquote>
+<p>Let <span class="math inline">\(X\)</span> be a real valued random variable. The <strong>distribution function</strong> (also called cumulative distribution function) of <span class="math inline">\(X\)</span>, commonly denoted <span class="math inline">\(F_X(x)\)</span> is defined by
+<span class="math display">\[
+    F_X(x) = \Pr(X \leq x)
+\]</span></p>
+<blockquote>
+<p>Properties</p>
+<ul>
+<li><span class="math inline">\(F\)</span> is monotone non-decreasing</li>
+<li><span class="math inline">\(F\)</span> is right continuous</li>
+<li><span class="math inline">\(\lim _ {x \to - \infty} F(x)=0\)</span> and <span class="math inline">\(\lim _ {x \to + \infty} F(x)=1\)</span></li>
+</ul>
+</blockquote>
+<p>The random variables <span class="math inline">\((X_1, .. , X_n)\)</span> are independent if and only if
+<span class="math display">\[
+  F _ {(X_1, ... , X_n)} (x) = \prod _ {i=1}^n F_{X_i} (x_i) \quad \forall x \in \mathbb R^n
+\]</span></p>
+<p>Let <span class="math inline">\(X\)</span> be a real valued random variable. <span class="math inline">\(X\)</span> has a <strong>probability density function</strong> if there exists <span class="math inline">\(f_X(x)\)</span> such that for all measurable <span class="math inline">\(A \subset \mathbb{R}\)</span>,
+<span class="math display">\[
+        P(X \in A) = \int_A f_X(x) \mathrm{d} x
+\]</span></p>
+</div>
+<div id="moments" class="section level2">
+<h2><span class="header-section-number">2.3</span> Moments</h2>
+<p>The <strong>expected value</strong> of a random variable, when it exists, is given by
+<span class="math display">\[
+        \mathbb{E}[X] = \int_ \Omega X(\omega) \mathrm{d} P
+\]</span>
+When <span class="math inline">\(X\)</span> has a density, then
+<span class="math display">\[
+        \mathbb{E} [X] = \int_ \mathbb{R} x f_X (x) \mathrm{d} x = \int _ \mathbb{R} x \mathrm{d} F_X (x) 
+\]</span></p>
+<p>The <strong>empirical expectation</strong> (or <strong>sample average</strong>) is given by
+<span class="math display">\[
+        \mathbb{E}_n [z_i] = \frac{1}{n} \sum _ {i=1}^N z_i 
+\]</span></p>
+<p>The <strong>covariance</strong> of two random variables <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> defined on <span class="math inline">\(\Omega\)</span> is
+<span class="math display">\[
+    Cov(X, Y ) = \mathbb{E}[ (X - \mathbb{E}[X]) (Y - \mathbb{E}[Y]) ]  = \mathbb{E}[XY ] - \mathbb{E}[X]E[Y]
+\]</span>
+In vector notation, <span class="math inline">\(Cov(X, Y) = \mathbb{E}[XY&#39;] - \mathbb{E}[X]\mathbb{E}[Y&#39;]\)</span>.</p>
+<p>The <strong>variance</strong> of a random variable <span class="math inline">\(X\)</span>, when it exists, is given by
+<span class="math display">\[
+    Var(X) = \mathbb{E}[ (X - \mathbb{E}[X])^2 ] = \mathbb{E}[X^2] - \mathbb{E}[X]^2
+\]</span>
+In vector notation, <span class="math inline">\(Var(X) = \mathbb{E}[XX&#39;] - \mathbb{E}[X]\mathbb{E}[X&#39;]\)</span>.</p>
+<blockquote>
+<p>Properties</p>
+<p>Let <span class="math inline">\(X, Y, Z, T \in \mathcal{L}^{2}\)</span> and <span class="math inline">\(a, b, c, d \in \mathbb{R}\)</span></p>
+<ul>
+<li><span class="math inline">\(Cov(X, X) = Var(X)\)</span></li>
+<li><span class="math inline">\(Cov(X, Y) = Cov(Y, X)\)</span></li>
+<li><span class="math inline">\(Cov(aX + b, Y) = a \ Cov(X,Y)\)</span></li>
+<li><span class="math inline">\(Cov(X+Z, Y) = Cov(X,Y) + Cov(Z,Y)\)</span></li>
+<li><span class="math inline">\(Cov(aX + bZ, cY + dT) = ac * Cov(X,Y) + ad * Cov(X,T) + bc * Cov(Z,Y) + bd * Cov(Z,T)\)</span></li>
+</ul>
+</blockquote>
+<p>Let <span class="math inline">\(X, Y \in \mathcal L^1\)</span> be independent. Then, <span class="math inline">\(\mathbb E[XY] = \mathbb E[X]E[Y]\)</span>.</p>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then <span class="math inline">\(Cov(X,Y) = 0\)</span>.</p>
+<blockquote>
+<p>Note that the converse does not hold: <span class="math inline">\(Cov(X,Y) = 0 \not \to X \perp Y\)</span>.</p>
+</blockquote>
+<p>The <strong>sample variance</strong> is given by
+<span class="math display">\[
+    Var_n (z_i) = \frac{1}{n} \sum _ {i=1}^N (z_i - \bar{z})^2 
+\]</span>
+where <span class="math inline">\(\bar{z_i} = \mathbb{E}_n [z_i] = \frac{1}{n} \sum _ {i=1}^N z_i\)</span>.</p>
+<p><strong>Theorem</strong>:
+The expected sample variance <span class="math inline">\(\mathbb{E} [\sigma^2_n] = \mathbb{E} \left[ \frac{1}{n} \sum _ {i=1}^N \left(y_i - \mathbb{E}_n[y] \right)^2 \right]\)</span> gives an estimate of the population variance that is biased by a factor of <span class="math inline">\(\frac{1}{n}\)</span> and is therefore referred to as <strong>biased sample variance</strong>.</p>
+<p><strong>Proof</strong>:
+<span class="math display">\[
+  \begin{aligned}
+  &amp;\mathbb{E}[\sigma^2_n] =  \mathbb{E} \left[ \frac{1}{n} \sum _ {i=1}^n \left( y_i - \mathbb{E}_n [y] \right)^2 \right] = 
+  \\
+  &amp;= \mathbb{E} \left[ \frac{1}{n} \sum _ {i=1}^n \left( y_i - \frac{1}{n} \sum _ {i=1}^n y_i \right )^2 \right] = 
+    \\
+    &amp;= \frac{1}{n} \sum _ {i=1}^n \mathbb{E} \left[ y_i^2 - \frac{2}{n} y_i \sum _ {j=1}^n y_j + \frac{1}{n^2} \sum _ {j=1}^n y_j \sum _ {k=1}^{n}y_k  \right] = 
+    \\
+    &amp;= \frac{1}{n} \sum _ {i=1}^n  \left[ \frac{n-2}{n} \mathbb{E}[y_i^2]  - \frac{2}{n} \sum _ {j\neq i} \mathbb{E}[y_i y_j] + \frac{1}{n^2} \sum _ {j=1}^n \sum _ {k\neq j} \mathbb{E}[y_j y_k] + \frac{1}{n^2} \sum _ {j=1}^n \mathbb{E}[y_j^2] \right] = 
+    \\
+    &amp;= \frac{1}{n} \sum _ {i=1}^n  \left[ \frac{n-2}{n}(\mu^2 + \sigma^2) - \frac{2}{n} (n-1) \mu^2 + \frac{1}{n^2} n(n-1)\mu^2 + \frac{1}{n^2} n (\mu^2 + \sigma^2)]\right] =
+    \\
+    &amp;= \frac{n-1}{n} \sigma^2
+    \end{aligned}
+\]</span>
+<span class="math display">\[\tag*{$\blacksquare$}\]</span></p>
+</div>
+<div id="inequalities" class="section level2">
+<h2><span class="header-section-number">2.4</span> Inequalities</h2>
+<ul>
+<li><strong>Triangle Inequality</strong>: if <span class="math inline">\(\mathbb{E}[X] &lt; \infty\)</span>, then
+<span class="math display">\[ |\mathbb{E} [X] | \leq \mathbb{E} [|X|] \]</span></li>
+<li><strong>Markov’s Inequality</strong>: if <span class="math inline">\(\mathbb{E}[X] &lt; \infty\)</span>, then
+<span class="math display">\[ \Pr(|X| &gt; t) \leq \frac{1}{t} \mathbb{E}[|X|] \]</span></li>
+<li><strong>Chebyshev’s Inequality</strong>: if <span class="math inline">\(\mathbb{E}[X^2] &lt; \infty\)</span>, then
+<span class="math display">\[ \Pr(|X- \mu|&gt; t \sigma) \leq \frac{1}{t^2}\Leftrightarrow \Pr(|X- \mu|&gt; t ) \leq \frac{\sigma^2}{t^2} \]</span></li>
+<li><strong>Cauchy-Schwarz’s Inequality</strong>:
+<span class="math display">\[ \mathbb{E} [|XY|] \leq \sqrt{\mathbb{E}[X^2] \mathbb{E}[Y^2]} \]</span></li>
+<li><strong>Minkowski Inequality</strong>:
+<span class="math display">\[ \left( \sum _ {k=1}^n | x_k + y_k |^p \right) ^ {\frac{1}{p}} \leq \left( \sum _ {k=1}^n | x_k |^p \right) ^ {\frac{1}{p}} + \left( \sum _ {k=1}^n | y_k | ^p \right) ^ { \frac{1}{p} } \]</span></li>
+<li><strong>Jensen’s Inequality</strong>: if <span class="math inline">\(g( \cdot)\)</span> is concave (e.g. logarithmic function), then
+<span class="math display">\[ \mathbb{E}[g(x)] \leq g(\mathbb{E}[x]) \]</span>
+Similarly, if <span class="math inline">\(g(\cdot)\)</span> is convex (e.g. exponential function), then
+<span class="math display">\[ \mathbb{E}[g(x)] \geq g(\mathbb{E}[x]) \]</span></li>
+</ul>
+</div>
+<div id="theorems" class="section level2">
+<h2><span class="header-section-number">2.5</span> Theorems</h2>
+<p><strong>Theorem</strong>:
+Law of Iterated Expectations
+<span class="math display">\[
+  \mathbb{E}(Y) = \mathbb{E}_X [\mathbb{E}(Y|X)]
+\]</span>
+<strong>Theorem</strong>:
+Law of Total Variance
+<span class="math display">\[
+        Var(Y) = Var_X (\mathbb{E}[Y |X]) + \mathbb{E}_X [Var(Y|X)] 
+\]</span></p>
+<p>Useful distributional results:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\chi^2_q \sim \sum _ {i=1}^q Z_i^2\)</span> where <span class="math inline">\(Z_i \sim N(0,1)\)</span></li>
+<li><span class="math inline">\(F(n_1 , n_2) \sim \frac{\chi^2 _ {n_1} / n_1}{\chi^2 _ {n_2}/n_2}\)</span></li>
+<li><span class="math inline">\(t_n \sim \frac{Z}{\sqrt{\chi^2 _ n}/n }\)</span></li>
+</ol>
+<blockquote>
+<p>The <span class="math inline">\(t\)</span> distribution is approximately standard normal but has heavier tails. The approximation is good for <span class="math inline">\(n \geq 30\)</span>: <span class="math inline">\(t_{n\geq 30} \sim N(0,1)\)</span></p>
+</blockquote>
+</div>
+<div id="statistical-models" class="section level2">
+<h2><span class="header-section-number">2.6</span> Statistical Models</h2>
+<p>A <strong>statistical model</strong> is a set of probability distributions. More precisely, a <strong>statistical model over data</strong> <span class="math inline">\(D \in \mathcal{D}\)</span> is a set of probability distribution over datasets <span class="math inline">\(D\)</span> which takes values in <span class="math inline">\(\mathcal{D}\)</span>.</p>
+<p>Suppose you have regression data <span class="math inline">\(\{ \mathbb{x}_i , y_i \} _ {i=1}^N\)</span> with <span class="math inline">\(\mathbb{x}_i \in \mathbb{R}^p\)</span> and <span class="math inline">\(y_i \in \mathbb{R}\)</span>. The statistical model is</p>
+<p><span class="math display">\[
+ \Big\{ P : y_i =  f(\mathbb{x}_i) + \varepsilon_i, \ x_i \sim F_x , \ \varepsilon_i \sim F _\varepsilon , \ \varepsilon_i \perp \mathbb{x}_i , \ f \in C^2 (\mathbb{R}^p) \Big\}
+\]</span></p>
+<blockquote>
+<p>In words: the statistical model is the set of distributions <span class="math inline">\(P\)</span> such that an additive decomposition of <span class="math inline">\(y_i\)</span> as <span class="math inline">\(f(\mathbb{x}_i) + \varepsilon_i\)</span> exists for some <span class="math inline">\(\mathbb{x}_i\)</span>; where <span class="math inline">\(f\)</span> is twice continuously differentiable.</p>
+</blockquote>
+<p>A statistical model parameterized by <span class="math inline">\(\theta \in \Theta\)</span> is <strong>well specified</strong> if the data generating process corresponds to some <span class="math inline">\(\theta_0\)</span> and <span class="math inline">\(\theta_0 \in \Theta\)</span>. Otherwise, the statistical model is <strong>misspecified</strong>.</p>
+<p>A statistical model can be parametrized as <span class="math inline">\(\mathcal{F} = \{ P_\theta \} _ {\{ \theta \in \Theta \}}\)</span>.</p>
+<p>Categories of statistical models:</p>
+<ul>
+<li><strong>Parametric</strong>: the stochastic features of the model are completly specified up to a finite dimensional parameter: <span class="math inline">\(\{ P_\theta \} _ { \{ \theta \in \Theta \}}\)</span> with <span class="math inline">\(\Theta \subseteq \mathbb{R}^k, k&lt;\infty\)</span>;</li>
+<li><strong>Semiparametric</strong>: it is a partially specified model, e.g., <span class="math inline">\(\{ P_\theta \} _ { \{ \theta \in \Theta, \gamma \in \Gamma \}}\)</span> with <span class="math inline">\(\Theta\)</span> of finite dimension and <span class="math inline">\(\Gamma\)</span> of infinite dimension;</li>
+<li><strong>Non parametric</strong>: there is no finite dimensional component of the model.</li>
+</ul>
+<p>In a <strong>linear model data</strong> are given by <span class="math inline">\(D_n = \{ (y_i, x _ {i1}, \dots, x _ {ik}) \} _ {i=1}^n \in \mathcal{D}\)</span> where:</p>
+<ul>
+<li><span class="math inline">\(D_n\)</span> are the observed data;</li>
+<li><span class="math inline">\(y_i\)</span> is the dependent variable;</li>
+<li><span class="math inline">\(x_ {i1}, \dots, x_ {ik}\)</span> are the regressors including a constant.</li>
+</ul>
+<p>Let <span class="math inline">\(\mathcal{D}\)</span> be the set of possible data realizations. Let <span class="math inline">\(D \in \mathcal{D}\)</span> be your data. Let <span class="math inline">\(\mathcal{F}\)</span> be a statistical model indexed by <span class="math inline">\(\theta\)</span>. Let <span class="math inline">\(\nu\)</span> be a functional <span class="math inline">\(\mathcal{F} \to \mathbb{R}\)</span>. Let <span class="math inline">\(\alpha &gt; 0\)</span> be a small tolerance. An <strong>estimator</strong> is a map
+<span class="math display">\[
+        \mathcal{D} \to \mathcal{F} \quad , \quad  D \mapsto \hat{\theta} \qquad \text{ or } \qquad \mathcal{D} \to \mathbb{R} \quad , \quad D \mapsto \hat{\nu}
+\]</span></p>
+<p>Statistical <strong>inference</strong> is a map into subsets of <span class="math inline">\(\mathcal{F}\)</span> given by
+<span class="math display">\[
+  \mathcal{D} \to \mathcal{G} \subseteq \mathcal{F}: \min _ \theta P_\theta (\mathcal{G} | \theta \in \mathcal{G}) \geq 1-\alpha  \qquad \text{ or } \qquad \mathcal{D} \to A \subseteq \mathbb{R}: \min _ \theta P_\theta (A | \nu(\theta) \in A) \geq 1-\alpha
+\]</span></p>
+<p>A <strong>data generating process</strong> (DGP) is a single statistical distribution over <span class="math inline">\(\mathcal{D}\)</span>.</p>
+<p>Suppose you have a statistical model parametrized by <span class="math inline">\(\theta\)</span> and an estimator <span class="math inline">\(\hat{\theta}\)</span>. The <strong>bias</strong> of <span class="math inline">\(\hat{\theta}\)</span> relative to <span class="math inline">\(\theta\)</span> is given by
+<span class="math display">\[
+    Bias _ {\theta} (\hat{\theta}) = \mathbb{E} _ {x|\theta} [\hat{\theta} ] - \theta = \mathbb{E} _ {x|\theta} [\hat{\theta} - \theta]
+\]</span></p>
+<p>Let <span class="math inline">\(\hat{\theta}\)</span> be an estimator for <span class="math inline">\(\theta_0\)</span>. We say <span class="math inline">\(\hat{\theta}\)</span> is an <strong>unbiased</strong> estimator for <span class="math inline">\(\theta\)</span> if <span class="math inline">\(\mathbb{E}[\hat{\theta}] = \theta_0\)</span>.</p>
+</div>
+<div id="references-2" class="section level2">
+<h2><span class="header-section-number">2.7</span> References</h2>
+<ul>
+<li>Kozbur (2019). PhD Econometrics - Lecture Notes.</li>
+<li>Greene (2006). “<em>Econometric Analysis</em>”. Appendix B: Probability and Distribution Theory.</li>
+<li>Greene (2006). “<em>Econometric Analysis</em>”. Appendix C: Estimation and Inference.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="appendix1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"download": [["notes.pdf", "PDF"]],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
