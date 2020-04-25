@@ -1,5 +1,5 @@
 # Configuration of Academic
-# Documentation: https://sourcethemes.com/academic/
+# Documentation: https://sourcethemes.com/hugo-academic/
 #
 # This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
@@ -15,15 +15,18 @@ baseurl = "https://matteocourthoud.github.io/"
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
 copyright = "Matteo Courthoud&copy;"
 
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = "UA-144780600-1"
+
 ############################
 ## Advanced options below ##
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "academic-mc"
+theme = "matteo-academic"
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -31,18 +34,10 @@ hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
-summaryLength = 30  # Listing summary length in words. Also, see `abstract_length` in `params.toml`.
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-
-# Workaround Hugo publishing taxonomy URLs as plurals - consistently use singular across Academic.
-[permalinks]
-  authors = "/author/:slug/"
-  tags = "/tag/:slug/"
-  categories = "/category/:slug/"
-  publication_types = "/publication-type/:slug/"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
@@ -55,16 +50,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   mediaType = "application/manifest+json"
   rel = "manifest"
 
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true  # Enable user to embed HTML snippets in Markdown content.
-  [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
+[blackfriday]
+  hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
+	angledQuotes = false
+	latexDashes = true
+  extensions = ["backslashLineBreak"]
 
 [imaging]
   resampleFilter = "lanczos"
