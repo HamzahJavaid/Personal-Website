@@ -22,7 +22,7 @@ In this tutorial I am going to explain how to build a website on [Github](https:
 
 ## Introduction
 
-There are two main options: either use RStudio or use the Terminal. I personally use a combination of the two. During the tutorial I will highlight pros and cons of each method.
+There are three main options: use RStudio, the Terminal or Netlify. I personally use a combination of RStudio and Terminal since the former is excellent for editing and testing and it's always useful to know how to use the latter. 
 
 Independently of the method, the first step is to create an account on [Github](https://www.github.com). 
 
@@ -106,20 +106,6 @@ In general, to automate your website publishment, I suggest creating a shell scr
 # Directory
 cd Dropbox/Website
 
-# Give name to the commit
-read -p "Enter commit description: " description
-
-# Remove public directory if it exists
-echo
-rm -r public/
-git submodule add -f -b master https://github.com/namesurname/namesurname.github.io.git public
-
-# Commit code
-echo
-git add .
-git commit -m $description
-git push -u origin master
-
 # Update website
 echo
 hugo
@@ -131,13 +117,7 @@ git commit -m "Update website"
 git push origin master
 ```
 
-Now you have three routines automatized:
-
-1. Your `Website` folder is saved in a (possibly homonymous) Github repository.
-2. Your website is updated.
-3. ... and published online into your `namesurname.github.io` Github repository.
-
-This is the **main advantage of working in the Terminal**.
+This routine updates your website and pushes it online.
 
 ## Basic Customization
 
