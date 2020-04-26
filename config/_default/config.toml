@@ -20,7 +20,7 @@ copyright = "Matteo Courthoud&copy;"
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "academic-mc"
+theme = "academic"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
