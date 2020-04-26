@@ -22,13 +22,13 @@ In this tutorial I am going to explain how to build a website on [Github](https:
 
 ## Introduction
 
-There are three main options: use RStudio, the Terminal or Netlify. I personally use a combination of RStudio and Terminal since the former is excellent for editing and testing and it's always useful to know how to use the latter. 
+There are three main options: use RStudio, the Terminal or Netlify. I personally use a combination of RStudio and Terminal since the former is excellent for editing and testing and it's always useful to know how to use the latter. The original guide can be found [here](https://sourcethemes.com/academic/docs/install/).
 
 Independently of the method, the first step is to create an account on [Github](https://www.github.com). 
 
 Then, add a new repository (`+` button in the top-right corner) called `namesurname.github.io` using your name and surname. Use the default settings when creating the repository. 
 
-## Option 1: RStudio
+## Create Website
 
 First, you need to have R and RStudio installed.
 
@@ -45,7 +45,7 @@ install.packages("blogdown")
 blogdown::install_hugo()
 ```
 
-### Create website
+### Setup folder
 
 Open RStudio and select:
 
@@ -55,6 +55,10 @@ Open RStudio and select:
   - `Directory name`: here input the name of the folder which will contain all the website files. I called mine `Website`.
   - `Create project as a subdirectory of`: select the directory in which you want to install your website (e.g. `user/Dropbox/`).
   - `Theme`: input `gcushen/hugo-academic` instead of the default theme.
+  
+Alternatively, you can simply go to the [Hugo Academic Github page](https://github.com/gcushen/hugo-academic) and download the content of the page. Copy-paste it into the `Website` folder and you are ready to go.
+
+### Build website
 
 To build the website, open the RProject file in your `Website` folder and type:
 
@@ -123,12 +127,11 @@ This routine updates your website and pushes it online.
 
 The basic files that you want to modify in the `Website` folder are the following
 
-- `config.toml`: website information
- - `baseurl`: insert your domain `namesurname.github.io` here
- - `title`: insert your name and surname `NAME SURNAME`
- - `theme`: by default should be `hugo-academic` but you can create custom themes in the `themes` folder
+- `config/_default/config.toml`: general website information
 - `config/_default/params.toml`: website customization 
+- `config/_default/menu.toml`: website customization 
 - `content/authors/admin/_index.md`: personal information
+
 
 In order to modify the widgets on your homepage, go to `content/home/` and modify the files inside. If you want to remove a section, just delete the corresponding file.
 
@@ -136,17 +139,13 @@ If you need to add other pages, just create a folder inside `content/` and inser
 
 ## Advanced Customization
 
-For the technical inclined.
+I personally advise against advanced customization 
 
 You can take inspiration from my personal repository: https://github.com/matteocourthoud/website.
 
 ## Site Management
 
 Google offers many tools to monitor and manage your website. I personally recommend two of them.
-
-### Google Analytics
-
-The mobile application of Google Analytics is particular intuitive and allows you to monitor your website traffic in detail.
 
 ### Google Search Console
 
@@ -163,6 +162,10 @@ Recommended actions:
 - Under **Sitemap** provide the link to your website sitemap to Google. It should be `https://namesurname.github.io/sitemap.xml`.
 
 Another good free tool to analyze the "quality" of your website is [SEO Mechanic](https://www.seomechanic.com/seo-analyzer/).
+
+### Google Analytics
+
+The mobile application of [Google Analytics](https://analytics.google.com/analytics/web/) is particular intuitive and allows you to monitor your website traffic in detail. You just need to link the website from the [Google Sesarch Console](https://search.google.com/search-console) and then you can motitor you website from this platform. There is also a very nice mobile app to monitor your website from your smartphone.
 
 ## References
 
