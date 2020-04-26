@@ -7,12 +7,8 @@ git config --global user.name matteocourthoud
 
 read -p "Enter commit description: " description
 
-# Remove public directory if it exists
-git submodule update --init --recursive
-rm -r public/
-git submodule add -f -b master https://github.com/matteocourthoud/matteocourthoud.github.io.git public
-
 # Add, commit, push code
+echo
 git add .
 git commit -m $description
 git push -u origin master

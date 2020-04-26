@@ -74,69 +74,10 @@ Previewing the website is very useful as it allows you to see live changes local
 
 ### Publish website
 
-In order to publish the website, you have to push your changes from the `public/` folder to your `namesurname.github.io` repository on Github. There are (at least) three ways of doing it:
+In order to publish the website, you have to push your changes from the `public/` folder to your `namesurname.github.io` repository on Github.
 
-1. **Web browser**: go on the [Github website](https://github.com) and upload the `public/` folder manually. This is the slowest and most cumbersome option.
-2. **Github App**: download the [Github app for desktop](https://desktop.github.com/) and link your `public/` folder with your repository from the app.
-3. **Terminal**: see below. This is the fastest option.
+First, link the `public/` folder to the `namesurname.github.io` repository.
 
-After you have pushed your changes, wait a few seconds (or minutes for heavy changes) and your website should be online.
-
-## Option 2: Terminal
-
-First, make sure you have **homebrew** installed on your machine. What is it? From their [website](https://brew.sh/): "*Homebrew installs the stuff you need that Apple (or your Linux system) didn’t*". Cool!
-
-Type the following line in the Terminal:
-
-```r
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-Now, you can install **hugo**.
-
-```r
-brew install hugo
-```
-
-### Create website
-
-In order to create the website, you have to save the website skeleton in a new folder. This folder will contain all your website files. You can pick any name for the folder (mine is called *Website*).
-
-```r
-# Select the parent folder in which you want to put your Website folder. 
-# For example, Dropbox
-cd Dropbox
-
-# Create a subfolder named Website.
-hugo new site Website
-
-# Enter the newly created Website folder
-cd Website
-
-# Download Academic theme inside
-git clone https://github.com/gcushen/hugo-academic.git themes/academic
-```
-
-Now you can publish your website by calling the `hugo` command.
-```r
-hugo
-```
-
-This command will generate a `public/` subfolder in which the actual code of the website is stored.
-
-If you want to view a *local* preview of your website, use the command:
-
-```r
-hugo server -D
-```
-
-Now you can preview your website at http://localhost:1313.
-
-It's a good practice to have your `Website` folder saved into a Github directory, just in case. Create a new `Website` repository on Github and link it to your local `Website` folder. Then, push all your change into it.
-
-### Publish website
-
-In order to publish the website, you have to link your `public/` subfolder to your git repository.
 ```r
 # Remove public directory if it exists
 rm -r public/
