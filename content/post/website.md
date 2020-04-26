@@ -132,7 +132,7 @@ The basic files that you want to modify in the `Website` folder are the followin
 - `config/_default/menus.toml`: top bar / menu customization 
 - `content/authors/admin/_index.md`: personal information
 
-For what concerns pictures, there are three main things you might wanto to modify:
+For what concerns images, there are three main things you might wanto to modify:
 - Profile picture: insert an `avatar.jpg` picture inside the `content/authors/admin/` folder
 - Website icon: insert a 512x512 `img.png` picture inside the `static/img/` folder 
 - Link preview: insert an `icon.png` picture inside the `assets/images/` file select `sharing_image = "icon.png"`

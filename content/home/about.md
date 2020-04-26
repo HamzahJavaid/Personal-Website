@@ -18,13 +18,6 @@ author = "admin"
   #   Choose a light or dark text color by setting `text_color_light`.
   #   Any HTML color name or Hex value is valid.
 
-  # Background color.
-  # color = "navy"
-
-  # Background gradient.
-  # gradient_start = "DarkGreen"
-  # gradient_end = "ForestGreen"
-
   # Background image.
   image = "grivola1.jpg"  # Name of image in `static/img/`.
   # image_darken = 0.1  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
