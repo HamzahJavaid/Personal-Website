@@ -19,24 +19,24 @@ menu:
 
 ## Introduction
 
-I will use this page to collect information about online seminars and conferences broadly related to Industrial Organization, Competition Policy and Econometrics.
+I will use this page to collect information about online seminars and conferences in Economics.
 
 If you know about public conferences or seminars that are missing from this list, please [contact me](mailto:matteo.courthoud@econ.uzh.ch)!
 
-A full updated list of publicly available online seminars and conferences in economics, beyond Industrial Organization, can be found here: [https://virtual-econ.info/](https://virtual-econ.info/).
+A full updated list of publicly available online seminars and conferences in economics can be found at [virtual-econ.info](https://virtual-econ.info/) and at [aeaweb.org](https://www.aeaweb.org/resources/online-seminars).
 
 
 ## Seminars
 
 | Seminar | Field | Day | Time (CET) | Registration | Recorded |
 |---------|-------|-----|------------|--------------|----------|
-| [Virtual Market Design Seminar Series](http://virtual-md-seminar.com/) | Theory | Monday | 16:00 | [Yes](http://virtual-md-seminar.com/registration.html) | [Yes](http://virtual-md-seminar.com/) |
+| [Virtual Market Design Seminar Series](http://virtual-md-seminar.com/) | Theory | Monday | 16:00 | [Yes](http://virtual-md-seminar.com/registration.html) | No |
 | [Virtual Quantitative Marketing Seminar](https://vquantmarketing.substack.com/) | Marketing | Monday | 17:30 | [Yes](https://vquantmarketing.substack.com/) | No |
 | [Search and Matching in Macro and Finance Virtual Seminar Series](https://sammf.com/) | Macro | Monday | 18:00 | [Yes](https://sammf.com/sign-up/) | No |
 | [Online Causal Inference Seminar](https://sites.google.com/view/ocis/) | Metrics | Tuesday | 16:30 | [Yes](https://www.google.com/url?q=https%3A%2F%2Fmailman.stanford.edu%2Fmailman%2Flistinfo%2Fonline-causal-inference-seminar&sa=D&sntz=1&usg=AFQjCNGgPMLB-5Iv0SRBiJHXlIhxo2ta2A) | [Yes](https://sites.google.com/view/ocis/past-talks-and-recordings?authuser=0) |
 | [Virtual Macro Seminar Series](https://sites.google.com/view/virtualmacro/)                                                                          | Macro   | Tuesday   | 18:00    | [Yes](https://www.google.com/url?q=https%3A%2F%2Fstockholmuniversity.zoom.us%2Fwebinar%2Fregister%2F7815862675026%2FWN_yNkq5FpES9yJjpjdqYWFbA&sa=D&sntz=1&usg=AFQjCNHWMu_cBPhLdq_uqy1eugAzEy2bzg) | [Yes](https://sites.google.com/view/virtualmacro/past-seminars)                                                  |
 | [Interactive Online IO Seminar (IO^2)](https://web.stanford.edu/~leinav/teaching/IOIOspring2020.pdf)                                                 | IO      | Tuesday   | 21:00    | [Yes](https://stanford.zoom.us/webinar/register/WN_A85qA0DSQmmJeHBimyw2MQ)                                                                                                                        | No                                                                                                               |
-| [CEPR Virtual IO Seminar (VIOS)](https://sites.google.com/view/virtual-io-seminar/)                                                                  | IO      | Wednesday | 16:00    | [Yes](https://drive.google.com/open?id=1-dtGhiM2EqtXnkTztoLzDO7cNB_ekOFfbuckSSIotxU)                                                                                                              | [Yes](https://sites.google.com/view/virtual-io-seminar/previous-talks)                                           |
+| [CEPR Virtual IO Seminar (VIOS)](https://sites.google.com/view/virtual-io-seminar/)                                                                  | IO      | Wednesday | 16:00    | [Yes](https://drive.google.com/open?id=1-dtGhiM2EqtXnkTztoLzDO7cNB_ekOFfbuckSSIotxU)                                                                                                              | No                                           |
 | [ONLINE Economics Research Seminar (JKU)](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) | Econ    | Wednesday | 16:00    | [Yes](mailto:alexander.ahammer@jku.at) | [Yes](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) |
 | [TCS+](https://sites.google.com/site/plustcs/)                                                                                                       | CS      | Wednesday | 19:00    | [Yes](https://sites.google.com/site/plustcs/livetalk/live-seat-reservation)                                                                                                                       | [Yes](https://sites.google.com/site/plustcs/past-talks)                                                          |
 | [Caltech Economic Theory at the Time of Cholera](http://tamuz.caltech.edu/cettc/)                                                                    | Theory  | Wednesday | 21:00    | No                                                                                                                                                                                                | [Yes](http://tamuz.caltech.edu/cettc/#x1-50003)                                                                  |
