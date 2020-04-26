@@ -125,21 +125,33 @@ This routine updates your website and pushes it online.
 
 ## Basic Customization
 
-The basic files that you want to modify in the `Website` folder are the following
+The basic files that you want to modify in the `Website` folder are the following:
 
 - `config/_default/config.toml`: general website information
 - `config/_default/params.toml`: website customization 
-- `config/_default/menu.toml`: website customization 
+- `config/_default/menus.toml`: top bar / menu customization 
 - `content/authors/admin/_index.md`: personal information
 
+For what concerns pictures, there are three main things you might wanto to modify:
+- Profile picture: insert an `avatar.jpg` picture inside the `content/authors/admin/` folder
+- Website icon: insert a 512x512 `img.png` picture inside the `static/img/` folder 
+- Link preview: insert an `icon.png` picture inside the `assets/images/` file select `sharing_image = "icon.png"`
 
-In order to modify the widgets on your homepage, go to `content/home/` and modify the files inside. If you want to remove a section, just delete the corresponding file.
+In order to modify the widgets on your homepage, go to `content/home/` and modify the files inside. If you want to remove a section, just open the corresponding file and select `active=false`.
 
-If you need to add other pages, just create a folder inside `content/` and insert a `_index.md` file inside. If you want to create subfolders, just remember that each one should have its own `_index.md` inside.
+You can generate three different types of content, each one corresponding to a subfolder in the `content/` folder:
+- `post`: blog posts
+- `publication`: academic publications
+- `talk`: academic talks
+
+I recomment to explore the sample website and proceed by trial and error.
 
 ## Advanced Customization
 
-I personally advise against advanced customization 
+I personally advise against advanced customization but here are a few things one can edit. First, you have to go inside the `theme/academic/` folder. Depending on the installation procedure, the subfolder name might differ.
+- `data\themes\` folder. Here you can find the original themes. Select the one you want to modify and copy it in `data\themes` in the main folder. For each theme, you can modify its colors as you prefer. A useful page to select the colors is [HTML Colors](https://htmlcolorcodes.com/). 
+- `data\fonts\` folder. Here you can find the original themes. Select the one you want to modify and copy it in `data\fonts` in the main folder. A useful page to select fonts is [Google Fonts](https://fonts.google.com/). 
+- `layout\partials\` folder. Here you can modify the structure of the different pages. Say for example that you want to modify the "powered by Academic theme for Hugo" footer in the front page. Open `site_footer.html` and you can modify (or remove) it. 
 
 You can take inspiration from my personal repository: https://github.com/matteocourthoud/website.
 

@@ -42,12 +42,20 @@
   enable = true
 
 [[buttons]]
+  id = "telegram"
+  url = "https://t.me/share/url?url={url}&text={text}"
+  title = "Telegram"
+  icon_pack = "fab"
+  icon = "telegram"
+  enable = true
+
+[[buttons]]
   id = "weibo"
   url = "https://service.weibo.com/share/share.php?url={url}&title={title}"
   title = "Weibo"
   icon_pack = "fab"
   icon = "weibo"
-  enable = true
+  enable = false
 
 [[buttons]]
   id = "reddit"

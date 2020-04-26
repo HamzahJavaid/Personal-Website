@@ -34,7 +34,7 @@
 [[main]]
   name = "How To Build A Website"
   parent = "post"
-  URL = "post/website_tutorial"
+  URL = "post/website"
   weight = 1
 
 [[main]]
