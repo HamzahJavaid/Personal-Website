@@ -30,6 +30,7 @@ A full updated list of publicly available online seminars and conferences in eco
 
 | Seminar | Field | Day | Time (CET) | Registration | Recorded |
 |---------|-------|-----|------------|--------------|:---------|
+| [Virtual Behavioral Economics Seminar (VIBES)](https://sites.google.com/view/vibesecon/) | Behavioral | Monday | 16:00 | [Yes](https://forms.gle/nAE6VLEZQqeRkSuK6) | No |
 | [Virtual Market Design Seminar Series](http://virtual-md-seminar.com/) | Theory | Monday | 16:00 | [Yes](http://virtual-md-seminar.com/registration.html) | No |
 | [Virtual Quantitative Marketing Seminar](https://vquantmarketing.substack.com/) | Marketing | Monday | 17:30 | [Yes](https://vquantmarketing.substack.com/) | No |
 | [Search and Matching in Macro and Finance Virtual Seminar Series](https://sammf.com/) | Macro | Monday | 18:00 | [Yes](https://sammf.com/sign-up/) | No |
