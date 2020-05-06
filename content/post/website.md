@@ -56,6 +56,7 @@ Open RStudio and select:
   - `Create project as a subdirectory of`: select the directory in which you want to install your website (e.g. `user/Dropbox/`).
   - `Theme`: input `gcushen/hugo-academic` instead of the default theme.
   
+
 Alternatively, you can simply go to the [Hugo Academic Github page](https://github.com/gcushen/hugo-academic) and download the content of the page. Copy-paste it into the `Website` folder and you are ready to go.
 
 ### Build website
@@ -83,6 +84,9 @@ In order to publish the website, you have to push your changes from the `public/
 First, link the `public/` folder to the `namesurname.github.io` repository.
 
 ```r
+# Init git in the \Website folder
+git init
+
 # Remove public directory if it exists
 rm -r public/
 
