@@ -45,7 +45,7 @@ A full updated list of publicly available online seminars and conferences in eco
 | [TCS+](https://sites.google.com/site/plustcs/) | Computer Science | Wednesday | 19:00 | [Yes](https://sites.google.com/site/plustcs/livetalk/live-seat-reservation) | [Yes](https://sites.google.com/site/plustcs/past-talks) |
 | [Caltech Economic Theory at the Time of Cholera](http://tamuz.caltech.edu/cettc/) | Theory  | Wednesday | 21:00    | No | [Yes](http://tamuz.caltech.edu/cettc/#x1-50003) |
 | [MaCCI EPoS Virtual IO Seminar](https://sites.google.com/view/macci-epos-virtual-io-seminar) | IO | Thursday | 15:00 | [Yes](https://sites.google.com/view/macci-epos-virtual-io-seminar/program/registration) | No |
-| [Virtual Digital Economy Seminar (VIDE)](https://sites.google.com/view/videseminar) | Media | Thursday | 16:00 | [Yes](https://sites.google.com/view/videseminar/mailing-list) | [Yes](https://sites.google.com/view/videseminar/past-seminars) |
+| [Virtual Digital Economy Seminar (VIDE)](https://www.digitalecon.org/seminar) | Media | Thursday | 16:00 | [Yes](https://www.digitalecon.org/seminar) | [Yes](https://www.digitalecon.org/seminar/past-seminars) |
 | [MiddExLab Virtual Seminar Series](http://middexlab.weebly.com/virtual-seminar-series.html) | Experimental | Thursday | 18:00 | [Yes](http://middexlab.weebly.com/virtual-seminar-series.html) | No |
 | [Virtual International Trade and Macro Seminar](https://www.tradedynamics.org/) | Macro | Thursday | 20:00 | [Yes](https://forms.gle/uiNjSptWjvucDbHSA) | [Yes](https://www.tradedynamics.org/video-archive) |
 | [Interactive Online IO Seminar (IO^2)](https://web.stanford.edu/~leinav/teaching/IOIOspring2020.pdf) | IO | Friday | 16:00 | [Yes](https://stanford.zoom.us/webinar/register/WN_Tb_FyMJ1RCeNF1HmCVvjMQ) | No |
