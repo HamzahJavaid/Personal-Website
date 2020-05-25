@@ -19,7 +19,7 @@ menu:
 
 ## Introduction
 
-I will use this page to collect information about online seminars and conferences in Economics.
+I will use this page to collect information about online seminars and conferences in Economics and Finance.
 
 If you know about public conferences or seminars that are missing from this list, please [contact me](mailto:matteo.courthoud@econ.uzh.ch)!
 
