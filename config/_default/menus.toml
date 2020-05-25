@@ -50,7 +50,7 @@
   weight = 3
 
 [[main]]
-  name = "Web Seminars"
+  name = "Online Seminars"
   parent = "post"
   URL = "post/webinars"
   weight = 4
