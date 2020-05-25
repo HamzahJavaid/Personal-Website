@@ -1,7 +1,7 @@
 ---
 
-title: Online Economics Seminars
-linktitle: Web Seminars
+title: Online Seminars in Economics and Finance
+linktitle: Online Seminars
 toc: true
 date: "2020-04-02"
 draft: false
@@ -23,7 +23,7 @@ I will use this page to collect information about online seminars and conference
 
 If you know about public conferences or seminars that are missing from this list, please [contact me](mailto:matteo.courthoud@econ.uzh.ch)!
 
-A full updated list of publicly available online seminars and conferences in economics can be found at [virtual-econ.info](https://virtual-econ.info/) and at [aeaweb.org](https://www.aeaweb.org/resources/online-seminars).
+Other great resources to find online Economics Seminars are [virtual-econ.info](https://virtual-econ.info/) and at [aeaweb.org](https://www.aeaweb.org/resources/online-seminars).
 
 
 ## Seminars
@@ -42,6 +42,7 @@ A full updated list of publicly available online seminars and conferences in eco
 | [CEPR Virtual IO Seminar (VIOS)](https://sites.google.com/view/virtual-io-seminar/) | IO      | Wednesday | 16:00    | [Yes](https://drive.google.com/open?id=1-dtGhiM2EqtXnkTztoLzDO7cNB_ekOFfbuckSSIotxU) | No |
 | [ONLINE Economics Research Seminar (JKU)](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) | Applied | Wednesday | 16:00    | [Yes](mailto:alexander.ahammer@jku.at) | [Yes](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) |
 | [Virtual AFE Seminar Series](https://economics.uchicago.edu/content/afe-seminar-series) | Experimental | Wednesday | 18:00 | [Yes](https://economics.uchicago.edu/content/afe-2020) | No |
+| [Virtual Finance Theory Seminar](https://drive.google.com/file/d/1FEnt42opuzpQiJtPUF1lHqN3Zdp9mdhZ/view) | Finance | Wednesday | 18:00 | [Yes](mailto:[virtualfinancetheoryseminar.com](mailto:mail@virtualfinancetheoryseminar.com)) | No |
 | [TCS+](https://sites.google.com/site/plustcs/) | Computer Science | Wednesday | 19:00 | [Yes](https://sites.google.com/site/plustcs/livetalk/live-seat-reservation) | [Yes](https://sites.google.com/site/plustcs/past-talks) |
 | [Caltech Economic Theory at the Time of Cholera](http://tamuz.caltech.edu/cettc/) | Theory  | Wednesday | 21:00    | No | [Yes](http://tamuz.caltech.edu/cettc/#x1-50003) |
 | [MaCCI EPoS Virtual IO Seminar](https://sites.google.com/view/macci-epos-virtual-io-seminar) | IO | Thursday | 15:00 | [Yes](https://sites.google.com/view/macci-epos-virtual-io-seminar/program/registration) | No |
