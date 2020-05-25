@@ -13,11 +13,16 @@ git add .
 git commit -m $description
 git push -u origin master
 
-# Build book
-cd courses/econometrics
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
-cd -
+# Ask to build book
+read -p "Re-build econometrics notes? [y/n]" answer
+if [[ $answer = y ]]
+then
+ # Build book
+ cd courses/econometrics
+ Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+ Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
+ cd -
+fi
 
 # Update website
 echo
