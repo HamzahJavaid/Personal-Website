@@ -26,11 +26,11 @@ There are three main options: use RStudio, the Terminal or Netlify. I personally
 
 Independently of the method, the first step is to create an account on [Github](https://www.github.com). 
 
-Then, add a new repository (`+` button in the top-right corner) called `namesurname.github.io` using your name and surname. Use the default settings when creating the repository. 
+Then, add a new repository (`+` button in the top-right corner) called `username.github.io` where `username` is your Github username. In my case, my github username is `matteocourthoud`, therefore the repository is `matteocourthoud.github.io` and my personal website is https://matteocourthoud.github.io Use the default settings when creating the repository. 
 
 ## Create Website
 
-First, you need to have R and RStudio installed.
+First, I highly recomment to have R and RStudio installed.
 
 - Download R form [https://www.r-project.org](https://www.r-project.org/)
 - Download RStudio from [https://www.rstudio.com](https://www.rstudio.com/)
@@ -159,29 +159,44 @@ I personally advise against advanced customization but here are a few things one
 
 You can take inspiration from my personal repository: https://github.com/matteocourthoud/website.
 
-## Site Management
+## Google Analytics
 
-Google offers many tools to monitor and manage your website. I personally recommend two of them.
+In order for the website to be displayed in Google searches, you need to ask Google to track it. 
 
-### Google Search Console
-
-You can access the page here: https://search.google.com/search-console.
-
-This tool allows you to check whether your page is online and to receive useful SEO suggestions by Google.
-
-In order for the website to be tracked, you need to request a Google Analytics identifyier and insert it into the `googleAnalytics` section of the `config.toml` file.
-
-Recommended actions: 
-
-- First, inspect your URL `https://namesurname.github.io` using the URL Inspection tool.
+- Go to the [Google Search Console website](https://search.google.com/search-console)
+- Use the [URL Inspection tool](https://search.google.com/search-console?action=inspect) to inspect the URL of your personal website: `https://username.github.io` 
 - Use **Request indexing** to request Google to index your website so that it will apprear in Google searches.
-- Under **Sitemap** provide the link to your website sitemap to Google. It should be `https://namesurname.github.io/sitemap.xml`.
+- Under **Sitemap** provide the link to your website sitemap to Google. It should be `https://username.github.io/sitemap.xml`.
+
+In order to receive statistics on your website, you first need to get your associated tracking code. 
+
+- Go to the [Google Analytics website](https://www.google.com/analytics/web/#home/)
+- Click [Admin](https://support.google.com/analytics/answer/6132368)
+- Select an account from the menu in the **ACCOUNT** column.
+- Select a property from the menu in the **PROPERTY** column.
+- Under **PROPERTY**, click Tracking Info > Tracking Code.
+- Your tracking ID and property number are displayed at the top of the page. It should have the form `UA-xxxxxxxxx-1`
+
+Now that we have the website tracking code, we need to insert it into the `googleAnalytics` section of the `param.toml` file.
+
+```r
+[marketing]
+  google_analytics = "UA-xxxxxxxxx-1"
+  google_tag_manager = ""
+```
+
+<u>IMPORTANT!</u> It seems that a bug makes the website not trackable unless you comment out the Google Tag Manager option.
+
+```r
+[marketing]
+  google_analytics = "UA-xxxxxxxxx-1"
+  #google_tag_manager = ""
+```
+
+The mobile application of [Google Analytics](https://analytics.google.com/analytics/web/) is particular intuitive and allows you to monitor your website traffic in detail. You just need to link the website from the [Google Sesarch Console](https://search.google.com/search-console) and then you can motitor you website from this platform. There is also a very nice mobile app for both [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.giant) and [iOS](https://apps.apple.com/us/app/google-analytics/id881599038) to monitor your website from your smartphone.
 
 Another good free tool to analyze the "quality" of your website is [SEO Mechanic](https://www.seomechanic.com/seo-analyzer/).
 
-### Google Analytics
-
-The mobile application of [Google Analytics](https://analytics.google.com/analytics/web/) is particular intuitive and allows you to monitor your website traffic in detail. You just need to link the website from the [Google Sesarch Console](https://search.google.com/search-console) and then you can motitor you website from this platform. There is also a very nice mobile app to monitor your website from your smartphone.
 
 ## References
 
