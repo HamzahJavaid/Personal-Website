@@ -56,6 +56,12 @@
   weight = 4
 
 [[main]]
+  name = "test"
+  parent = "post"
+  URL = "post/test"
+  weight = 5
+
+[[main]]
   name = "CV"
   url = "files/cv.pdf"
   weight = 5
