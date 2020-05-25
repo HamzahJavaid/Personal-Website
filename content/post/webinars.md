@@ -29,7 +29,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 ## Seminars
 
 | Seminar | Field | Day | Time (CET) | Registration | Recorded |
-|---------|-------|-----|------------|--------------|:---------|
+|:-------:|:-----:|:---:|:----------:|:------------:|:--------:|
 | [Virtual Market Design Seminar Series](http://virtual-md-seminar.com/) | Theory | Monday | 16:00 | [Yes](http://virtual-md-seminar.com/registration.html) | No |
 | [Virtual Behavioral Economics Seminar (VIBES)](https://sites.google.com/view/vibesecon/) | Behavioral | Monday | 17:00 | [Yes](https://forms.gle/nAE6VLEZQqeRkSuK6) | No |
 | [Virtual Quantitative Marketing Seminar](https://vquantmarketing.substack.com/) | Marketing | Monday | 17:30 | [Yes](https://vquantmarketing.substack.com/) | No |
