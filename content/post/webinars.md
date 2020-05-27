@@ -43,7 +43,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 | [Labor & Finance Online Seminar](https://sites.google.com/view/lfos) | Labor | Tuesday | 19:15 | [Yes](https://sites.google.com/view/lfos/register) | No |
 | [Interactive Online IO Seminar (IO^2)](https://web.stanford.edu/~leinav/teaching/IOIOspring2020.pdf) | IO | Tuesday | 21:00 | [Yes](https://stanford.zoom.us/webinar/register/WN_A85qA0DSQmmJeHBimyw2MQ) | No |
 | [CEPR Virtual IO Seminar (VIOS)](https://sites.google.com/view/virtual-io-seminar/) | IO | Wednesday | 16:00 | [Yes](https://drive.google.com/open?id=1-dtGhiM2EqtXnkTztoLzDO7cNB_ekOFfbuckSSIotxU) | No |
-| [CEPS Political Economy Seminar Series](https://mailchi.mp/cepr/cepr-webinar-polecon-series-reminder) | Political | Wednesday | 16:00 | [Yes](https://zoom.us/webinar/register/WN_3MqzgQR2RQ-1nu8DD2LxeA) | No |
+| [CEPR Political Economy Seminar Series](https://mailchi.mp/cepr/cepr-webinar-polecon-series-reminder) | Political | Wednesday | 16:00 | [Yes](https://zoom.us/webinar/register/WN_3MqzgQR2RQ-1nu8DD2LxeA) | No |
 | [ONLINE Economics Research Seminar (JKU)](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) | Applied | Wednesday | 16:00 | [Yes](mailto:alexander.ahammer@jku.at) | [Yes](https://www.jku.at/en/department-of-economics/research/research-events/online-economics-research-seminar/) |
 | [Virtual AFE Seminar Series](https://economics.uchicago.edu/content/afe-seminar-series) | Experimental | Wednesday | 18:00 | [Yes](https://economics.uchicago.edu/content/afe-2020) | No |
 | [Virtual Finance Theory Seminar](https://drive.google.com/file/d/1FEnt42opuzpQiJtPUF1lHqN3Zdp9mdhZ/view) | Finance | Wednesday | 18:00 | [Yes](mailto:[virtualfinancetheoryseminar.com](mailto:mail@virtualfinancetheoryseminar.com)) | No |
@@ -70,7 +70,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 | [John Von Neumann Lecture 2020](https://gametheory.online/project_show/40) | Market Design | 29 May 2020 | No | No |
 | [Canadian Economic Theory Conference 2020](https://www.economics.utoronto.ca/conferences/index.php/cetc/2020) | Theory | 8-10 May 2020 | No | 10 April 2020 |
 | [HEC Paris Spring Finance Conference](https://www.hec.edu/en/news-room/hec-paris-spring-finance-online-conference) | Finance | 23 April 2020 | [Yes](https://zoom.us/webinar/register/WN_8xeT7qlyS3WUpz9wUWrDQg) | Passed |
-| [Virtual Finance and Economics Conference 2020](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Finance | 17 April 2020 | No | 25 March 2020 | 
+| [Virtual Finance and Economics Conference 2020](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Finance | 17 April 2020 | No | 25 March 2020 |
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | IO | 03 March 2020 | [Yes](https://sites.google.com/view/dc-io-day) | Passed |
 
 
