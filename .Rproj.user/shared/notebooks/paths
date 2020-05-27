@@ -4,6 +4,7 @@
 /Users/macbook/Dropbox/Website/content/authors/admin/_index.md="18A0CE2C"
 /Users/macbook/Dropbox/Website/content/home/about.md="DB7ACEFB"
 /Users/macbook/Dropbox/Website/content/home/demo.md="940E98C5"
+/Users/macbook/Dropbox/Website/content/home/posts.md="EDE36E56"
 /Users/macbook/Dropbox/Website/content/home/publications.md="716BD81"
 /Users/macbook/Dropbox/Website/content/home/skills.md="247F505D"
 /Users/macbook/Dropbox/Website/content/post/webinars.md="2342F311"
@@ -11,3 +12,5 @@
 /Users/macbook/Dropbox/Website/data/fonts/custom.toml="E9AAE93F"
 /Users/macbook/Dropbox/Website/data/page_sharer.toml="59406C8D"
 /Users/macbook/Dropbox/Website/data/themes/custom.toml="293C274"
+/Users/macbook/Dropbox/Website/themes/academic/layouts/partials/widgets/about.html="CF81A51"
+/Users/macbook/Dropbox/Website/themes/academic/layouts/partials/widgets/featurette.html="8CCF004F"
