@@ -58,7 +58,6 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 
 
 
-
 ## Conferences
 
 ### DC IO Day

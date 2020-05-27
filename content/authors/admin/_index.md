@@ -31,7 +31,7 @@ education:
   courses:
   - course: PhD in Economics
     institution: University of Zurich
-    year: 2022 (expected)
+    year: 2022*
   - course: MSc in Economics
     institution: Bocconi University
     year: 2016
