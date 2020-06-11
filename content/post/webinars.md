@@ -79,7 +79,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 
 ## Lectures
 
-| Lecture                                                      | Field | Day      | Time (CET) | Registration | Recorded |
-| ------------------------------------------------------------ | ----- | -------- | ---------- | ------------ | -------- |
-| [2020 Lectures on Urban Economics](http://www.urbaneconomics.org/meetings/lectures2020/) | Urban | Thursday | 17:00      | No           | No       |
+| Lecture | Field | Day | Time (CET) | Registration | Recorded |
+|:--------|-------|:----|:----------:|:------------:|:--------:|
+| [2020 Lectures on Urban Economics](http://www.urbaneconomics.org/meetings/lectures2020/) | Urban | Thursday | 17:00 | No | No |
 
