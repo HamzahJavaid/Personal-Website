@@ -1,5 +1,5 @@
 # Directory
-cd dropbox/website/
+cd dropbox/code/website/
 
 # Set git
 git config --global user.email matteo.courthoud@uzh.ch
