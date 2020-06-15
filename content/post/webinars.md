@@ -67,6 +67,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 
 | Conference | Field | Date | Registration | Deadline |
 |:-----------|-------|:-----|:------------:|:--------:|
+| [Economics and Computation](http://ec20.sigecom.org/) | Computation | 13-17 July | [Yes](http://ec20.sigecom.org/participation/registration/) | - |
 | [NBER Summer Institute 2020](http://conference.nber.org/confer/2020/SI2020/SI2020.html) | All | 6-25 July 2020 | No | - |
 | [Conference on Mechanism and Institution Design 2020 (CMID20)](https://conference2.aau.at/event/4/) | Market Design | 11-13 June 2020 | [Yes](https://conference2.aau.at/event/4/registrations/10/) | - |
 | [John Von Neumann Lecture 2020](https://gametheory.online/project_show/40) | Market Design | 29 May 2020 | No | No |
