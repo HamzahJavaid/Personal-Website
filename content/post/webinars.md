@@ -65,16 +65,18 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 
 ## Conferences
 
-| Conference | Field | Date | Registration | Deadline |
-|:-----------|-------|:-----|:------------:|:--------:|
-| [Economics and Computation](http://ec20.sigecom.org/) | Computation | 13-17 July | [Yes](http://ec20.sigecom.org/participation/registration/) | - |
-| [NBER Summer Institute 2020](http://conference.nber.org/confer/2020/SI2020/SI2020.html) | All | 6-25 July 2020 | No | - |
-| [Conference on Mechanism and Institution Design 2020 (CMID20)](https://conference2.aau.at/event/4/) | Market Design | 11-13 June 2020 | [Yes](https://conference2.aau.at/event/4/registrations/10/) | - |
-| [John Von Neumann Lecture 2020](https://gametheory.online/project_show/40) | Market Design | 29 May 2020 | No | No |
-| [Canadian Economic Theory Conference 2020](https://www.economics.utoronto.ca/conferences/index.php/cetc/2020) | Theory | 8-10 May 2020 | No | 10 April 2020 |
-| [HEC Paris Spring Finance Conference](https://www.hec.edu/en/news-room/hec-paris-spring-finance-online-conference) | Finance | 23 April 2020 | [Yes](https://zoom.us/webinar/register/WN_8xeT7qlyS3WUpz9wUWrDQg) | Passed |
-| [Virtual Finance and Economics Conference 2020](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Finance | 17 April 2020 | No | 25 March 2020 |
-| [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | IO | 03 March 2020 | [Yes](https://sites.google.com/view/dc-io-day) | Passed |
+| Conference | Field | Date | Registration |
+|:-----------|-------|:-----|:------------:|
+| [Economics and Computation](http://ec20.sigecom.org/) | Computation | 13-17 July | [Yes](http://ec20.sigecom.org/participation/registration/) |
+| [NBER Summer Institute 2020](http://conference.nber.org/confer/2020/SI2020/SI2020.html) | All | 6-25 July 2020 | No |
+| [SITE 2020](https://site.stanford.edu/) | All | 6 July - 11 September 2020 | [Yes](https://forms.gle/DeV1wqdpVXKAFSnK7) |
+| [BCCP Virtual Mini Conference](https://www.bccp-berlin.de/events/all-events/events-detail/bccp-virtual-mini-conference-2020/) | Media | 26 June 2020 | No |
+| [Conference on Mechanism and Institution Design 2020 (CMID20)](https://conference2.aau.at/event/4/) | Market Design | 11-13 June 2020 | [Yes](https://conference2.aau.at/event/4/registrations/10/) |
+| [John Von Neumann Lecture 2020](https://gametheory.online/project_show/40) | Market Design | 29 May 2020 | No |
+| [Canadian Economic Theory Conference 2020](https://www.economics.utoronto.ca/conferences/index.php/cetc/2020) | Theory | 8-10 May 2020 | No |
+| [HEC Paris Spring Finance Conference](https://www.hec.edu/en/news-room/hec-paris-spring-finance-online-conference) | Finance | 23 April 2020 | [Yes](https://zoom.us/webinar/register/WN_8xeT7qlyS3WUpz9wUWrDQg) |
+| [Virtual Finance and Economics Conference 2020](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Finance | 17 April 2020 | No |
+| [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | IO | 03 March 2020 | [Yes](https://sites.google.com/view/dc-io-day) |
 
 
 
