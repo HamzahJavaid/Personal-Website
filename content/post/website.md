@@ -108,14 +108,13 @@ Wait a few seconds (or minutes for heavy changes) and your website should be onl
 
 ### Automation
 
-In general, to automate your website publishment, I suggest creating a shell script `update_website.sh` with the following code inside:
+In general, to automate your website updates, I suggest creating a shell script `update_website.sh` with the following code inside:
 
 ```r
 # Directory
 cd Dropbox/Website
 
 # Update website
-echo
 hugo
 
 # Publish website
@@ -136,10 +135,10 @@ The basic files that you want to modify in the `Website` folder are the followin
 - `config/_default/menus.toml`: top bar / menu customization 
 - `content/authors/admin/_index.md`: personal information
 
-For what concerns images, there are three main things you might wanto to modify:
+For what concerns images, there are three main things you might want to modify:
 - Profile picture: insert an `avatar.jpg` picture inside the `content/authors/admin/` folder
 - Website icon: insert a 512x512 `img.png` picture inside the `static/img/` folder 
-- Link preview: insert an `icon.png` picture inside the `assets/images/` file select `sharing_image = "icon.png"`
+- Link preview: insert an `icon.png` picture inside the `assets/images/` folder and in the `config/_default/params.toml` select `sharing_image = "icon.png"`
 
 In order to modify the widgets on your homepage, go to `content/home/` and modify the files inside. If you want to remove a section, just open the corresponding file and select `active=false`.
 
@@ -154,7 +153,7 @@ I recomment to explore the sample website and proceed by trial and error.
 
 I personally advise against advanced customization but here are a few things one can edit. First, you have to go inside the `theme/academic/` folder. Depending on the installation procedure, the subfolder name might differ.
 - `data\themes\` folder. Here you can find the original themes. Select the one you want to modify and copy it in `data\themes` in the main folder. For each theme, you can modify its colors as you prefer. A useful page to select the colors is [HTML Colors](https://htmlcolorcodes.com/). 
-- `data\fonts\` folder. Here you can find the original themes. Select the one you want to modify and copy it in `data\fonts` in the main folder. A useful page to select fonts is [Google Fonts](https://fonts.google.com/). 
+- `data\fonts\` folder. Here you can find the original fonts. Select the one you want to modify and copy it in `data\fonts` in the main folder. A useful page to select fonts is [Google Fonts](https://fonts.google.com/). 
 - `layout\partials\` folder. Here you can modify the structure of the different pages. Say for example that you want to modify the "powered by Academic theme for Hugo" footer in the front page. Open `site_footer.html` and you can modify (or remove) it. 
 
 You can take inspiration from my personal repository: https://github.com/matteocourthoud/website.
@@ -177,7 +176,7 @@ In order to receive statistics on your website, you first need to get your assoc
 - Under **PROPERTY**, click Tracking Info > Tracking Code.
 - Your tracking ID and property number are displayed at the top of the page. It should have the form `UA-xxxxxxxxx-1`
 
-Now that we have the website tracking code, we need to insert it into the `googleAnalytics` section of the `param.toml` file.
+Now that we have the website tracking code, we need to insert it into the `googleAnalytics` section of the `config/_default/params.toml` file.
 
 ```r
 [marketing]
@@ -200,7 +199,7 @@ Another good free tool to analyze the "quality" of your website is [SEO Mechanic
 
 ## References
 
-Here are some references:
+Here are the main resources I used to write this guide:
 
  - Official Academic website: https://sourcethemes.com/academic/docs/install/
  - Official Bookdown website: https://bookdown.org/yihui/blogdown/installation.html
