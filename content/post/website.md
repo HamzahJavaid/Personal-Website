@@ -1,6 +1,6 @@
 ---
 
-title: How To Build A Website
+title: How To Build A Personal Website with Hugo
 linktitle: How To Build A Website
 toc: true
 date: "2019-08-16"
@@ -18,7 +18,7 @@ menu:
 
 ---
 
-In this tutorial I am going to explain how to build a website on [Github](https://www.github.com) using [Academic](https://sourcethemes.com/academic/) theme from [Hugo](https://gohugo.io/).
+In this tutorial I am going to explain how to build a personal page on [Github](https://www.github.com) using the [Academic](https://sourcethemes.com/academic/) theme from [Hugo](https://gohugo.io/).
 
 ## Introduction
 
