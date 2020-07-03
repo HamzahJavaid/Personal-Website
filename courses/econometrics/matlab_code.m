@@ -258,9 +258,9 @@ end
 figure
 set(gcf,'position',[0,0,1000,500])
 subplot(1,3,1)
-hist(alpha_short, 20), title(['alpha short'],'fontsize',12)
-subplot(1,3,2)
 hist(alpha_long, 20), title(['alpha long'],'fontsize',12)
+subplot(1,3,2)
+hist(alpha_short, 20), title(['alpha short'],'fontsize',12)
 xlabel(['alpha=',num2str(alpha),', beta=',num2str(beta),', gamma=',num2str(gamma),', n=',num2str(n)], 'fontsize',10)
 subplot(1,3,3)
 hist(alpha_pretest, 20), title(['alpha pre-test'],'fontsize',12)

@@ -236,7 +236,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
 <li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="lecture5.html"><a href="lecture5.html#matlab-8"><i class="fa fa-check"></i><b>8.3.1</b> <code>Matlab</code></a></li>
+</ul></li>
 <li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
@@ -488,7 +490,7 @@ On the other hand, if <span class="math inline">\(h \simeq n\)</span>, <span cla
 <p><strong>Example</strong>:
 How to choose <span class="math inline">\(h\)</span>? Look at the score autocorrelation function (ACF).</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb5-1"><a href="lecture2.html#cb5-1"></a><span class="co">% Set seed</span></span>
-<span id="cb5-2"><a href="lecture2.html#cb5-2"></a>seed(<span class="fl">123</span>)</span>
+<span id="cb5-2"><a href="lecture2.html#cb5-2"></a>rng(<span class="fl">123</span>)</span>
 <span id="cb5-3"><a href="lecture2.html#cb5-3"></a></span>
 <span id="cb5-4"><a href="lecture2.html#cb5-4"></a><span class="co">% Autocorrelated process</span></span>
 <span id="cb5-5"><a href="lecture2.html#cb5-5"></a>X = rand(<span class="fl">1000</span>,<span class="fl">1</span>);</span>
