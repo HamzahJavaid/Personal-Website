@@ -91,7 +91,7 @@ git init
 rm -r public/
 
 # Add git submodule
-git submodule add -f -b master https://github.com/namesurname/namesurname.github.io.git public
+git submodule add -f -b master https://github.com/namesurname/namesurname.github.io public
 ```
 
 To publish it, just push your `public/` subfolder to git
