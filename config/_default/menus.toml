@@ -52,15 +52,21 @@
 [[main]]
   name = "Online Seminars"
   parent = "post"
-  URL = "post/webinars"
+  URL = "post/seminars"
+  weight = 4
+
+[[main]]
+  name = "Online Conferences"
+  parent = "post"
+  URL = "post/conferences"
   weight = 4
 
 [[main]]
   name = "CV"
   url = "files/cv.pdf"
-  weight = 5
+  weight = 1
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 1
