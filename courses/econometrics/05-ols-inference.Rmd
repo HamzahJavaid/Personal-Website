@@ -245,7 +245,7 @@ How to choose $h$? Look at the score autocorrelation function (ACF).
 
 ```matlab
 % Set seed
-seed(123)
+rng(123)
 
 % Autocorrelated process
 X = rand(1000,1);
