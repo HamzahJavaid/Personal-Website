@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.11)  3 JUL 2020 18:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.11)  3 JUL 2020 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,7 +968,7 @@ Package pdftex.def Info: figures/Fig_621.png  used on input line 3787.
 <inserted text> 
                 $
 l.3796 ... reject the null hypothesis for \$ \beta
-                                                  \_0 = O \left( \frac{1}{\s...
+                                                   \_ 0 = O \left( \frac{1}{...
  
 Here is how much of TeX's memory you used:
  14172 strings out of 494060
