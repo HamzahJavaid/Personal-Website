@@ -3793,13 +3793,13 @@ As we can see from the figure above (code below), running the short regression i
 Pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
 
 \begin{quote}
-Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when \(\beta_0>0\) but we fail to reject the null hypothesis \(H_0:\beta_0=0\) because of lack of statistical power, i.e.~\(|\beta_0|\) is small with respect to the sample size. In particular, we fail to reject the null hypothesis for \(\beta_0 = O\left( \frac{1}{n}\right)\). Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if \(\beta_0(n) = O\left( \frac{1}{n}\right)\), \(\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0\). We now clarify what it means to have a coefficient depending on the sample size, \(\beta_0(n)\).
+Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when \(\beta_0>0\) but we fail to reject the null hypothesis \(H_0 : \beta_0 = 0\) because of lack of statistical power, i.e.~\(|\beta_0|\) is small with respect to the sample size. In particular, we fail to reject the null hypothesis for \$\beta\_0 = O \left( \frac{1}{\sqrt{n}}\right) \$. Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if \(\beta_0(n) = O\left( \frac{1}{n}\right)\), then \(\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0\). We now clarify what it means to have a coefficient depending on the sample size, \(\beta_0(n)\).
 \end{quote}
 
 Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a fixed ``true'' parameter \(\beta_0\), you have a sequence \(\beta_0(n)\).
 Having a cofficient that depends on the sample size \(n\) is useful to preserve the concept of ``small with respect to the sample size'' in asymptotic theory.
 
-In the context of Pre-Testing, all problems vanish asymptotically since we are able to always reject the null hypothesis \(H_0:\beta_0=0\) when \(\beta_0 \neq 0\). In the figure above, I plot simulation results for \(\hat \alpha_{PRETESTING}\) for a fixed coefficient \(\beta_0\) (first row) and variable coefficient \(\beta_0(n)\) that depends on the sample size (second row), for different sample sizes (columns). We see that if \(\beta_0\) is independent from the sample size (first row), the distribution of \(\hat \alpha_{PRETEST}\) is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), the distribution of \(\hat \alpha_{PRETEST}\) stays bimodal even when the sample size increases.
+In the context of Pre-Testing, all problems vanish asymptotically since we are able to always reject the null hypothesis \(H_0 : \beta_0 = 0\) when \(\beta_0 \neq 0\). In the figure above, I plot simulation results for \(\hat \alpha_{PRETESTING}\) for a fixed coefficient \(\beta_0\) (first row) and variable coefficient \(\beta_0(n)\) that depends on the sample size (second row), for different sample sizes (columns). We see that if \(\beta_0\) is independent from the sample size (first row), the distribution of \(\hat \alpha_{PRETEST}\) is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), the distribution of \(\hat \alpha_{PRETEST}\) stays bimodal even when the sample size increases.
 
 \begin{quote}
 Note that the estimator is always consistent!
@@ -3811,12 +3811,12 @@ Note that the estimator is always consistent!
 \caption{Distrubution of \(\hat \alpha_{PRETEST}\)}
 \end{figure}
 
-One could show that problems arise exactly when \(\beta_0 = O\left( \frac{1}{n}\right)\). If we were to draw a map of where the gaussianity assumption of \(\beta_0(n)\) holds well, it would look like the following figure.
+One could show that problems arise exactly when \(\beta_0 = O \left( \frac{1}{\sqrt{n}} \right)\). If we were to draw a map of where the gaussianity assumption of \(\beta_0(n)\) holds well, it would look like the following figure.
 
 \begin{figure}
 \centering
 \includegraphics{figures/Fig_623.png}
-\caption{Pre-test Bias}
+\caption{Uniformty}
 \end{figure}
 
 The intuition for the three different regions (from bottom to top) is the following.
@@ -3825,9 +3825,9 @@ The intuition for the three different regions (from bottom to top) is the follow
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  When \(\beta_0 = o(1/\sqrt{n})\), \(z_i\) is excluded with probability \(p \to 1\). But, given that \(\beta_0\) is small enough, failing to control for \(z_i\) does not introduce large omitted variables bias (Belloni et al., 2014).
+  When \(\beta_0 = o \left( \frac{1}{\sqrt{n}} \right)\), \(z_i\) is excluded with probability \(p \to 1\). But, given that \(\beta_0\) is small enough, failing to control for \(z_i\) does not introduce large omitted variables bias (Belloni et al., 2014).
 \item
-  If however the coefficient on the control is ``moderately close to zero'' (\(\beta_0 = O(1/\sqrt{n})\)), the t-test set-up above cannot distinguish this coefficient from \(0\), and the control \(z_i\) is dropped with probability \(p \to 1\). However, in this case the omitted variable bias generated by excluding \(z_i\) scaled by \(\sqrt{n}\) does not converge to zero. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
+  If however the coefficient on the control is ``moderately close to zero'', \(\beta_0 = O \left( \frac{1}{\sqrt{n}} \right)\), the t-test set-up above cannot distinguish this coefficient from \(0\), and the control \(z_i\) is dropped with probability \(p \to 1\). However, in this case the omitted variable bias generated by excluding \(z_i\) scaled by \(\sqrt{n}\) does not converge to zero. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
 \item
   Lastly, when \(\beta_0\) is large enough, the null pre-testing hypothesis \(H_0 : \beta_0 = 0\) will be rejected sufficiently often so that the bias is negligible.
 \end{enumerate}
@@ -3954,7 +3954,7 @@ First, we consider the following model: \$ y\_i = x\_i' \alpha\_0 + z\_i' \beta\
 \end{Highlighting}
 \end{Shaded}
 
-Now we repeat the same exercise but for two different specifications of \(beta_0\): one that depends on the sample size \(n\) and one that does not. We check what happens for different sample sizes.
+Now we repeat the same exercise but for two different specifications of \(\beta_0\): one that depends on the sample size \(n\) and one that does not. We check what happens for different sample sizes.
 
 \begin{Shaded}
 \begin{Highlighting}[]

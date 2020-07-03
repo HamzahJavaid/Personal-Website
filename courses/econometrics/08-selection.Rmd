@@ -188,7 +188,7 @@ As we can see from the figure above (code below), running the short regression i
 
 Pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of $\sqrt{n}$ (Belloni et al., 2014). 
 
-> Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when $\beta_0>0$ but we fail to reject the null hypothesis $H_0 : \beta_0 = 0$ because of lack of statistical power, i.e. $|\beta_0|$ is small with respect to the sample size. In particular, we fail to reject the null hypothesis for $\beta_0 = O \left( \frac{1}{\sqrt{n}}\right) $. Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if $\beta_0(n) = O\left( \frac{1}{n}\right)$, then $\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0$. We now clarify what it means to have a coefficient depending on the sample size, $\beta_0(n)$.
+> Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when $\beta_0>0$ but we fail to reject the null hypothesis $H_0 : \beta_0 = 0$ because of lack of statistical power, i.e. $|\beta_0|$ is small with respect to the sample size. In particular, we fail to reject the null hypothesis for $ \beta_0 = O \left( \frac{1}{\sqrt{n}} \right) $. Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if $\beta_0(n) = O\left( \frac{1}{n}\right)$, then $\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0$. We now clarify what it means to have a coefficient depending on the sample size, $\beta_0(n)$.
 
 Concept of **uniformity**: the DGP varies with $n$. Instead of having a fixed "true" parameter $\beta_0$, you have a sequence $\beta_0(n)$. 
 Having a cofficient that depends on the sample size $n$ is useful to preserve the concept of "small with respect to the sample size" in asymptotic theory.
@@ -416,16 +416,16 @@ $$
   CI = \left[ \hat{\alpha} \pm \frac{1.96 \cdot \hat{\sigma}}{\sqrt{n}} \right]
 $$
 
-If the bias is $o(n^{-1/2})$ then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is $O(n^{-1/2})$ then it has the same magnitude of the confidence interval and it does not asymptotically vanish. 
+If the bias is $o \left( \frac{1}{\sqrt{n}} \right)$ then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is $O \left( \frac{1}{\sqrt{n}} \right)$ then it has the same magnitude of the confidence interval and it does not asymptotically vanish. 
 
 The idea of the proof is to use partitioned regression. An alternative way to think about the argument is: bound the omitted variables bias. Omitted variable bias comes from the product of 2 quantities related to the omitted variable:
 
 1. Its partial correlation with the outcome, and
 2. Its partial correlation with the variable of interest.
 
-If both those partial correlations are $O( \sqrt{\log p/n})$, then the omitted variables bias is $(s \times O( \sqrt{\log p/n})^2 = o(n^{-1/2})$, provided $s^2 (\log p)^2/n \to 0$. Relative to the $n^{-1/2}$ convergence rate, the omitted variables bias is negligible. 
+If both those partial correlations are $O( \sqrt{\log p/n})$, then the omitted variables bias is $(s \times O( \sqrt{\log p/n})^2 = o \left( \frac{1}{\sqrt{n}} \right)$, provided $s^2 (\log p)^2/n \to 0$. Relative to the $\frac{1}{\sqrt{n}$ convergence rate, the omitted variables bias is negligible. 
 
-In our omitted variable bias case, we want $| \beta_0 \gamma_0 | = o \left(\frac{1}{\sqrt{n}}\right)$.  Post-double selection guarantees that 
+In our omitted variable bias case, we want $| \beta_0 \gamma_0 | = o \left( \frac{1}{\sqrt{n}} \right)$.  Post-double selection guarantees that 
 
 - *Reduced form* selection (pre-testing): any "missing" variable has $|\beta_{0j}| \leq \frac{c}{\sqrt{n}}$
 - *First stage* selection (additional): any "missing" variable has $|\gamma_{0j}| \leq \frac{c}{\sqrt{n}}$
