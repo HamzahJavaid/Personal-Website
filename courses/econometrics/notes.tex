@@ -3688,6 +3688,30 @@ Remarks on Lasso:
 \end{itemize}
 \end{quote}
 
+What is the criterium that should guide the selection of \(\lambda\)?
+\[
+  \frac{\lambda}{n} \geq 2 \mathbb E_n[x_{ij} \varepsilon_i] \qquad \forall j \quad \text{ if } Var(x_{ij} \varepsilon_i) = 1
+\]
+
+How to choose the optimal \(\lambda\):
+
+\begin{itemize}
+\tightlist
+\item
+  Decide the coverage of the confidence intervals (\(1-\alpha\)):
+  \[
+  \Pr \left( \sqrt{n} \Big| \mathbb E_n [x_{ij} \varepsilon_i] \Big| > t \right) = 1- \alpha
+  \]
+\item
+  Solve for \(t\)
+\item
+  Get \(\lambda\) such that all scores are dominated by \(\frac{\lambda}{n}\) with \(\alpha\%\) probability.
+\end{itemize}
+
+\begin{quote}
+It turns out that the optimal \(t \propto \sqrt{\log(p)}\)
+\end{quote}
+
 \hypertarget{pre-testing}{%
 \section{Pre-Testing}\label{pre-testing}}
 
@@ -3758,26 +3782,26 @@ Pre Testing procedure:
   Perform statistical inference (i.e.~confidence intervals and hypothesis tests) as if no model selection had been done.
 \end{enumerate}
 
-This procedure is unfortunately not desirable in most practical settings since it introduces \textbf{omitted variable bias}.
-
 \begin{figure}
 \centering
 \includegraphics{figures/Fig_621.png}
-\caption{Pre-test Bias}
+\caption{Omitted Variable Bias and Pre-Test Distortion}
 \end{figure}
 
-Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a fixed ``true'' parameter \(\beta_0\), you have a sequence \(\beta_0(n)\). Then, we could plot a sequence of ordered pairs \((n, DGP)\) as below. In order to study the behavior of \(\hat{\beta}\) at your particular \(n\), you study its behavior along the sequence.
+As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed.
 
-From the figure below, we see that if \(\beta_0\) is independent from the sample size (first row), its distribution is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), its distribution stays bimodal even when the sample size increases.
+Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a fixed ``true'' parameter \(\beta_0\), you have a sequence \(\beta_0(n)\). Then, we could plot a sequence of ordered pairs \((n, DGP)\) as below. In order to study the behavior of \(\hat{\beta}\) at your particular \(n\), you study its behavior along the sequence.
 
 \begin{figure}
 \centering
 \includegraphics{figures/Fig_624.png}
-\caption{Pre-test Bias}
+\caption{Distrubution of \(\hat \alpha_{PRETEST}\)}
 \end{figure}
 
+From the figure below, we see that if \(\beta_0\) is independent from the sample size (first row), the distribution of \(\hat \alpha_{PRETEST}\) is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), the distribution of \(\hat \alpha_{PRETEST}\) stays bimodal even when the sample size increases.
+
 \begin{quote}
-Remark: pre-test bias is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.
+Remark: pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.
 \end{quote}
 
 \begin{figure}
@@ -3794,7 +3818,7 @@ The intuition for the three different regions (from below to above) is the follo
 \item
   When \(\beta_0 = o(1/\sqrt{n})\), \(z_i\) is excluded with probability \(p \to 1\). But, given that \(\beta_0\) is small enough, failing to control for \(z_i\) does not introduce large omitted variables bias (Belloni et al., 2014).
 \item
-  If however the coefficient on the control is ``moderately close to zero'' (\(\beta_0 = O(1/\sqrt{n})\)), the t-test set-up above still cannot distinguish this coefficient from \(0\), and the control \(z_i\) is dropped with probability \(p \to 1\). However now the omitted variable bias created by dropping \(z_i\) scaled by \(\sqrt{n}\), diverges to infinity. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
+  If however the coefficient on the control is ``moderately close to zero'' (\(\beta_0 = O(1/\sqrt{n})\)), the t-test set-up above cannot distinguish this coefficient from \(0\), and the control \(z_i\) is dropped with probability \(p \to 1\). However, in this case the omitted variable bias generated by excluding \(z_i\) scaled by \(\sqrt{n}\) does not converge to zero. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
 \item
   Lastly, when \(\beta_0\) is large enough, the null pre-testing hypothesis \(H_0 : \beta_0 = 0\) will be rejected sufficiently often so that the bias is negligible.
 \end{enumerate}
@@ -3854,115 +3878,6 @@ Having established the claim, we want to show that the normal equation \(\tilde{
 \end{enumerate}
 
 The coefficient \(\hat{\alpha}\) is a \emph{partial regression} coefficient identified from the variation in \(X\) that is orthogonal to \(Z\). This is often known as \textbf{residual variation}.
-
-\hypertarget{post-double-selection}{%
-\section{Post Double Selection}\label{post-double-selection}}
-
-We would like to guard against pretest bias if possible, in order to handle high dimensional models. A good pathway towards motivating procedures which guard against pretest bias is a discussion of classical partitioned regression.
-
-Consider a regression \(y_i\) on \(x_i\) and \(z_i\). \(x_i\) is the 1-dimensional variable of interest, \(z_i\) is a high-dimensional set of control variables. We have the following procedure:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{First Stage} selection: lasso \(x_i\) on \(z_i\). Let the selected variables be collected in the set \(S_{FS} \subseteq z_i\)
-\item
-  \textbf{Reduced Form} selection: lasso \(y_i\) on \(z_i\). Let the selected variables be collected in the set \(S_{RF} \subseteq z_i\)
-\item
-  Regress \(y_i\) on \(x_i\) and \(S_{FS} \cup S_{RF}\)
-\end{enumerate}
-
-\textbf{Theorem}:
-Let \(\{P^n\}\) be a sequence of data-generating processes for \(D_n = (y_i, x_i, z_i)^n_{i=1} \in (\mathbb R \times \mathbb R \times \mathbb R^p) ^n\) where \(p\) depends on \(n\). For each \(n\), the data are iid with \(yi = x_i'\alpha_0^{(n)} + z_i' \beta_0^{(n)} + \varepsilon_i\) and \(x_i = z_i' \gamma_0^{(n)} + u_i\) where \(\mathbb E[\varepsilon_i | x_i,z_i] = 0\) and \(\mathbb E[u_i|z_i] = 0\). The sparsity of the vectors \(\beta_0^{(n)}\), \(\gamma_0^{(n)}\) is controlled by \(|| \beta_0^{(n)} ||_0 \leq s\) with \(s^2 (\log p)^2/n \to 0\). Suppose that additional regularity conditions on the model selection procedures and moments of the random variables \(y_i\) , \(x_i\) , \(z_i\) as documented in Belloni et al.~(2014). Then the confidence intervals, CI, from the post double selection procedure are uniformly valid. That is, for any confidence level \(\xi \in (0, 1)\)
-\[
-        \Pr(\alpha_0 \in CI) \to 1- \xi
-\]
-
-In order to have valid confidence intervals you want their bias to be negligibly. Since
-\[
-  CI = \left[ \hat{\beta} \pm \frac{1.96 \cdot \hat{\sigma}}{\sqrt{n}} \right]
-\]
-
-If the bias is \(o(n^{-1/2})\) then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is \(O(n^{-1/2})\) then it has the same magnitude of the confidence interval and it does not asymptotically vanish.
-
-The idea of the proof is to use partitioned regression. An alternative way to think about the argument is: bound the omitted variables bias. Omitted variable bias comes from the product of 2 quantities related to the omitted variable:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Its partial correlation with the outcome, and
-\item
-  Its partial correlation with the variable of interest.
-\end{enumerate}
-
-If both those partial correlations are \(O( \sqrt{\log p/n})\), then the omitted variables bias is \((s \times O( \sqrt{\log p/n})^2 = o(n^{-1/2})\), provided \(s^2 (\log p)^2/n \to 0\). Relative to the \(n^{-1/2}\) convergence rate, the omitted variables bias is negligible.
-
-In our omitted variable bias case, we want \(| \gamma_0 \delta_0 | = o \left(\frac{1}{\sqrt{n}}\right)\). Post-double selection guarantees that
-
-\begin{itemize}
-\tightlist
-\item
-  \emph{First stage} selection: any ``missing'' variable has \(|\gamma_{0j}| \leq \frac{c}{\sqrt{n}}\)
-\item
-  \emph{Reduced form} selection: any ``missing'' variable has \(|\delta_{0j}| \leq \frac{c}{\sqrt{n}}\)
-\end{itemize}
-
-As a consequence, as long as the number of omitted variables is finite, the omitted variable bias is
-\[
-    OVB = |\gamma_{0j}| \cdot|\delta_{0j}| \leq \frac{c}{\sqrt{n}} \cdot \frac{c}{\sqrt{n}} = \frac{c^2}{n} = o \left(\frac{1}{\sqrt{n}}\right)
-\]
-
-\begin{figure}
-\centering
-\includegraphics{figures/Fig_641.png}
-\caption{Pre-test Bias}
-\end{figure}
-
-Under homoskedasticity, the above estimator achieves the semiparametric efficiency bound.
-
-\begin{quote}
-Example: \(y_i = \alpha_0 x_i + \delta_0 z_{i1} + \gamma_0 z_{i2} + \varepsilon_i\)
-
-\begin{itemize}
-\tightlist
-\item
-  \(| \delta_0 | = \frac{1}{2} \qquad \quad | \gamma_0| = \frac{1}{2} \quad\) then the bias is \(= \frac{1}{4}\)
-\item
-  \(| \delta_0 | = \frac{1}{2} \qquad \quad | \gamma_0| = \frac{1}{\sqrt{n}}\) then the bias is \(= \frac{1}{2 \sqrt{n}}\)
-\item
-  \(| \delta_0 | = \frac{1}{\sqrt{n}} \qquad | \gamma_0| = \frac{1}{2}\quad\) then the bias is \(= \frac{1}{2 \sqrt{n}}\)
-\item
-  \(| \delta_0 | = \frac{1}{\sqrt{n}} \qquad | \gamma_0| = \frac{1}{\sqrt{n}}\) then the bias is \(= \frac{1}{n}\)
-\end{itemize}
-
-Only in the last case the bias is \(o \left(\frac{1}{\sqrt{n}}\right)\).
-\end{quote}
-
-What is the criterium that should guide the selection of \(\lambda\)?
-\[
-  \frac{\lambda}{n} \geq 2 \mathbb E_n[x_{ij} \varepsilon_i] \qquad \forall j \quad \text{ if } Var(x_{ij} \varepsilon_i) = 1
-\]
-
-How to choose the optimal \(\lambda\):
-
-\begin{itemize}
-\tightlist
-\item
-  Decide the coverage of the confidence intervals (\(1-\alpha\)):
-  \[
-  \Pr \left( \sqrt{n} \Big| \mathbb E_n [x_{ij} \varepsilon_i] \Big| > t \right) = 1- \alpha
-  \]
-\item
-  Solve for \(t\)
-\item
-  Get \(\lambda\) such that all scores are dominated by \(\frac{\lambda}{n}\) with \(\alpha\%\) probability.
-\end{itemize}
-
-\begin{quote}
-It turns out that the optimal \(t \propto \sqrt{\log(p)}\)
-\end{quote}
 
 \hypertarget{matlab-8}{%
 \subsection{\texorpdfstring{\texttt{Matlab}}{Matlab}}\label{matlab-8}}
@@ -4091,6 +4006,81 @@ Now we repeat the same exercise but for two different specifications of \(beta_0
 \NormalTok{end}
 \end{Highlighting}
 \end{Shaded}
+
+\hypertarget{post-double-selection}{%
+\section{Post Double Selection}\label{post-double-selection}}
+
+Consider again data \(D= (y_i, x_i, z_i)_{i=1}^n\), where the true model is:
+\[
+\begin{aligned}
+& y_i = x_i' \alpha_0  + z_i' \beta_0 + \varepsilon_i \\
+& x_i = z_i' \gamma_0 + u_i
+\end{aligned}
+\]
+
+We would like to guard against pretest bias if possible, in order to handle high dimensional models. A good pathway towards motivating procedures which guard against pretest bias is a discussion of classical partitioned regression.
+
+Consider a regression \(y_i\) on \(x_i\) and \(z_i\). \(x_i\) is the 1-dimensional variable of interest, \(z_i\) is a high-dimensional set of control variables. We have the following procedure:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{First Stage} selection: lasso \(x_i\) on \(z_i\). Let the selected variables be collected in the set \(S_{FS} \subseteq z_i\)
+\item
+  \textbf{Reduced Form} selection: lasso \(y_i\) on \(z_i\). Let the selected variables be collected in the set \(S_{RF} \subseteq z_i\)
+\item
+  Regress \(y_i\) on \(x_i\) and \(S_{FS} \cup S_{RF}\)
+\end{enumerate}
+
+\textbf{Theorem}:
+Let \(\{P^n\}\) be a sequence of data-generating processes for \(D_n = (y_i, x_i, z_i)^n_{i=1} \in (\mathbb R \times \mathbb R \times \mathbb R^p) ^n\) where \(p\) depends on \(n\). For each \(n\), the data are iid with \(yi = x_i'\alpha_0^{(n)} + z_i' \beta_0^{(n)} + \varepsilon_i\) and \(x_i = z_i' \gamma_0^{(n)} + u_i\) where \(\mathbb E[\varepsilon_i | x_i,z_i] = 0\) and \(\mathbb E[u_i|z_i] = 0\). The sparsity of the vectors \(\beta_0^{(n)}\), \(\gamma_0^{(n)}\) is controlled by \(|| \beta_0^{(n)} ||_0 \leq s\) with \(s^2 (\log p)^2/n \to 0\). Suppose that additional regularity conditions on the model selection procedures and moments of the random variables \(y_i\) , \(x_i\) , \(z_i\) as documented in Belloni et al.~(2014). Then the confidence intervals, CI, from the post double selection procedure are uniformly valid. That is, for any confidence level \(\xi \in (0, 1)\)
+\[
+        \Pr(\alpha_0 \in CI) \to 1- \xi
+\]
+
+In order to have valid confidence intervals you want their bias to be negligibly. Since
+\[
+  CI = \left[ \hat{\alpha} \pm \frac{1.96 \cdot \hat{\sigma}}{\sqrt{n}} \right]
+\]
+
+If the bias is \(o(n^{-1/2})\) then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is \(O(n^{-1/2})\) then it has the same magnitude of the confidence interval and it does not asymptotically vanish.
+
+The idea of the proof is to use partitioned regression. An alternative way to think about the argument is: bound the omitted variables bias. Omitted variable bias comes from the product of 2 quantities related to the omitted variable:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Its partial correlation with the outcome, and
+\item
+  Its partial correlation with the variable of interest.
+\end{enumerate}
+
+If both those partial correlations are \(O( \sqrt{\log p/n})\), then the omitted variables bias is \((s \times O( \sqrt{\log p/n})^2 = o(n^{-1/2})\), provided \(s^2 (\log p)^2/n \to 0\). Relative to the \(n^{-1/2}\) convergence rate, the omitted variables bias is negligible.
+
+In our omitted variable bias case, we want \(| \beta_0 \gamma_0 | = o \left(\frac{1}{\sqrt{n}}\right)\). Post-double selection guarantees that
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Reduced form} selection (pre-testing): any ``missing'' variable has \(|\beta_{0j}| \leq \frac{c}{\sqrt{n}}\)
+\item
+  \emph{First stage} selection (additional): any ``missing'' variable has \(|\gamma_{0j}| \leq \frac{c}{\sqrt{n}}\)
+\end{itemize}
+
+As a consequence, as long as the number of omitted variables is finite, the omitted variable bias is
+\[
+    OVB(\alpha) = |\beta_{0j}| \cdot|\gamma_{0j}| \leq \frac{c}{\sqrt{n}} \cdot \frac{c}{\sqrt{n}} = \frac{c^2}{n} = o \left(\frac{1}{\sqrt{n}}\right)
+\]
+
+\begin{figure}
+\centering
+\includegraphics{figures/Fig_641.png}
+\caption{Pre-test Bias}
+\end{figure}
+
+Under homoskedasticity, the above estimator achieves the semiparametric efficiency bound.
 
 \hypertarget{references-8}{%
 \section{References}\label{references-8}}

@@ -235,10 +235,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.1" data-path="lecture5.html"><a href="lecture5.html#omitted-variable-bias"><i class="fa fa-check"></i><b>8.2.1</b> Omitted Variable Bias</a></li>
 <li class="chapter" data-level="8.2.2" data-path="lecture5.html"><a href="lecture5.html#pre-test-bias"><i class="fa fa-check"></i><b>8.2.2</b> Pre-test bias</a></li>
 <li class="chapter" data-level="8.2.3" data-path="lecture5.html"><a href="lecture5.html#partioned-regression"><i class="fa fa-check"></i><b>8.2.3</b> Partioned Regression</a></li>
+<li class="chapter" data-level="8.2.4" data-path="lecture5.html"><a href="lecture5.html#matlab-8"><i class="fa fa-check"></i><b>8.2.4</b> <code>Matlab</code></a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="lecture5.html"><a href="lecture5.html#matlab-8"><i class="fa fa-check"></i><b>8.3.1</b> <code>Matlab</code></a></li>
-</ul></li>
+<li class="chapter" data-level="8.3" data-path="lecture5.html"><a href="lecture5.html#post-double-selection"><i class="fa fa-check"></i><b>8.3</b> Post Double Selection</a></li>
 <li class="chapter" data-level="8.4" data-path="lecture5.html"><a href="lecture5.html#references-8"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="matlabcode.html"><a href="matlabcode.html"><i class="fa fa-check"></i><b>9</b> Matlab Code</a><ul>
@@ -362,6 +361,22 @@ Then</p>
 <li><span class="math inline">\(\sqrt{n}\)</span> factor is important since it is the demarcation line for reliable statistical detection.</li>
 </ul>
 </blockquote>
+<p>What is the criterium that should guide the selection of <span class="math inline">\(\lambda\)</span>?
+<span class="math display">\[
+  \frac{\lambda}{n} \geq 2 \mathbb E_n[x_{ij} \varepsilon_i] \qquad \forall j \quad \text{ if } Var(x_{ij} \varepsilon_i) = 1
+\]</span></p>
+<p>How to choose the optimal <span class="math inline">\(\lambda\)</span>:</p>
+<ul>
+<li>Decide the coverage of the confidence intervals (<span class="math inline">\(1-\alpha\)</span>):
+<span class="math display">\[
+\Pr \left( \sqrt{n} \Big| \mathbb E_n [x_{ij} \varepsilon_i] \Big| &gt; t \right) = 1- \alpha
+\]</span></li>
+<li>Solve for <span class="math inline">\(t\)</span></li>
+<li>Get <span class="math inline">\(\lambda\)</span> such that all scores are dominated by <span class="math inline">\(\frac{\lambda}{n}\)</span> with <span class="math inline">\(\alpha\%\)</span> probability.</li>
+</ul>
+<blockquote>
+<p>It turns out that the optimal <span class="math inline">\(t \propto \sqrt{\log(p)}\)</span></p>
+</blockquote>
 </div>
 </div>
 <div id="pre-testing" class="section level2">
@@ -408,19 +423,19 @@ Suppose that the DGP for the long regression corresponds to <span class="math in
 <li>Re-run the new “model” using <span class="math inline">\((x_i, z_{\hat{T},i})\)</span> (i.e. using the selected covariates).</li>
 <li>Perform statistical inference (i.e. confidence intervals and hypothesis tests) as if no model selection had been done.</li>
 </ol>
-<p>This procedure is unfortunately not desirable in most practical settings since it introduces <strong>omitted variable bias</strong>.</p>
 <div class="figure">
 <img src="figures/Fig_621.png" alt="" />
-<p class="caption">Pre-test Bias</p>
+<p class="caption">Omitted Variable Bias and Pre-Test Distortion</p>
 </div>
+<p>As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed.</p>
 <p>Concept of <strong>uniformity</strong>: the DGP varies with <span class="math inline">\(n\)</span>. Instead of having a fixed “true” parameter <span class="math inline">\(\beta_0\)</span>, you have a sequence <span class="math inline">\(\beta_0(n)\)</span>. Then, we could plot a sequence of ordered pairs <span class="math inline">\((n, DGP)\)</span> as below. In order to study the behavior of <span class="math inline">\(\hat{\beta}\)</span> at your particular <span class="math inline">\(n\)</span>, you study its behavior along the sequence.</p>
-<p>From the figure below, we see that if <span class="math inline">\(\beta_0\)</span> is independent from the sample size (first row), its distribution is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when <span class="math inline">\(\beta_0(n)\)</span> depends on the sample size (second row), its distribution stays bimodal even when the sample size increases.</p>
 <div class="figure">
 <img src="figures/Fig_624.png" alt="" />
-<p class="caption">Pre-test Bias</p>
+<p class="caption">Distrubution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span></p>
 </div>
+<p>From the figure below, we see that if <span class="math inline">\(\beta_0\)</span> is independent from the sample size (first row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when <span class="math inline">\(\beta_0(n)\)</span> depends on the sample size (second row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> stays bimodal even when the sample size increases.</p>
 <blockquote>
-<p>Remark: pre-test bias is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.</p>
+<p>Remark: pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.</p>
 </blockquote>
 <div class="figure">
 <img src="figures/Fig_623.png" alt="" />
@@ -429,7 +444,7 @@ Suppose that the DGP for the long regression corresponds to <span class="math in
 <p>The intuition for the three different regions (from below to above) is the following.</p>
 <ol style="list-style-type: decimal">
 <li>When <span class="math inline">\(\beta_0 = o(1/\sqrt{n})\)</span>, <span class="math inline">\(z_i\)</span> is excluded with probability <span class="math inline">\(p \to 1\)</span>. But, given that <span class="math inline">\(\beta_0\)</span> is small enough, failing to control for <span class="math inline">\(z_i\)</span> does not introduce large omitted variables bias (Belloni et al., 2014).</li>
-<li>If however the coefficient on the control is “moderately close to zero” (<span class="math inline">\(\beta_0 = O(1/\sqrt{n})\)</span>), the t-test set-up above still cannot distinguish this coefficient from <span class="math inline">\(0\)</span>, and the control <span class="math inline">\(z_i\)</span> is dropped with probability <span class="math inline">\(p \to 1\)</span>. However now the omitted variable bias created by dropping <span class="math inline">\(z_i\)</span> scaled by <span class="math inline">\(\sqrt{n}\)</span>, diverges to infinity. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014).</li>
+<li>If however the coefficient on the control is “moderately close to zero” (<span class="math inline">\(\beta_0 = O(1/\sqrt{n})\)</span>), the t-test set-up above cannot distinguish this coefficient from <span class="math inline">\(0\)</span>, and the control <span class="math inline">\(z_i\)</span> is dropped with probability <span class="math inline">\(p \to 1\)</span>. However, in this case the omitted variable bias generated by excluding <span class="math inline">\(z_i\)</span> scaled by <span class="math inline">\(\sqrt{n}\)</span> does not converge to zero. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014).</li>
 <li>Lastly, when <span class="math inline">\(\beta_0\)</span> is large enough, the null pre-testing hypothesis <span class="math inline">\(H_0 : \beta_0 = 0\)</span> will be rejected sufficiently often so that the bias is negligible.</li>
 </ol>
 <p>The post-double-selection estimator, <span class="math inline">\(\hat{\alpha}_{PDS}\)</span> solves this problem by doing variable selection via standard t-tests or Lasso-type selectors with the two “true model” equations (<strong>first stage</strong> and <strong>reduced form</strong>) that contain the information from the model and then estimating <span class="math inline">\(\alpha_0\)</span> by regressing <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and the union of the selected controls. By doing so, <span class="math inline">\(z_i\)</span> is omitted only if its coefficient in both equations is small which greatly limits the potential for omitted variables bias (Belloni et al., 2014).</p>
@@ -470,74 +485,8 @@ We want to show that <span class="math inline">\(\hat{\alpha} = \tilde{\alpha}\)
 </ol>
 <p>The coefficient <span class="math inline">\(\hat{\alpha}\)</span> is a <em>partial regression</em> coefficient identified from the variation in <span class="math inline">\(X\)</span> that is orthogonal to <span class="math inline">\(Z\)</span>. This is often known as <strong>residual variation</strong>.</p>
 </div>
-</div>
-<div id="post-double-selection" class="section level2">
-<h2><span class="header-section-number">8.3</span> Post Double Selection</h2>
-<p>We would like to guard against pretest bias if possible, in order to handle high dimensional models. A good pathway towards motivating procedures which guard against pretest bias is a discussion of classical partitioned regression.</p>
-<p>Consider a regression <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and <span class="math inline">\(z_i\)</span>. <span class="math inline">\(x_i\)</span> is the 1-dimensional variable of interest, <span class="math inline">\(z_i\)</span> is a high-dimensional set of control variables. We have the following procedure:</p>
-<ol style="list-style-type: decimal">
-<li><strong>First Stage</strong> selection: lasso <span class="math inline">\(x_i\)</span> on <span class="math inline">\(z_i\)</span>. Let the selected variables be collected in the set <span class="math inline">\(S_{FS} \subseteq z_i\)</span></li>
-<li><strong>Reduced Form</strong> selection: lasso <span class="math inline">\(y_i\)</span> on <span class="math inline">\(z_i\)</span>. Let the selected variables be collected in the set <span class="math inline">\(S_{RF} \subseteq z_i\)</span></li>
-<li>Regress <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and <span class="math inline">\(S_{FS} \cup S_{RF}\)</span></li>
-</ol>
-<p><strong>Theorem</strong>:
-Let <span class="math inline">\(\{P^n\}\)</span> be a sequence of data-generating processes for <span class="math inline">\(D_n = (y_i, x_i, z_i)^n_{i=1} \in (\mathbb R \times \mathbb R \times \mathbb R^p) ^n\)</span> where <span class="math inline">\(p\)</span> depends on <span class="math inline">\(n\)</span>. For each <span class="math inline">\(n\)</span>, the data are iid with <span class="math inline">\(yi = x_i&#39;\alpha_0^{(n)} + z_i&#39; \beta_0^{(n)} + \varepsilon_i\)</span> and <span class="math inline">\(x_i = z_i&#39; \gamma_0^{(n)} + u_i\)</span> where <span class="math inline">\(\mathbb E[\varepsilon_i | x_i,z_i] = 0\)</span> and <span class="math inline">\(\mathbb E[u_i|z_i] = 0\)</span>. The sparsity of the vectors <span class="math inline">\(\beta_0^{(n)}\)</span>, <span class="math inline">\(\gamma_0^{(n)}\)</span> is controlled by <span class="math inline">\(|| \beta_0^{(n)} ||_0 \leq s\)</span> with <span class="math inline">\(s^2 (\log p)^2/n \to 0\)</span>. Suppose that additional regularity conditions on the model selection procedures and moments of the random variables <span class="math inline">\(y_i\)</span> , <span class="math inline">\(x_i\)</span> , <span class="math inline">\(z_i\)</span> as documented in Belloni et al. (2014). Then the confidence intervals, CI, from the post double selection procedure are uniformly valid. That is, for any confidence level <span class="math inline">\(\xi \in (0, 1)\)</span>
-<span class="math display">\[
-        \Pr(\alpha_0 \in CI) \to 1- \xi
-\]</span></p>
-<p>In order to have valid confidence intervals you want their bias to be negligibly. Since
-<span class="math display">\[
-  CI = \left[ \hat{\beta} \pm \frac{1.96 \cdot \hat{\sigma}}{\sqrt{n}} \right]
-\]</span></p>
-<p>If the bias is <span class="math inline">\(o(n^{-1/2})\)</span> then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is <span class="math inline">\(O(n^{-1/2})\)</span> then it has the same magnitude of the confidence interval and it does not asymptotically vanish.</p>
-<p>The idea of the proof is to use partitioned regression. An alternative way to think about the argument is: bound the omitted variables bias. Omitted variable bias comes from the product of 2 quantities related to the omitted variable:</p>
-<ol style="list-style-type: decimal">
-<li>Its partial correlation with the outcome, and</li>
-<li>Its partial correlation with the variable of interest.</li>
-</ol>
-<p>If both those partial correlations are <span class="math inline">\(O( \sqrt{\log p/n})\)</span>, then the omitted variables bias is <span class="math inline">\((s \times O( \sqrt{\log p/n})^2 = o(n^{-1/2})\)</span>, provided <span class="math inline">\(s^2 (\log p)^2/n \to 0\)</span>. Relative to the <span class="math inline">\(n^{-1/2}\)</span> convergence rate, the omitted variables bias is negligible.</p>
-<p>In our omitted variable bias case, we want <span class="math inline">\(| \gamma_0 \delta_0 | = o \left(\frac{1}{\sqrt{n}}\right)\)</span>. Post-double selection guarantees that</p>
-<ul>
-<li><em>First stage</em> selection: any “missing” variable has <span class="math inline">\(|\gamma_{0j}| \leq \frac{c}{\sqrt{n}}\)</span></li>
-<li><em>Reduced form</em> selection: any “missing” variable has <span class="math inline">\(|\delta_{0j}| \leq \frac{c}{\sqrt{n}}\)</span></li>
-</ul>
-<p>As a consequence, as long as the number of omitted variables is finite, the omitted variable bias is
-<span class="math display">\[
-    OVB = |\gamma_{0j}| \cdot|\delta_{0j}| \leq \frac{c}{\sqrt{n}} \cdot \frac{c}{\sqrt{n}} = \frac{c^2}{n} = o \left(\frac{1}{\sqrt{n}}\right)
-\]</span></p>
-<div class="figure">
-<img src="figures/Fig_641.png" alt="" />
-<p class="caption">Pre-test Bias</p>
-</div>
-<p>Under homoskedasticity, the above estimator achieves the semiparametric efficiency bound.</p>
-<blockquote>
-<p>Example: <span class="math inline">\(y_i = \alpha_0 x_i + \delta_0 z_{i1} + \gamma_0 z_{i2} + \varepsilon_i\)</span></p>
-<ul>
-<li><span class="math inline">\(| \delta_0 | = \frac{1}{2} \qquad \quad | \gamma_0| = \frac{1}{2} \quad\)</span> then the bias is <span class="math inline">\(= \frac{1}{4}\)</span></li>
-<li><span class="math inline">\(| \delta_0 | = \frac{1}{2} \qquad \quad | \gamma_0| = \frac{1}{\sqrt{n}}\)</span> then the bias is <span class="math inline">\(= \frac{1}{2 \sqrt{n}}\)</span></li>
-<li><span class="math inline">\(| \delta_0 | = \frac{1}{\sqrt{n}} \qquad | \gamma_0| = \frac{1}{2}\quad\)</span> then the bias is <span class="math inline">\(= \frac{1}{2 \sqrt{n}}\)</span></li>
-<li><span class="math inline">\(| \delta_0 | = \frac{1}{\sqrt{n}} \qquad | \gamma_0| = \frac{1}{\sqrt{n}}\)</span> then the bias is <span class="math inline">\(= \frac{1}{n}\)</span></li>
-</ul>
-<p>Only in the last case the bias is <span class="math inline">\(o \left(\frac{1}{\sqrt{n}}\right)\)</span>.</p>
-</blockquote>
-<p>What is the criterium that should guide the selection of <span class="math inline">\(\lambda\)</span>?
-<span class="math display">\[
-  \frac{\lambda}{n} \geq 2 \mathbb E_n[x_{ij} \varepsilon_i] \qquad \forall j \quad \text{ if } Var(x_{ij} \varepsilon_i) = 1
-\]</span></p>
-<p>How to choose the optimal <span class="math inline">\(\lambda\)</span>:</p>
-<ul>
-<li>Decide the coverage of the confidence intervals (<span class="math inline">\(1-\alpha\)</span>):
-<span class="math display">\[
-\Pr \left( \sqrt{n} \Big| \mathbb E_n [x_{ij} \varepsilon_i] \Big| &gt; t \right) = 1- \alpha
-\]</span></li>
-<li>Solve for <span class="math inline">\(t\)</span></li>
-<li>Get <span class="math inline">\(\lambda\)</span> such that all scores are dominated by <span class="math inline">\(\frac{\lambda}{n}\)</span> with <span class="math inline">\(\alpha\%\)</span> probability.</li>
-</ul>
-<blockquote>
-<p>It turns out that the optimal <span class="math inline">\(t \propto \sqrt{\log(p)}\)</span></p>
-</blockquote>
 <div id="matlab-8" class="section level3">
-<h3><span class="header-section-number">8.3.1</span> <code>Matlab</code></h3>
+<h3><span class="header-section-number">8.2.4</span> <code>Matlab</code></h3>
 <p>First, we consider the following model: $ y_i = x_i’ _0 + z_i’ _0 + _i $ and
 $ x_i = z_i’ _0 + u_i $ where <span class="math inline">\(\alpha_0 = 1\)</span>, <span class="math inline">\(\beta_0 = 0.1\)</span> and <span class="math inline">\(\gamma = -4\)</span>, and <span class="math inline">\(\varepsilon_i, u_i \sim N(0,1)\)</span>. We simulate three different estimators over 10000 samples: <span class="math inline">\(\hat \alpha_{LONG}\)</span> from the long regression, <span class="math inline">\(\hat \alpha_{SHORT}\)</span> from the short regression and <span class="math inline">\(\hat \alpha_{PRE-TESTING}\)</span> that is either <span class="math inline">\(\hat \alpha_{LONG}\)</span> or <span class="math inline">\(\hat \alpha_{SHORT}\)</span>, depending on whether <span class="math inline">\(\hat \beta\)</span> is significant at the 5% level or not in the long regression.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb10-1"><a href="lecture5.html#cb10-1"></a><span class="co">% Set seed</span></span>
@@ -652,6 +601,53 @@ $ x_i = z_i’ _0 + u_i $ where <span class="math inline">\(\alpha_0 = 1\)</span
 <span id="cb11-54"><a href="lecture5.html#cb11-54"></a>    end</span>
 <span id="cb11-55"><a href="lecture5.html#cb11-55"></a>end</span></code></pre></div>
 </div>
+</div>
+<div id="post-double-selection" class="section level2">
+<h2><span class="header-section-number">8.3</span> Post Double Selection</h2>
+<p>Consider again data <span class="math inline">\(D= (y_i, x_i, z_i)_{i=1}^n\)</span>, where the true model is:
+<span class="math display">\[
+\begin{aligned}
+&amp; y_i = x_i&#39; \alpha_0  + z_i&#39; \beta_0 + \varepsilon_i \\
+&amp; x_i = z_i&#39; \gamma_0 + u_i
+\end{aligned}
+\]</span></p>
+<p>We would like to guard against pretest bias if possible, in order to handle high dimensional models. A good pathway towards motivating procedures which guard against pretest bias is a discussion of classical partitioned regression.</p>
+<p>Consider a regression <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and <span class="math inline">\(z_i\)</span>. <span class="math inline">\(x_i\)</span> is the 1-dimensional variable of interest, <span class="math inline">\(z_i\)</span> is a high-dimensional set of control variables. We have the following procedure:</p>
+<ol style="list-style-type: decimal">
+<li><strong>First Stage</strong> selection: lasso <span class="math inline">\(x_i\)</span> on <span class="math inline">\(z_i\)</span>. Let the selected variables be collected in the set <span class="math inline">\(S_{FS} \subseteq z_i\)</span></li>
+<li><strong>Reduced Form</strong> selection: lasso <span class="math inline">\(y_i\)</span> on <span class="math inline">\(z_i\)</span>. Let the selected variables be collected in the set <span class="math inline">\(S_{RF} \subseteq z_i\)</span></li>
+<li>Regress <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and <span class="math inline">\(S_{FS} \cup S_{RF}\)</span></li>
+</ol>
+<p><strong>Theorem</strong>:
+Let <span class="math inline">\(\{P^n\}\)</span> be a sequence of data-generating processes for <span class="math inline">\(D_n = (y_i, x_i, z_i)^n_{i=1} \in (\mathbb R \times \mathbb R \times \mathbb R^p) ^n\)</span> where <span class="math inline">\(p\)</span> depends on <span class="math inline">\(n\)</span>. For each <span class="math inline">\(n\)</span>, the data are iid with <span class="math inline">\(yi = x_i&#39;\alpha_0^{(n)} + z_i&#39; \beta_0^{(n)} + \varepsilon_i\)</span> and <span class="math inline">\(x_i = z_i&#39; \gamma_0^{(n)} + u_i\)</span> where <span class="math inline">\(\mathbb E[\varepsilon_i | x_i,z_i] = 0\)</span> and <span class="math inline">\(\mathbb E[u_i|z_i] = 0\)</span>. The sparsity of the vectors <span class="math inline">\(\beta_0^{(n)}\)</span>, <span class="math inline">\(\gamma_0^{(n)}\)</span> is controlled by <span class="math inline">\(|| \beta_0^{(n)} ||_0 \leq s\)</span> with <span class="math inline">\(s^2 (\log p)^2/n \to 0\)</span>. Suppose that additional regularity conditions on the model selection procedures and moments of the random variables <span class="math inline">\(y_i\)</span> , <span class="math inline">\(x_i\)</span> , <span class="math inline">\(z_i\)</span> as documented in Belloni et al. (2014). Then the confidence intervals, CI, from the post double selection procedure are uniformly valid. That is, for any confidence level <span class="math inline">\(\xi \in (0, 1)\)</span>
+<span class="math display">\[
+        \Pr(\alpha_0 \in CI) \to 1- \xi
+\]</span></p>
+<p>In order to have valid confidence intervals you want their bias to be negligibly. Since
+<span class="math display">\[
+  CI = \left[ \hat{\alpha} \pm \frac{1.96 \cdot \hat{\sigma}}{\sqrt{n}} \right]
+\]</span></p>
+<p>If the bias is <span class="math inline">\(o(n^{-1/2})\)</span> then there is no problem since it is asymptotically negligible w.r.t. the magnitude of the confidence interval. If however the the bias is <span class="math inline">\(O(n^{-1/2})\)</span> then it has the same magnitude of the confidence interval and it does not asymptotically vanish.</p>
+<p>The idea of the proof is to use partitioned regression. An alternative way to think about the argument is: bound the omitted variables bias. Omitted variable bias comes from the product of 2 quantities related to the omitted variable:</p>
+<ol style="list-style-type: decimal">
+<li>Its partial correlation with the outcome, and</li>
+<li>Its partial correlation with the variable of interest.</li>
+</ol>
+<p>If both those partial correlations are <span class="math inline">\(O( \sqrt{\log p/n})\)</span>, then the omitted variables bias is <span class="math inline">\((s \times O( \sqrt{\log p/n})^2 = o(n^{-1/2})\)</span>, provided <span class="math inline">\(s^2 (\log p)^2/n \to 0\)</span>. Relative to the <span class="math inline">\(n^{-1/2}\)</span> convergence rate, the omitted variables bias is negligible.</p>
+<p>In our omitted variable bias case, we want <span class="math inline">\(| \beta_0 \gamma_0 | = o \left(\frac{1}{\sqrt{n}}\right)\)</span>. Post-double selection guarantees that</p>
+<ul>
+<li><em>Reduced form</em> selection (pre-testing): any “missing” variable has <span class="math inline">\(|\beta_{0j}| \leq \frac{c}{\sqrt{n}}\)</span></li>
+<li><em>First stage</em> selection (additional): any “missing” variable has <span class="math inline">\(|\gamma_{0j}| \leq \frac{c}{\sqrt{n}}\)</span></li>
+</ul>
+<p>As a consequence, as long as the number of omitted variables is finite, the omitted variable bias is
+<span class="math display">\[
+    OVB(\alpha) = |\beta_{0j}| \cdot|\gamma_{0j}| \leq \frac{c}{\sqrt{n}} \cdot \frac{c}{\sqrt{n}} = \frac{c^2}{n} = o \left(\frac{1}{\sqrt{n}}\right)
+\]</span></p>
+<div class="figure">
+<img src="figures/Fig_641.png" alt="" />
+<p class="caption">Pre-test Bias</p>
+</div>
+<p>Under homoskedasticity, the above estimator achieves the semiparametric efficiency bound.</p>
 </div>
 <div id="references-8" class="section level2">
 <h2><span class="header-section-number">8.4</span> References</h2>
