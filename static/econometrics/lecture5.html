@@ -388,7 +388,7 @@ Then</p>
 <p><span class="math display">\[
   y_i = x_i&#39; \alpha_0+ z_i&#39; \beta_0 + \varepsilon_i
 \]</span></p>
-<p>Define the corresponding <strong>short regression</strong></p>
+<p>Define the corresponding <strong>short regression</strong> as</p>
 <p><span class="math display">\[
   y_i = x_i&#39; \alpha_0 + v_i \quad \text{ with } v_i = z_i&#39; \beta_0 + \varepsilon_i
 \]</span></p>
@@ -415,33 +415,39 @@ Suppose that the DGP for the long regression corresponds to <span class="math in
 <li>Strict exogeneity: <span class="math inline">\(\mathbb E[\varepsilon_i | x_i, z_i] = 0\)</span> and <span class="math inline">\(\mathbb E[u_i | z_i] = 0\)</span></li>
 <li><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\gamma_0\)</span> have dimension (and hence value) that depend on <span class="math inline">\(n\)</span></li>
 </ul>
-<p>Pre Testing procedure:</p>
+<p>Pre-Testing procedure:</p>
 <ol style="list-style-type: decimal">
 <li>Regress <span class="math inline">\(y_i\)</span> on <span class="math inline">\(x_i\)</span> and <span class="math inline">\(z_i\)</span></li>
 <li>For each <span class="math inline">\(j = 1, ..., p = \dim(z_i)\)</span> calculate a test statistic <span class="math inline">\(t_j\)</span></li>
 <li>Let <span class="math inline">\(\hat{T} = \{ j: |t_j| &gt; C &gt; 0 \}\)</span> for some constant <span class="math inline">\(C\)</span> (set of statistically significant coefficients).</li>
-<li>Re-run the new “model” using <span class="math inline">\((x_i, z_{\hat{T},i})\)</span> (i.e. using the selected covariates).</li>
+<li>Re-run the new “model” using <span class="math inline">\((x_i, z_{\hat{T},i})\)</span> (i.e. using the selected covariates with statistically significant coefficients).</li>
 <li>Perform statistical inference (i.e. confidence intervals and hypothesis tests) as if no model selection had been done.</li>
 </ol>
 <div class="figure">
 <img src="figures/Fig_621.png" alt="" />
 <p class="caption">Omitted Variable Bias and Pre-Test Distortion</p>
 </div>
-<p>As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed.</p>
-<p>Concept of <strong>uniformity</strong>: the DGP varies with <span class="math inline">\(n\)</span>. Instead of having a fixed “true” parameter <span class="math inline">\(\beta_0\)</span>, you have a sequence <span class="math inline">\(\beta_0(n)\)</span>. Then, we could plot a sequence of ordered pairs <span class="math inline">\((n, DGP)\)</span> as below. In order to study the behavior of <span class="math inline">\(\hat{\beta}\)</span> at your particular <span class="math inline">\(n\)</span>, you study its behavior along the sequence.</p>
+<p>As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed (third column).</p>
+<p>Pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014).</p>
+<blockquote>
+<p>Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when <span class="math inline">\(\beta_0&gt;0\)</span> but we fail to reject the null hypothesis <span class="math inline">\(H_0:\beta_0=0\)</span> because of lack of statistical power, i.e. <span class="math inline">\(|\beta_0|\)</span> is small with respect to the sample size. In particular, we fail to reject the null hypothesis for <span class="math inline">\(\beta_0 = O\left( \frac{1}{n}\right)\)</span>. Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if <span class="math inline">\(\beta_0(n) = O\left( \frac{1}{n}\right)\)</span>, <span class="math inline">\(\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0\)</span>. We now clarify what it means to have a coefficient depending on the sample size, <span class="math inline">\(\beta_0(n)\)</span>.</p>
+</blockquote>
+<p>Concept of <strong>uniformity</strong>: the DGP varies with <span class="math inline">\(n\)</span>. Instead of having a fixed “true” parameter <span class="math inline">\(\beta_0\)</span>, you have a sequence <span class="math inline">\(\beta_0(n)\)</span>.
+Having a cofficient that depends on the sample size <span class="math inline">\(n\)</span> is useful to preserve the concept of “small with respect to the sample size” in asymptotic theory.</p>
+<p>In the context of Pre-Testing, all problems vanish asymptotically since we are able to always reject the null hypothesis <span class="math inline">\(H_0:\beta_0=0\)</span> when <span class="math inline">\(\beta_0 \neq 0\)</span>. In the figure above, I plot simulation results for <span class="math inline">\(\hat \alpha_{PRETESTING}\)</span> for a fixed coefficient <span class="math inline">\(\beta_0\)</span> (first row) and variable coefficient <span class="math inline">\(\beta_0(n)\)</span> that depends on the sample size (second row), for different sample sizes (columns). We see that if <span class="math inline">\(\beta_0\)</span> is independent from the sample size (first row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when <span class="math inline">\(\beta_0(n)\)</span> depends on the sample size (second row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> stays bimodal even when the sample size increases.</p>
+<blockquote>
+<p>Note that the estimator is always consistent!</p>
+</blockquote>
 <div class="figure">
 <img src="figures/Fig_624.png" alt="" />
 <p class="caption">Distrubution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span></p>
 </div>
-<p>From the figure below, we see that if <span class="math inline">\(\beta_0\)</span> is independent from the sample size (first row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when <span class="math inline">\(\beta_0(n)\)</span> depends on the sample size (second row), the distribution of <span class="math inline">\(\hat \alpha_{PRETEST}\)</span> stays bimodal even when the sample size increases.</p>
-<blockquote>
-<p>Remark: pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.</p>
-</blockquote>
+<p>One could show that problems arise exactly when <span class="math inline">\(\beta_0 = O\left( \frac{1}{n}\right)\)</span>. If we were to draw a map of where the gaussianity assumption of <span class="math inline">\(\beta_0(n)\)</span> holds well, it would look like the following figure.</p>
 <div class="figure">
 <img src="figures/Fig_623.png" alt="" />
 <p class="caption">Pre-test Bias</p>
 </div>
-<p>The intuition for the three different regions (from below to above) is the following.</p>
+<p>The intuition for the three different regions (from bottom to top) is the following.</p>
 <ol style="list-style-type: decimal">
 <li>When <span class="math inline">\(\beta_0 = o(1/\sqrt{n})\)</span>, <span class="math inline">\(z_i\)</span> is excluded with probability <span class="math inline">\(p \to 1\)</span>. But, given that <span class="math inline">\(\beta_0\)</span> is small enough, failing to control for <span class="math inline">\(z_i\)</span> does not introduce large omitted variables bias (Belloni et al., 2014).</li>
 <li>If however the coefficient on the control is “moderately close to zero” (<span class="math inline">\(\beta_0 = O(1/\sqrt{n})\)</span>), the t-test set-up above cannot distinguish this coefficient from <span class="math inline">\(0\)</span>, and the control <span class="math inline">\(z_i\)</span> is dropped with probability <span class="math inline">\(p \to 1\)</span>. However, in this case the omitted variable bias generated by excluding <span class="math inline">\(z_i\)</span> scaled by <span class="math inline">\(\sqrt{n}\)</span> does not converge to zero. That is, the standard post-selection estimator is not asymptotically normal and even fails to be consistent at the rate of <span class="math inline">\(\sqrt{n}\)</span> (Belloni et al., 2014).</li>

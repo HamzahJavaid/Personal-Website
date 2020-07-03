@@ -3726,7 +3726,7 @@ Consider two separate statistical models. Assume the following \textbf{long regr
   y_i = x_i' \alpha_0+ z_i' \beta_0 + \varepsilon_i
 \]
 
-Define the corresponding \textbf{short regression}
+Define the corresponding \textbf{short regression} as
 
 \[
   y_i = x_i' \alpha_0 + v_i \quad \text{ with } v_i = z_i' \beta_0 + \varepsilon_i
@@ -3765,7 +3765,7 @@ From now on, we will work under the following assumptions:
   \(\beta_0\) and \(\gamma_0\) have dimension (and hence value) that depend on \(n\)
 \end{itemize}
 
-Pre Testing procedure:
+Pre-Testing procedure:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3777,7 +3777,7 @@ Pre Testing procedure:
 \item
   Let \(\hat{T} = \{ j: |t_j| > C > 0 \}\) for some constant \(C\) (set of statistically significant coefficients).
 \item
-  Re-run the new ``model'' using \((x_i, z_{\hat{T},i})\) (i.e.~using the selected covariates).
+  Re-run the new ``model'' using \((x_i, z_{\hat{T},i})\) (i.e.~using the selected covariates with statistically significant coefficients).
 \item
   Perform statistical inference (i.e.~confidence intervals and hypothesis tests) as if no model selection had been done.
 \end{enumerate}
@@ -3788,9 +3788,22 @@ Pre Testing procedure:
 \caption{Omitted Variable Bias and Pre-Test Distortion}
 \end{figure}
 
-As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed.
+As we can see from the figure above (code below), running the short regression instead of the long one introduces Omitted Variable Bias (second column). Instead, the Pre-Testing estimator is consistent but not normally distributed (third column).
 
-Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a fixed ``true'' parameter \(\beta_0\), you have a sequence \(\beta_0(n)\). Then, we could plot a sequence of ordered pairs \((n, DGP)\) as below. In order to study the behavior of \(\hat{\beta}\) at your particular \(n\), you study its behavior along the sequence.
+Pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014).
+
+\begin{quote}
+Intuition: when performing pre-testing, we might have an Omitted Variable Bias problem when \(\beta_0>0\) but we fail to reject the null hypothesis \(H_0:\beta_0=0\) because of lack of statistical power, i.e.~\(|\beta_0|\) is small with respect to the sample size. In particular, we fail to reject the null hypothesis for \(\beta_0 = O\left( \frac{1}{n}\right)\). Note however, that the problem vanishes asymptotically, as the resulting estimator is consistent. In fact, if \(\beta_0(n) = O\left( \frac{1}{n}\right)\), \(\alpha_0 - \hat \alpha_{PRETEST} \overset{p}{\to} \beta_0 \gamma_0 = 0\). We now clarify what it means to have a coefficient depending on the sample size, \(\beta_0(n)\).
+\end{quote}
+
+Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a fixed ``true'' parameter \(\beta_0\), you have a sequence \(\beta_0(n)\).
+Having a cofficient that depends on the sample size \(n\) is useful to preserve the concept of ``small with respect to the sample size'' in asymptotic theory.
+
+In the context of Pre-Testing, all problems vanish asymptotically since we are able to always reject the null hypothesis \(H_0:\beta_0=0\) when \(\beta_0 \neq 0\). In the figure above, I plot simulation results for \(\hat \alpha_{PRETESTING}\) for a fixed coefficient \(\beta_0\) (first row) and variable coefficient \(\beta_0(n)\) that depends on the sample size (second row), for different sample sizes (columns). We see that if \(\beta_0\) is independent from the sample size (first row), the distribution of \(\hat \alpha_{PRETEST}\) is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), the distribution of \(\hat \alpha_{PRETEST}\) stays bimodal even when the sample size increases.
+
+\begin{quote}
+Note that the estimator is always consistent!
+\end{quote}
 
 \begin{figure}
 \centering
@@ -3798,11 +3811,7 @@ Concept of \textbf{uniformity}: the DGP varies with \(n\). Instead of having a f
 \caption{Distrubution of \(\hat \alpha_{PRETEST}\)}
 \end{figure}
 
-From the figure below, we see that if \(\beta_0\) is independent from the sample size (first row), the distribution of \(\hat \alpha_{PRETEST}\) is not normal in small samples and it displays the bimodality that characterizes pre-testing. However, it becomes normal in large samples. On the other hand, when \(\beta_0(n)\) depends on the sample size (second row), the distribution of \(\hat \alpha_{PRETEST}\) stays bimodal even when the sample size increases.
-
-\begin{quote}
-Remark: pre-testing is problematic because the post-selection estimator is not asymptotically normal. Moreover, for particular data generating processes, it even fails to be consistent at the rate of \(\sqrt{n}\) (Belloni et al., 2014). An approximate depiction of the DGPs for which consistency fails is depicted below.
-\end{quote}
+One could show that problems arise exactly when \(\beta_0 = O\left( \frac{1}{n}\right)\). If we were to draw a map of where the gaussianity assumption of \(\beta_0(n)\) holds well, it would look like the following figure.
 
 \begin{figure}
 \centering
@@ -3810,7 +3819,7 @@ Remark: pre-testing is problematic because the post-selection estimator is not a
 \caption{Pre-test Bias}
 \end{figure}
 
-The intuition for the three different regions (from below to above) is the following.
+The intuition for the three different regions (from bottom to top) is the following.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
