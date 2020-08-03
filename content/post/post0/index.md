@@ -8,10 +8,8 @@ draft: false
 type: post
 
 tags:
- - resources
- - economics
- - seminars
- - online
+ - blog
+ - news
 
 ---
 
