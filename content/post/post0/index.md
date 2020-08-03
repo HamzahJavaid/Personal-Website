@@ -15,7 +15,7 @@ tags:
 
 ---
 
-I use this post series to summarize my readings in the past weeks. I collect both news articles on present events and older articles I discovered during the past weeks. I try to give preference to sources without paywalls.
+I use this post series to summarize my readings in the last week. I collect both news articles on present events and older articles I discovered during the last seven days. 
 
 ## Old
 
