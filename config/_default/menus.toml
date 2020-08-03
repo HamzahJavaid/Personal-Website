@@ -26,40 +26,10 @@
   weight = 1
 
 [[main]]
-  name = "Posts"
+  name = "Blog"
   identifier = "post"
   url = "post/"
   weight = 4
-
-[[main]]
-  name = "How To Build A Website"
-  parent = "post"
-  URL = "post/website"
-  weight = 1
-
-[[main]]
-  name = "Programming Languages"
-  parent = "post"
-  URL = "post/programming"
-  weight = 2
-
-[[main]]
-  name = "Summer Schools"
-  parent = "post"
-  URL = "post/summerschools"
-  weight = 3
-
-[[main]]
-  name = "Online Seminars"
-  parent = "post"
-  URL = "post/seminars"
-  weight = 4
-
-[[main]]
-  name = "Online Conferences"
-  parent = "post"
-  URL = "post/conferences"
-  weight = 5
 
 [[main]]
   name = "CV"

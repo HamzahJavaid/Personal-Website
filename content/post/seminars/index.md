@@ -13,12 +13,7 @@ tags:
  - seminars
  - online
 
-menu: 
-  resources:
-
 ---
-
-## Introduction
 
 I will use this page to collect information about online seminars in Economics and Finance.
 

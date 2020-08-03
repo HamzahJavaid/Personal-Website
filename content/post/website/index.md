@@ -13,9 +13,6 @@ tags:
  - hugo
  - academic
 
-menu: 
-  resources:
-
 ---
 
 In this tutorial I am going to explain how to build a personal page on [Github](https://www.github.com) using the [Academic](https://sourcethemes.com/academic/) theme from [Hugo](https://gohugo.io/).

@@ -12,12 +12,7 @@ tags:
  - economics
  - summer schools
 
-menu: 
-  resources:
-
 ---
-
-## Introduction
 
 I will use this page to collect information about summer schools in Economics. I will try to keep it updated across the years.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.11)  3 JUL 2020 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.11)  3 JUL 2020 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,18 +964,38 @@ File: figures/Fig_621.png Graphic file (type png)
 <use figures/Fig_621.png>
 Package pdftex.def Info: figures/Fig_621.png  used on input line 3787.
 (pdftex.def)             Requested size: 469.76805pt x 233.09782pt.
+[92]
+<figures/Fig_624.png, id=743, 1513.3338pt x 753.5352pt>
+File: figures/Fig_624.png Graphic file (type png)
+<use figures/Fig_624.png>
+Package pdftex.def Info: figures/Fig_624.png  used on input line 3810.
+(pdftex.def)             Requested size: 469.7521pt x 233.90395pt.
+<figures/Fig_623.png, id=744, 648.4225pt x 579.16376pt>
+File: figures/Fig_623.png Graphic file (type png)
+<use figures/Fig_623.png>
+Package pdftex.def Info: figures/Fig_623.png  used on input line 3818.
+(pdftex.def)             Requested size: 469.76282pt x 419.58691pt.
+[93 <./figures/Fig_621.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[94 <./figures/Fig_624.png (PNG copy)>] [95 <./figures/Fig_623.png>]
+Overfull \hbox (26.95941pt too wide) in paragraph at lines 3872--3873
+[]\T1/lmr/m/n/12 (-20) Having es-tab-lished the claim, we want to show that the
+ nor-mal equa-tion $[] [] \OT1/lmr/m/n/12 (-20) =
+ []
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.3796 ... reject the null hypothesis for \$ \beta
-                                                   \_ 0 = O \left( \frac{1}{...
+l.3898 ... following model: \$ y\_i = x\_i' \alpha
+                                                  \_0 + z\_i' \beta\_0 + \va...
  
 Here is how much of TeX's memory you used:
- 14172 strings out of 494060
- 205859 string characters out of 6163035
+ 14220 strings out of 494060
+ 206520 string characters out of 6163035
  315822 words of memory out of 5000000
- 17084 multiletter control sequences out of 15000+600000
- 106525 words of font info for 181 fonts, out of 8000000 for 9000
+ 17106 multiletter control sequences out of 15000+600000
+ 113544 words of font info for 188 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  32i,14n,38p,1380b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

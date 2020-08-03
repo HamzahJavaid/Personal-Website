@@ -2,8 +2,8 @@
 %  Matteo Courthoud
 %  01/01/2017
 
-%cd '/Users/macbook/Dropbox/Code/website/courses/econometrics/'
-cd '/home/mcourt/Dropbox/Code/website/courses/econometrics/'
+cd '/Users/macbook/Dropbox/Code/website/courses/econometrics/'
+%cd '/home/mcourt/Dropbox/Code/website/courses/econometrics/'
  
 
 

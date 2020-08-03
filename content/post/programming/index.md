@@ -13,12 +13,7 @@ tags:
  - programming
  - econometrics
 
-menu: 
-  resources:
-
 ---
-
-## Introduction
 
 In this tutorial I am going over different programming languages in Economics. In particular, I will analyze Stata, Python, Matlab, R and partially C/C++. I will try to answer the following questions (from my very limited experience):
 

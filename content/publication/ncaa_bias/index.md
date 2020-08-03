@@ -1,5 +1,5 @@
 ---
-title: "Peer-to-Peer Platform Competition"
+title: "Present Bias in Career Decisions"
 authors:
 - admin
 date: "2019-09-01"
@@ -21,22 +21,21 @@ publication_short: ""
 abstract: Coming soon...
 
 # Summary. An optional shortened abstract.
-summary: In this project I analyze the dynamics of competition between platforms in peer-to-peer rental markets.
+summary: In this project we empirically assess the extent of present bias in young professionsals career decision making.
 
 tags:
 - Industrial Organization
+- Behavioral Economics
 - Dynamics
-- Platforms
-- Peer-to-Peer
 featured: false
 
 links:
-url_pdf: '#'
-url_code: '#'
-url_dataset: '#'
+url_pdf: ''
+url_code: ''
+url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: '#'
+url_slides: ''
 url_source: ''
 url_video: ''
 

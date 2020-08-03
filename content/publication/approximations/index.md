@@ -1,8 +1,8 @@
 ---
-title: "Mergers, Acquisitions and Innovation"
+title: "Approximation Methods for Large Dynamic Stochastic Games"
 authors:
 - admin
-date: "2019-09-01"
+date: "2020-07-01"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -18,25 +18,24 @@ publication_types: []
 publication: ""
 publication_short: ""
 
-abstract: Coming soon...
+abstract: Dynamic stochastic games notoriously suffer from a curse of dimensionality that makes computing the Markov Perfect Equilibrium of large games infeasible. This article compares the existing approximation methods and alternative equilibrium concepts that have been proposed in the literature to overcome this problem. No method clearly dominates the others but some are dominated in all dimensions. In general, alternative equilibrium concepts outperform sampling-based approximation methods. I propose a new game structure, games with random order, in which players move sequentially and the order of play is unknown. The Markov Perfect equilibrium of this game consistently outperforms all existing approximation methods in terms of approximation accuracy while still being extremely efficient in terms of computational time.
 
 # Summary. An optional shortened abstract.
-summary: The objective of this project is to empirically study effects of mergers and acquisitions on innovation and consumer welfare.
+summary: In this project I compare existing approximation methods to compute Markow Perfect Equilibrium in dynamic stochastic games with large state spaces. I also propose a new approximation method called "Games with Random Order".
 
 tags:
 - Industrial Organization
-- Innovation
-- Competition Policy
+- Computation
 - Dynamics
 featured: false
 
 links:
-url_pdf: '#'
-url_code: '#'
-url_dataset: '#'
+url_pdf: 'files/approximation2020.pdf'
+url_code: ''
+url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: '#'
+url_slides: ''
 url_source: ''
 url_video: ''
 

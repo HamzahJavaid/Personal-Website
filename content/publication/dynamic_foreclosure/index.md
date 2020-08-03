@@ -1,5 +1,5 @@
 ---
-title: "Present Bias in Career Decisions"
+title: "Dynamic Foreclosure"
 authors:
 - admin
 date: "2019-09-01"
@@ -21,21 +21,22 @@ publication_short: ""
 abstract: Coming soon...
 
 # Summary. An optional shortened abstract.
-summary: In this project we empirically assess the extent of present bias in young professionsals career decision making.
+summary: In this project I inspect the dynamics of competition and innovation in adjacent markets. I show how small asymmetries propagate and how foreclosure and market tipping forces enhance this mechanism.
 
 tags:
 - Industrial Organization
-- Behavioral Economics
 - Dynamics
+- Platforms
+- Peer-to-Peer
 featured: false
 
 links:
-url_pdf: '#'
-url_code: '#'
-url_dataset: '#'
+url_pdf: ''
+url_code: ''
+url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: '#'
+url_slides: ''
 url_source: ''
 url_video: ''
 
@@ -44,7 +45,7 @@ url_video: ''
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
   focal_point: ""
-  preview_only: false
+  preview_only: true
 
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
