@@ -29,7 +29,7 @@ echo
 cd public
 git add .
 git commit -a -m "Update website"
-git push origin master
+git push
 
 sleep 3
 exit
