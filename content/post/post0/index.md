@@ -1,6 +1,7 @@
 ---
 
 title: My Readings - 02/08/20
+linktitle: readings020820
 subtitle: My Readings of the week with short summaries and links
 authors: 
  - admin
