@@ -28,7 +28,7 @@ fi
 echo
 cd public
 git add .
-git commit -m "Update website"
+git commit -a -m "Update website"
 git push origin master
 
 sleep 3
