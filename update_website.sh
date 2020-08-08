@@ -24,18 +24,20 @@ then
  cd -
 fi
 
-# Update website
-echo
-rm -r public
-hugo
+# Re-init public
+# rm -r public
+# git submodule add -f -b master https://github.com/matteocourthoud/matteocourthoud.github.io public
+
+# Update website - NOT WORKING AT THE MOMENT
+# echo
+# hugo
 
 # Add, commit, push website
 echo
 cd public
-git remote set-url origin  https://github.com/matteocourthoud/matteocourthoud.github.io
 git add .
-git commit -a -m "Update website"
-git push -f origin master
+git commit -m "Update website"
+git push
 
 sleep 3
 exit

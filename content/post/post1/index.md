@@ -19,7 +19,34 @@ tags:
 
 I use this post series to summarize my readings in the last week. I collect both news articles on present events and older articles I discovered during the last seven days. 
 
-## Old
+
+## News
+
+### Commission opens in-depth investigation into the proposed acquisition of Fitbit by Google
+
+[*from European Commission, 04/08/20*](https://ec.europa.eu/commission/presscorner/detail/en/ip_20_1446)
+
+The European Commission has opened an in-depth investigation to assess the proposed acquisition of Fitbit by Google under the EU Merger Regulation. The Commission is concerned that the proposed transaction would further entrench Google's market position in the online advertising markets by increasing the already vast amount of data that Google could use for personalisation of the ads it serves and displays.
+
+
+
+### Attack of the TikTok clones
+
+[*from The Verge, 06/08/20*](https://www.theverge.com/21356971/tiktok-alternatives-instagram-reels-byte-triller-zynn-ban)
+
+The two biggest names in shortform mobile video — Instagram and Snapchat — are now launching TikTok-like features, too. Snapchat is positioning its music feature as something meant for personal messaging. But Instagram is launching a much more significant threat: a feature called Reels that lets people publish short videos set to music that others can watch and discover.
+
+
+
+### Trump bans US transactions with Chinese-owned TikTok and WeChat
+
+[*from The Guardian, 07/08/20*](https://www.theguardian.com/technology/2020/aug/06/us-senate-tiktok-ban)
+
+Donald Trump has issued a pair of executive orders that would ban any US transactions with the Chinese companies that own TikTok and WeChat, saying the US must take “aggressive action” in the interest of national security. Executive orders issued late on Thursday would prohibit “any transaction by any person, or with respect to any property, subject to the jurisdiction of the United States,” with the companies, beginning in 45 days.
+
+
+
+## Old Articles
 
 ### Index funds invest trillions but rarely challenge management
 
@@ -45,26 +72,3 @@ Amazon intentionally posts low profits because it takes the vast majority of the
 
 
 
-## News
-
-### Commission opens in-depth investigation into the proposed acquisition of Fitbit by Google
-
-[*from European Commission, 04/08/20*](https://ec.europa.eu/commission/presscorner/detail/en/ip_20_1446)
-
-The European Commission has opened an in-depth investigation to assess the proposed acquisition of Fitbit by Google under the EU Merger Regulation. The Commission is concerned that the proposed transaction would further entrench Google's market position in the online advertising markets by increasing the already vast amount of data that Google could use for personalisation of the ads it serves and displays.
-
-
-
-### Attack of the TikTok clones
-
-[*from The Verge, 06/08/20*](https://www.theverge.com/21356971/tiktok-alternatives-instagram-reels-byte-triller-zynn-ban)
-
-The two biggest names in shortform mobile video — Instagram and Snapchat — are now launching TikTok-like features, too. Snapchat is positioning its music feature as something meant for personal messaging. But Instagram is launching a much more significant threat: a feature called Reels that lets people publish short videos set to music that others can watch and discover.
-
-
-
-### Trump bans US transactions with Chinese-owned TikTok and WeChat
-
-[*from The Guardian, 07/08/20*](https://www.theguardian.com/technology/2020/aug/06/us-senate-tiktok-ban)
-
-Donald Trump has issued a pair of executive orders that would ban any US transactions with the Chinese companies that own TikTok and WeChat, saying the US must take “aggressive action” in the interest of national security. Executive orders issued late on Thursday would prohibit “any transaction by any person, or with respect to any property, subject to the jurisdiction of the United States,” with the companies, beginning in 45 days.
