@@ -3,9 +3,6 @@ cd dropbox/code/website/
 
 read -p "Enter commit description: " description
 
-# Remove public folder
-rm -r public
-
 # Add, commit, push code
 echo
 git add .
@@ -24,8 +21,8 @@ then
 fi
 
 # Update website
-echo
-hugo
+# echo
+# hugo
 
 # Add, commit, push website
 echo
