@@ -14,22 +14,22 @@
   weight = 2
 
 [[main]]
+  name = "Blog"
+  identifier = "post"
+  url = "post/"
+  weight = 3
+
+[[main]]
   name = "Courses"
   identifier = "courses"
   url = ""
-  weight = 3
+  weight = 4
 
 [[main]]
   name = "Econometrics"
   parent = "courses"
   url = "econometrics/"
   weight = 1
-
-[[main]]
-  name = "Blog"
-  identifier = "post"
-  url = "post/"
-  weight = 4
 
 [[main]]
   name = "CV"

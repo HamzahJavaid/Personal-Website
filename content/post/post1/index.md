@@ -1,15 +1,18 @@
 ---
 
 title: My Readings - 09/08/20
-linktitle: My Readings
-toc: true
+subtitle: My Readings of the week with short summaries and links
+authors: 
+ - admin
 date: "2020-08-09"
 draft: false
 type: post
+toc: true
 
 tags:
  - blog
  - news
+ - economics
 
 ---
 
