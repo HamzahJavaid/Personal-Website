@@ -21,8 +21,8 @@ then
 fi
 
 # Update website
-# echo
-# hugo
+echo
+hugo
 
 # Add, commit, push website
 echo
