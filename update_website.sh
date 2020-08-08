@@ -26,7 +26,7 @@ fi
 
 # Update website
 echo
-rm public
+rm -r public
 hugo
 
 # Add, commit, push website
