@@ -1,6 +1,10 @@
 # Directory
 cd dropbox/code/website/
 
+# Set git
+git config --global user.email matteo.courthoud@uzh.ch
+git config --global user.name matteocourthoud
+
 read -p "Enter commit description: " description
 
 # Add, commit, push code
