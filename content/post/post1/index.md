@@ -46,6 +46,14 @@ Donald Trump has issued a pair of executive orders that would ban any US transac
 
 
 
+### To Head Off Regulators, Google Makes Certain Words Taboo
+
+[*from The Markup, 07/08/20*](https://themarkup.org/google-the-giant/2020/08/07/google-documents-show-taboo-words-antitrust)
+
+The Markup obtained internal documents that coach new employees to avoid creating “very real legal risks” in using words like “market” and “network effects”. [...] The documents explain the basics of antitrust law and caution against loose talk that could have implications for government regulators or private lawsuits.
+
+ 
+
 ## Old Articles
 
 ### Index funds invest trillions but rarely challenge management

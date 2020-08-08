@@ -29,8 +29,8 @@ fi
 # git submodule add -f -b master https://github.com/matteocourthoud/matteocourthoud.github.io public
 
 # Update website - NOT WORKING AT THE MOMENT
-# echo
-# hugo
+echo
+hugo
 
 # Add, commit, push website
 echo
