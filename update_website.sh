@@ -3,11 +3,13 @@ cd dropbox/code/website/
 
 read -p "Enter commit description: " description
 
+# Remove public folder
+rm -r public
+
 # Add, commit, push code
 echo
 git add .
 git commit -m $description
-git remote set-url origin https://github.com/matteocourthoud/Website.git
 git push -u origin master
 
 # Ask to build book
@@ -23,7 +25,6 @@ fi
 
 # Update website
 echo
-rm -r public
 hugo
 
 # Add, commit, push website
