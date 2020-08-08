@@ -28,6 +28,7 @@ hugo
 # Add, commit, push website
 echo
 cd public
+git remote set-url origin  https://github.com/matteocourthoud/matteocourthoud.github.io
 git add .
 git commit -a -m "Update website"
 git push
