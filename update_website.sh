@@ -31,7 +31,7 @@ cd public
 git remote set-url origin  https://github.com/matteocourthoud/matteocourthoud.github.io
 git add .
 git commit -a -m "Update website"
-git push
+git push -f
 
 sleep 3
 exit
