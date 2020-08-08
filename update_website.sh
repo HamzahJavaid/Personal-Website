@@ -11,7 +11,7 @@ read -p "Enter commit description: " description
 echo
 git add .
 git commit -m $description
-git push -u origin master
+git push
 
 # Ask to build book
 read -p "Re-build econometrics notes? [y/n]" answer
