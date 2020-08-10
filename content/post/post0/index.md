@@ -17,7 +17,7 @@ tags:
 
 ---
 
-I use this post series to summarize my readings in the last week. I collect both news articles on present events and older articles I discovered during the last seven days. 
+This is my personal reading list in which I collect and summarize the most interesting articles I have read during the last week. I save both news articles on present events and older articles.
 
 
 
