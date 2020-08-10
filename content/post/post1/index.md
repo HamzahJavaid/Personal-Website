@@ -1,11 +1,11 @@
 ---
 
 title: My Readings - 09/08/20
-linktitle: readings090820
 subtitle: My Readings of the week with short summaries and links
 authors: 
  - admin
 date: "2020-08-09"
+lastmod: "2020-08-09"
 draft: false
 type: post
 toc: true
@@ -52,7 +52,15 @@ Donald Trump has issued a pair of executive orders that would ban any US transac
 
 The Markup obtained internal documents that coach new employees to avoid creating “very real legal risks” in using words like “market” and “network effects”. [...] The documents explain the basics of antitrust law and caution against loose talk that could have implications for government regulators or private lawsuits.
 
- 
+
+
+### What more should antitrust be doing?
+
+[*from The Economist, 08/08/20*](https://www.economist.com/schools-brief/2020/08/08/what-more-should-antitrust-be-doing)
+
+In many industries the largest firms have consistently gained market share without any official concern; the most successful technology companies have grown into veritable titans. Many economists studying the subject now worry that a lack of competition is an economic drag, especially online. Some scholars go further, arguing that the Chicago school’s sense of what is good for consumers is not serving their broader interests.
+
+
 
 ## Old Articles
 
@@ -77,6 +85,23 @@ This is not a story of financial efficiency having surprising negative effects o
 [*from Vox, 24/10/19*](https://www.vox.com/recode/2019/8/21/20826405/amazons-profits-revenue-free-cash-flow-explained-charts)
 
 Amazon intentionally posts low profits because it takes the vast majority of the money it earns and invests it right back into the company so that it will profit all the more in the future. Its business model, once reviled on Wall Street, has spurred numerous other companies like Uber and WeWork to emulate Amazon and forgo profits for the sake of growth — though many of these companies haven’t really proved that they could ever be profitable.
+
+
+
+### Why a Struggling Rust Belt City Pinned Its Revival on a Self-Chilling Beverage Can
+
+[*from ProPublica, 11/03/20*](https://www.propublica.org/article/youngstown-chill-can)
+
+Welcome to Youngstown, Ohio, home of Chill-Can, the self-chilling beverage container you’ve probably never heard of. Officials have gambled millions of dollars and demolished a neighborhood for the product. Not one job has been created yet.
+
+
+
+ ### Does Amazon Really Pay No Taxes? Here’s the Complicated Answer
+ 
+ [*from The Wall Street Journal, 14/06/19*](https://www.wsj.com/articles/does-amazon-really-pay-no-taxes-heres-the-complicated-answer-11560504602)
+ 
+A closer look at the internet giant’s tax disclosures over several years paints a more complicated picture: Amazon has paid income taxes somewhere, albeit at a low rate, likely helped by deductions and incentives related to investment, research and employee compensation.
+
 
 
 
