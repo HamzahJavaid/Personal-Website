@@ -19,14 +19,23 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "TA for MA Machine Learning for Economic Analysis"
+  company = "University of Zurich"
+  company_url = ""
+  location = "Zurich, Switzerland"
+  date_start = "2020-09-01"
+  date_end = ""
+  description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find the material for the exercise sessions [here](https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020) (work in progress)."
+
+[[experience]]
   title = "TA for PhD Econometrics"
   company = "University of Zurich"
   company_url = ""
   location = "Zurich, Switzerland"
   date_start = "2018-09-01"
-  date_end = ""
+  date_end = "2020-09-01"
   description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find my notes for the course [here](/courses/econometrics)."
-  
+
 [[experience]]
   title = "Instructor for PhD Programming Course"
   company = "University of Zurich"
