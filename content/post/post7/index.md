@@ -43,7 +43,7 @@ When the Italian news agency Ansa asked Archbishop Paul Richard Gallagher, the V
 
 [*from The Fast Company, 30/09/20*](https://www.fastcompany.com/90555442/facebook-messenger-instagram-whatsapp-zuckerberg-privacy-integration)
 
-The freedom that Instagram’s and WhatsApp’s founders enjoyed within Facebook was remarkable for its longevity. But as recounted this year in Steven Levy’s *Facebook: The Inside Story* and Sarah Frier’s *No Filter: The Inside Story of Instagram*, it wouldn’t last forever.
+On September 29, Facebook introduced Accounts Center, a one-stop hub—still in test mode—where users can view and change settings across Facebook, Messenger, and Instagram, including the ability to log into each service and automatically cross-post among them. Now it’s also beginning to push out a new version of Instagram’s messaging features that’s based on Messenger rather being its own self-contained entity. Users on both services will be able to chat with Messenger and Instagram friends from either app.
 
 
 
@@ -59,7 +59,7 @@ The Seattle City Council approved a minimum pay standard for Uber and Lyft drive
 
 [*from Coda Story 29/09/20*](https://www.codastory.com/disinformation/india-reframing-history/)
 
-As the coronavirus crisis causes unprecedented disruption to India’s education system, an ideological battle over the country’s history and identity is being fought using school syllabuses and textbooks.
+Back in June, Prime Minister Narendra Modi’s government began revising nationwide curriculums to reduce student workloads. The move was announced as a way to mitigate challenges posed to educational institutions by Covid-19 restrictions. Since then, individual Indian states have taken additional steps to pare down examination requirements and accommodate remote learning.
 
 
 
