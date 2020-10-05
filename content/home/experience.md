@@ -34,7 +34,7 @@ date_format = "Jan 2006"
   location = "Zurich, Switzerland"
   date_start = "2018-09-01"
   date_end = "2020-09-01"
-  description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find my notes for the course [here](/econometrics)."
+  description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find my notes for the course [here](https://github.com/matteocourthoud/Econometrics-for-Research-Students-2019)."
 
 [[experience]]
   title = "Instructor for PhD Programming Course"

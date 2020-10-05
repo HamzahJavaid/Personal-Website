@@ -13,17 +13,6 @@ git add .
 git commit -m $description
 git push
 
-# Ask to build book
-read -p "Re-build econometrics notes? [y/n]" answer
-if [[ $answer = y ]]
-then
- # Build book
- cd courses/econometrics
- Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
- Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
- cd -
-fi
-
 # Re-init public
 # rm -r public
 # git submodule add -f -b master https://github.com/matteocourthoud/matteocourthoud.github.io public

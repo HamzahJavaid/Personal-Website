@@ -26,9 +26,9 @@
   weight = 4
 
 [[main]]
-  name = "Econometrics"
+  name = "Econometrics for Research Students"
   parent = "courses"
-  url = "econometrics/"
+  url = "https://github.com/matteocourthoud/Econometrics-for-Research-Students-2019"
   weight = 1
 
 [[main]]
@@ -36,6 +36,12 @@
   parent = "courses"
   url = "https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020"
   weight = 2
+
+[[main]]
+  name = "Programming Practices for Research Students"
+  parent = "courses"
+  url = "https://pp4rs.github.io/"
+  weight = 3
 
 [[main]]
   name = "CV"
