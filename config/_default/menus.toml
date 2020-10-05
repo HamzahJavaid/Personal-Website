@@ -32,6 +32,12 @@
   weight = 1
 
 [[main]]
+  name = "Machine Learning for Economic Analysis"
+  parent = "courses"
+  url = "https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020"
+  weight = 2
+
+[[main]]
   name = "CV"
   url = "files/cv.pdf"
   weight = 5
