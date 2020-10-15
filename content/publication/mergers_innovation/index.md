@@ -1,7 +1,7 @@
 ---
 title: "Mergers, Acquisitions and Innovation"
 authors:
-- admin
+- "Matteo Courthoud"
 date: "2019-09-01"
 doi: ""
 

@@ -1,7 +1,7 @@
 ---
 title: "Present Bias in Career Decisions"
 authors:
-- admin
+- "Matteo Courthoud"
 date: "2019-09-01"
 doi: ""
 
