@@ -38,38 +38,38 @@
   weight = 3
 
 [[main]]
-  name = "Tutorials"
-  identifier = "tutorials"
+  name = "Resources"
+  identifier = "resources"
   url = ""
   weight = 4
 
 [[main]]
   name = "Online Seminars"
-  parent = "tutorials"
+  parent = "resources"
   url = "post/webinars"
   weight = 1
 
 [[main]]
   name = "Online Conferences"
-  parent = "tutorials"
+  parent = "resources"
   url = "post/conferences"
   weight = 2
 
 [[main]]
   name = "Summer Schools"
-  parent = "tutorials"
+  parent = "resources"
   url = "post/summerschools"
   weight = 3
 
 [[main]]
   name = "How to Build a Website"
-  parent = "tutorials"
+  parent = "resources"
   url = "post/website"
   weight = 4
 
 [[main]]
   name = "Programming Languages"
-  parent = "tutorials"
+  parent = "resources"
   url = "post/programming"
   weight = 5
 
