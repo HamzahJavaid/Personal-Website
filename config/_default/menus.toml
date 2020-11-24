@@ -14,16 +14,10 @@
   weight = 2
 
 [[main]]
-  name = "Blog"
-  identifier = "post"
-  url = "post/"
-  weight = 3
-
-[[main]]
   name = "Courses"
   identifier = "courses"
   url = ""
-  weight = 4
+  weight = 3
 
 [[main]]
   name = "Econometrics for Research Students"
@@ -42,6 +36,42 @@
   parent = "courses"
   url = "https://pp4rs.github.io/"
   weight = 3
+
+[[main]]
+  name = "Tutorials"
+  identifier = "tutorials"
+  url = ""
+  weight = 4
+
+[[main]]
+  name = "Online Seminars"
+  parent = "tutorials"
+  url = "post/webinars"
+  weight = 1
+
+[[main]]
+  name = "Online Conferences"
+  parent = "tutorials"
+  url = "post/conferences"
+  weight = 2
+
+[[main]]
+  name = "Summer Schools"
+  parent = "tutorials"
+  url = "post/summerschools"
+  weight = 3
+
+[[main]]
+  name = "How to Build a Website"
+  parent = "tutorials"
+  url = "post/website"
+  weight = 4
+
+[[main]]
+  name = "Programming Languages"
+  parent = "tutorials"
+  url = "post/programming"
+  weight = 5
 
 [[main]]
   name = "CV"
