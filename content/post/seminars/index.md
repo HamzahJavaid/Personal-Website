@@ -28,6 +28,7 @@ Other great resources to find online Economics Seminars are [virtual-econ.info](
 |:--------|-------|:----------:|:------------:|:--------:|
 | [One World Mathematical Game Theory Seminar](https://gametheorynetwork.com/one-world-game-theory-seminar/) | Theory | 15:00 | No | No |
 | [Virtual Market Design Seminar Series](http://virtual-md-seminar.com/) | Theory | 16:00 | [Yes](http://virtual-md-seminar.com/registration.html) | No |
+| [Berlin Applied Micro Seminar (BAMS)](https://sites.google.com/site/berlinappliedmicroseminar/) | Applied | 16:00 | [Yes](https://sites.google.com/site/berlinappliedmicroseminar/co_hosted_events) | No |
 | [Virtual Behavioral Economics Seminar (VIBES)](https://sites.google.com/view/vibesecon/) | Behavioral | 17:00 | [Yes](https://forms.gle/nAE6VLEZQqeRkSuK6) | No |
 | [Virtual Quantitative Marketing Seminar](https://vquantmarketing.substack.com/) | Marketing | 17:30 | [Yes](https://vquantmarketing.substack.com/) | No |
 | [Search and Matching in Macro and Finance Virtual Seminar Series](https://sammf.com/) | Macro | 18:00 | [Yes](https://sammf.com/sign-up/) | No |

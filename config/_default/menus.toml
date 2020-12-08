@@ -20,15 +20,15 @@
   weight = 3
 
 [[main]]
-  name = "Econometrics for Research Students"
-  parent = "courses"
-  url = "https://github.com/matteocourthoud/Econometrics-for-Research-Students-2019"
-  weight = 1
-
-[[main]]
   name = "Machine Learning for Economic Analysis"
   parent = "courses"
   url = "https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020"
+  weight = 1
+
+[[main]]
+  name = "Econometrics for Research Students"
+  parent = "courses"
+  url = "https://github.com/matteocourthoud/Econometrics-for-Research-Students-2019"
   weight = 2
 
 [[main]]
