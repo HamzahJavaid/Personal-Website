@@ -46,7 +46,7 @@
 [[main]]
   name = "Online Seminars"
   parent = "resources"
-  url = "post/webinars"
+  url = "post/seminars"
   weight = 1
 
 [[main]]
