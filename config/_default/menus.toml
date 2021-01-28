@@ -14,26 +14,26 @@
   weight = 2
 
 [[main]]
-  name = "Courses"
-  identifier = "courses"
+  name = "Teaching"
+  identifier = "teaching"
   url = ""
   weight = 3
 
 [[main]]
   name = "Machine Learning for Economic Analysis"
-  parent = "courses"
+  parent = "teaching"
   url = "https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020"
   weight = 1
 
 [[main]]
   name = "Econometrics for Research Students"
-  parent = "courses"
+  parent = "teaching"
   url = "https://github.com/matteocourthoud/Econometrics-for-Research-Students-2019"
   weight = 2
 
 [[main]]
   name = "Programming Practices for Research Students"
-  parent = "courses"
+  parent = "teaching"
   url = "https://pp4rs.github.io/"
   weight = 3
 
@@ -62,16 +62,28 @@
   weight = 3
 
 [[main]]
-  name = "How to Build a Website"
+  name = "Coding Resources"
   parent = "resources"
-  url = "post/website"
+  url = "post/coding"
   weight = 4
 
 [[main]]
-  name = "Programming Languages"
+  name = "Programs and Applications"
   parent = "resources"
-  url = "post/programming"
+  url = "post/programs"
   weight = 5
+
+[[main]]
+  name = "How to Build a Website"
+  parent = "resources"
+  url = "post/website"
+  weight = 6
+
+[[main]]
+  name = "How to Set Up a Remote Server"
+  parent = "resources"
+  url = "post/server"
+  weight = 7
 
 [[main]]
   name = "CV"
