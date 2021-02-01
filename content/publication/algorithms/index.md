@@ -30,7 +30,7 @@ tags:
 featured: false
 
 links:
-url_pdf: 'files/courthoud2021approximation.pdf'
+url_pdf: 'files/courthoud2021algorithms.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
