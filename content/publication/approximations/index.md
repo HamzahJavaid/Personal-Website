@@ -2,7 +2,7 @@
 title: "Approximation Methods for Large Dynamic Stochastic Games"
 authors:
 - "Matteo Courthoud"
-date: "2020-07-01"
+date: "2021-01-01"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -30,7 +30,7 @@ tags:
 featured: false
 
 links:
-url_pdf: 'files/courthoud2020approximation.pdf'
+url_pdf: 'files/courthoud2021approximation.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
@@ -42,7 +42,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: 'Comparison of existing value function approximation methods (lower is better)'
   focal_point: ""
   preview_only: false
 
