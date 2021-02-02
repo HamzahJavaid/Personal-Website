@@ -25,9 +25,10 @@ If you know about public conferences or lectures that are missing from this list
 |:-----------|-------|:-----|:------------:|------------|------------|
 | [Doctoral Workshop on the Economics of Digitization](https://www.digital-economics.org/) | TSE | Digitalization | [**January 31**](https://www.digital-economics.org/) | phd | 18/05/21 |
 | [Annual Congress of the Swiss Society of Economics and Statistics](https://www.sgvs.ch/conferences/sses2021) | SSES | All | [**February 01**](https://www.sgvs.ch/conferences/sses2021) | all | 10/06/21 |
-| [North American Summer Meeting of the Econometric Society](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [**February 05**](https://www.cirano.qc.ca/en/events/972) | all | 10/06/21 |
+| [North American Summer Meeting of the Econometric Society](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [**February 05**](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
 | [Economics and Computation](http://ec20.sigecom.org/) | ACM SIGecom | Theory | [**February 12**](http://ec20.sigecom.org/call-for-contributions-acm/papers/) | all | 13/07/21 |
 | [EEA-ESEM](https://www.eea-esem-congresses.org/index.html) | European Economic Association | All | [**February 15**](https://www.eea-esem-congresses.org/important-dates.html) | all | 23/08/21 |
+| [Econometric Society European Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [**February 15**](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
 | [GAMES 2020](https://games2020.hu/)                          | Game Theory Society           | Game Theory    | [**February 20**](https://games2020.hu/registration/)        | all    | 19/07/21 |
 | [GSE Summer Forum](https://www.barcelonagse.eu/summer-forum) | Barcelona GSE | All | [**March 14**](https://www.barcelonagse.eu/summer-forum) | all | 07/06/21 |
 | [Economics of Media Workshop](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | Queen’s University | IO | [**March 15**](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | junior | 12/06/20 |
