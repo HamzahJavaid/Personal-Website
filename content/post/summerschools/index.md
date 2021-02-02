@@ -1,6 +1,6 @@
 ---
 
-title: Summer Schools for Economics
+title: Summer Schools in Economics and Finance
 linktitle: Summer Schools
 toc: true
 date: "2020-03-02"
