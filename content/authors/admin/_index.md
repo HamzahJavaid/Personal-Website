@@ -75,7 +75,7 @@ user_groups:
 - Visitors
 ---
 
-I am a fourth year PhD student in Economics at the University of Zürich under the supervision of professor [Gregory Crawford](https://www.econ.uzh.ch/en/people/faculty/crawford.html). I hold a BSc in Economics from Bocconi University (2014) and a MSc in Economics from Bocconi University (2016). I am interested in studying modern issues in competition policy, such as the role of data or platform markets. My objective is to provide empirical evidence and theoretical frameworks that could guide competition authorities to deal with new and emerging challenges.
+I am a fourth year PhD student in Economics at the University of Zürich under the supervision of professor [Gregory Crawford](https://www.econ.uzh.ch/en/people/faculty/crawford.html). I am interested in studying modern issues in competition policy, such as the role of data or platform markets. My objective is to provide empirical evidence and theoretical frameworks that could guide competition authorities to deal with new and emerging challenges.
 
 You can download my [CV here](files/cv.pdf).
 
