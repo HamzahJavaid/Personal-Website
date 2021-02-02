@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   location = "Zurich, Switzerland"
   date_start = "2020-09-01"
   date_end = ""
-  description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find the material for the exercise sessions [here](https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020) (work in progress)."
+  description = "Teaching assistant for professor [Damian Kozbur](https://www.econ.uzh.ch/en/people/faculty/kozbur.html). You can find the material for the exercise sessions [here](https://github.com/matteocourthoud/Machine-Learning-for-Economic-Analysis-2020)."
 
 [[experience]]
   title = "TA for PhD Econometrics"
