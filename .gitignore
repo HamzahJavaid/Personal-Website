@@ -1,7 +1,11 @@
-# IDEs
-.idea/
+# Folders
+public
+resources
+themes
 
-# Hugo
-resources/
-public/
-.Rproj.user
+# Files
+.*
+*.sh
+netlify.toml
+
+website.Rproj
