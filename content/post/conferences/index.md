@@ -25,7 +25,7 @@ If you know about public conferences or meetings that are missing from this list
 | [Doctoral Workshop on the Economics of Digitization](https://www.digital-economics.org/) | TSE | Digitalization | [January 31](https://www.digital-economics.org/) | phd | 18/05/21 |
 | [Annual Congress of the Swiss Society of Economics and Statistics](https://www.sgvs.ch/conferences/sses2021) | SSES | All | [February 01](https://www.sgvs.ch/conferences/sses2021) | all | 10/06/21 |
 | [Bergen Competition Policy Conference](https://beccle.no/event/bergen-competition-policy-conference-2020/) | NHH | Comp policy | [February 03](https://beccle.no/event/bergen-competition-policy-conference-2020/) | all | 23/04/20 |
-| [North American Summer Meeting of the Econometric Society](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [**February 05**](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
+| [ES North American Summer Meeting](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [**February 05**](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
 | [Economics and Computation](http://ec20.sigecom.org/) | ACM SIGecom | Theory | [**February 12**](http://ec20.sigecom.org/call-for-contributions-acm/papers/) | all | 13/07/21 |
 | [EEA Summer Meeting](https://www.eea-esem-congresses.org/index.html) | European Economic Association | All | [**February 15**](https://www.eea-esem-congresses.org/important-dates.html) | all | 23/08/21 |
 | [ES European Summer Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [**February 15**](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
@@ -59,4 +59,3 @@ If you know about public conferences or meetings that are missing from this list
 
 
 Active deadlines are marked in bold.
-
