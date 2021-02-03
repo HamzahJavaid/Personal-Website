@@ -14,7 +14,9 @@ tags:
 
 ---
 
-I will use this page to collect information about summer schools in Economics. I will try to keep it updated across the years.
+I will use this page to collect information about summer schools in Economics. 
+
+If you know about summer schools that are missing from this listplease either [contact me](mailto:matteo.courthoud@econ.uzh.ch) or [edit the table on Github](https://github.com/matteocourthoud/website/blob/master/content/post/summerschools/index.md)!
 
 ## 2020
 

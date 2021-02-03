@@ -17,9 +17,7 @@ tags:
 
 I will use this page to collect information about online seminars in Economics and Finance.
 
-If you know about public seminars that are missing from this list, please [contact me](mailto:matteo.courthoud@econ.uzh.ch)!
-
-Other great resources to find online Economics Seminars are [virtual-econ.info](https://virtual-econ.info/),  [aeaweb.org](https://www.aeaweb.org/resources/online-seminars) and [ideas.repec.org](https://ideas.repec.org/v/).
+If you know about public seminars that are missing from this list, please either [contact me](mailto:matteo.courthoud@econ.uzh.ch) or [edit the table on Github](https://github.com/matteocourthoud/website/blob/master/content/post/seminars/index.md)!
 
 
 ## Monday
