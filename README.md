@@ -1,4 +1,4 @@
-![](static/img/grivola.jpeg)
+![](static/img/icon.jpeg)
 
 ## Personal Website
 
