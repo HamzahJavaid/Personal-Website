@@ -15,7 +15,7 @@ tags:
 
 ---
 
-In this tutorial I am going to explain how to build a personal page on [Github](https://www.github.com) using the [Academic](https://sourcethemes.com/academic/) theme from [Hugo](https://gohugo.io/).
+In this tutorial I am going to explain how to build a personal page on [Github](https://www.github.com) using the **[Academic](https://sourcethemes.com/academic/)** theme from [Hugo](https://gohugo.io/).
 
 ## Introduction
 

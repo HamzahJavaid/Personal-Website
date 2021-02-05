@@ -25,20 +25,20 @@ If you know about public conferences or meetings that are missing from this list
 | [Doctoral Workshop on the Economics of Digitization](https://www.digital-economics.org/) | TSE | Digitalization | [January 31](https://www.digital-economics.org/) | phd | 18/05/21 |
 | [Annual Congress of the Swiss Society of Economics and Statistics](https://www.sgvs.ch/conferences/sses2021) | SSES | All | [February 01](https://www.sgvs.ch/conferences/sses2021) | all | 10/06/21 |
 | [Bergen Competition Policy Conference](https://beccle.no/event/bergen-competition-policy-conference-2020/) | NHH | Comp policy | [February 03](https://beccle.no/event/bergen-competition-policy-conference-2020/) | all | 23/04/20 |
-| [ES North American Summer Meeting](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [**February 05**](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
-| [Economics and Computation](http://ec20.sigecom.org/) | ACM SIGecom | Theory | [**February 12**](http://ec20.sigecom.org/call-for-contributions-acm/papers/) | all | 13/07/21 |
-| [EEA Summer Meeting](https://www.eea-esem-congresses.org/index.html) | European Economic Association | All | [**February 15**](https://www.eea-esem-congresses.org/important-dates.html) | all | 23/08/21 |
-| [ES European Summer Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [**February 15**](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
-| [GAMES 2020](https://games2020.hu/)                          | Game Theory Society           | Game Theory    | [**February 20**](https://games2020.hu/registration/)        | all    | 19/07/21 |
-| [Annual GEP/CEPR Postgraduate Conference](https://www.nottingham.ac.uk/gep/news-events/conferences/2020-21/postgrad-conference-2021.aspx) | University of Nottingham | Policy | [**February 26**](https://www.nottingham.ac.uk/gep/documents/conferences/2020-21/pg-conf-cfp-2021.pdf) | junior | 06/05/21 |
+| [ES North American Summer Meeting](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [February 05](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
+| [Economics and Computation](http://ec20.sigecom.org/) | ACM SIGecom | Theory | [February 12](http://ec20.sigecom.org/call-for-contributions-acm/papers/) | all | 13/07/21 |
+| [EEA Summer Meeting](https://www.eea-esem-congresses.org/index.html) | European Economic Association | All | [February 15](https://www.eea-esem-congresses.org/important-dates.html) | all | 23/08/21 |
+| [ES European Summer Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [February 15](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
+| [GAMES 2020](https://games2020.hu/)                          | Game Theory Society           | Game Theory    | [February 20](https://games2020.hu/registration/)        | all    | 19/07/21 |
+| [Annual GEP/CEPR Postgraduate Conference](https://www.nottingham.ac.uk/gep/news-events/conferences/2020-21/postgrad-conference-2021.aspx) | University of Nottingham | Policy | [February 26](https://www.nottingham.ac.uk/gep/documents/conferences/2020-21/pg-conf-cfp-2021.pdf) | junior | 06/05/21 |
 | [Young Economists' Meeting](https://yem2020.econ.muni.cz/) | University fo Munich | All | [March 08](https://yem2020.econ.muni.cz/) | junior | 01/10/20 |
-| [GSE Summer Forum](https://www.barcelonagse.eu/summer-forum) | Barcelona GSE | All | [**March 14**](https://www.barcelonagse.eu/summer-forum) | all | 07/06/21 |
+| [GSE Summer Forum](https://www.barcelonagse.eu/summer-forum) | Barcelona GSE | All | [March 14](https://www.barcelonagse.eu/summer-forum) | all | 07/06/21 |
 | [Economics of Media Workshop](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | Queen’s University | IO | [March 15](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | junior | 12/06/20 |
 | [Virtual Finance and Economics Conference](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Yale University | Finecon | [March 25](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | all | 17/04/20 |
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | Georgetown University | IO | [March 31](https://sites.google.com/view/dc-io-day) | all | 15/05/20 |
-| [SITE](https://economics.stanford.edu/site/site-2021) | Stanford University | Theory | [**April 01**](https://economics.stanford.edu/site/site-2021) | all | 12/06/21 |
-| [CRESSE](https://www.cresse.info/) | CRESSE | IO | [**April 30**](https://www.cresse.info/) | all | 26/07/21 |
-| [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR | Trade | [**May 02**](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | all | 22/10/21 |
+| [SITE](https://economics.stanford.edu/site/site-2021) | Stanford University | Theory | [April 01](https://economics.stanford.edu/site/site-2021) | all | 12/06/21 |
+| [CRESSE](https://www.cresse.info/) | CRESSE | IO | [April 30](https://www.cresse.info/) | all | 26/07/21 |
+| [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR | Trade | [May 02](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | all | 22/10/21 |
 | [Warsaw International Economic Meeting](http://coin.wne.uw.edu.pl/wiem/) | Warsaw University | All | [May 03](http://coin.wne.uw.edu.pl/wiem/wiem2020-cfp.pdf) | all | 01/07/20 |
 | [Empirics and Methods in Economics Conference](https://www.emconference.net/) | Northwestern & Chicago | Empirical | [July 30](https://www.emconference.net/) | junior | 22/10/20 |
 | [ES European Winter Meeting](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | Econometricc Society | All | [September 22](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | senior | 14/12/20 |
@@ -59,5 +59,3 @@ If you know about public conferences or meetings that are missing from this list
 | [JEI Student Conference](https://www.emerginginvestigators.org/conference) | Harvard University | All | canceled | junior | 20/06/20 |
 
 
-
-Active deadlines are marked in bold.
