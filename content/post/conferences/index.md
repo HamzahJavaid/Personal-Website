@@ -38,6 +38,7 @@ If you know about public conferences or meetings that are missing from this list
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | Georgetown University | IO | [March 31](https://sites.google.com/view/dc-io-day) | all | 15/05/20 |
 | [SITE](https://economics.stanford.edu/site/site-2021) | Stanford University | Theory | [**April 01**](https://economics.stanford.edu/site/site-2021) | all | 12/06/21 |
 | [CRESSE](https://www.cresse.info/) | CRESSE | IO | [**April 30**](https://www.cresse.info/) | all | 26/07/21 |
+| [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR | Trade | [**May 02**](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | all | 22/10/21 |
 | [Warsaw International Economic Meeting](http://coin.wne.uw.edu.pl/wiem/) | Warsaw University | All | [May 03](http://coin.wne.uw.edu.pl/wiem/wiem2020-cfp.pdf) | all | 01/07/20 |
 | [Empirics and Methods in Economics Conference](https://www.emconference.net/) | Northwestern & Chicago | Empirical | [July 30](https://www.emconference.net/) | junior | 22/10/20 |
 | [ES European Winter Meeting](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | Econometricc Society | All | [September 22](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | senior | 14/12/20 |
