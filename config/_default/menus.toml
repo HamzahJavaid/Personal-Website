@@ -86,6 +86,12 @@
   weight = 7
 
 [[main]]
+  name = "PhD FAQ"
+  parent = "resources"
+  url = "post/faq"
+  weight = 8
+
+[[main]]
   name = "CV"
   url = "files/cv.pdf"
   weight = 5
