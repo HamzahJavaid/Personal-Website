@@ -68,28 +68,16 @@
   weight = 4
 
 [[main]]
-  name = "Programs and Applications"
-  parent = "resources"
-  url = "post/programs"
-  weight = 5
-
-[[main]]
   name = "How to Build a Website"
   parent = "resources"
   url = "post/website"
-  weight = 6
-
-[[main]]
-  name = "How to Set Up a Remote Server"
-  parent = "resources"
-  url = "post/server"
-  weight = 7
+  weight = 5
 
 [[main]]
   name = "PhD FAQ"
   parent = "resources"
   url = "post/faq"
-  weight = 8
+  weight = 6
 
 [[main]]
   name = "CV"

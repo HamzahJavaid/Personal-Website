@@ -16,7 +16,33 @@ tags:
 
 
 
-WORK IN PROGRESS...
-
 In this page I will collect useful resources for coding for researchers in social sciences.
 
+
+
+## General
+
+- [How to setup SSH for remote computing](https://medium.com/@SergioPietri/how-to-setup-and-use-ssh-for-remote-connections-e86556d804dd)
+
+
+
+## Python
+
+- [What is the best IDE for python? PyCharm](https://www.softwaretestinghelp.com/python-ide-code-editors/)
+- [How to structure a python project](https://docs.python-guide.org/writing/structure/)
+- [How to document python code](https://realpython.com/documenting-python-code/)
+- [How to make nice graphs in python](https://www.kaggle.com/maheshdadhich/strength-of-visualization-python-visuals-tutorial/notebook)
+- [How to use python remotely via SSH](https://www.jetbrains.com/help/pycharm/configuring-remote-interpreters-via-ssh.html)
+
+
+
+## Matlab
+
+- [How to make nice graphs in Matlab](https://www.bradleymonk.com/wp/how-to-make-professional-looking-plots-for-journal-publication-using-matlab-r2014a-and-r2014b/)
+- [How to make jupyter notebooks in Matlab](https://am111.readthedocs.io/en/latest/jmatlab_use.html)
+
+
+
+## Julia
+
+- [What is the best IDE for Julia? Juno](https://medium.com/dev-genius/what-is-the-best-ide-for-developing-in-the-programming-language-julia-484c913f07bc)
