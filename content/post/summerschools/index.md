@@ -10,7 +10,8 @@ type: post
 tags:
  - resources
  - economics
- - summer schools
+ - phd
+ - research
 
 ---
 

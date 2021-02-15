@@ -11,6 +11,9 @@ tags:
  - tutorial
  - economics
  - programming
+ - python
+ - matlab
+ - julia
 
 ---
 

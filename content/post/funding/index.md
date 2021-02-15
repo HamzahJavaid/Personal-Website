@@ -10,8 +10,8 @@ type: post
 tags:
  - resources
  - economics
- - seminars
- - online
+ - phd
+ - research
 
 ---
 

@@ -12,6 +12,7 @@ tags:
  - website
  - hugo
  - academic
+ - programming
 
 ---
 

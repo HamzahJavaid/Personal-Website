@@ -11,6 +11,8 @@ tags:
  - tutorial
  - economics
  - programming
+ - phd
+ - research
 
 ---
 
