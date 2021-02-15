@@ -41,7 +41,9 @@ In this page I will collect useful resources for coding for researchers in socia
 
 ## Matlab
 
+- [How to work with classes in Matlab](https://mathworks.com/help/matlab/matlab_oop/user-defined-classes.html)
 - [How to make nice graphs in Matlab](https://www.bradleymonk.com/wp/how-to-make-professional-looking-plots-for-journal-publication-using-matlab-r2014a-and-r2014b/)
+- [How to make nice graphs in Matlab 2](https://mathworks.com/matlabcentral/answers/133372-how-to-make-nice-plots)
 - [How to make jupyter notebooks in Matlab](https://am111.readthedocs.io/en/latest/jmatlab_use.html)
 
 
