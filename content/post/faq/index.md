@@ -18,6 +18,6 @@ tags:
 
 In this page I will collect questions that I frequently asked myself during my PhD, possibly with answers.
 
-- [Which numerical computing language is best: Julia, MATLAB, Python or R?](https://voxeu.org/content/which-numerical-computing-language-best-julia-matlab-python-or-r)
+- [Which numerical computing language is best?](https://voxeu.org/content/which-numerical-computing-language-best-julia-matlab-python-or-r)
 - 
 
