@@ -26,6 +26,7 @@ If you know about public conferences or meetings that are missing from this list
 | [Annual Congress of the Swiss Society of Economics and Statistics](https://www.sgvs.ch/conferences/sses2021) | SSES | All | [February 01](https://www.sgvs.ch/conferences/sses2021) | all | 10/06/21 |
 | [Bergen Competition Policy Conference](https://beccle.no/event/bergen-competition-policy-conference-2020/) | NHH | Comp policy | [February 03](https://beccle.no/event/bergen-competition-policy-conference-2020/) | all | 23/04/20 |
 | [ES North American Summer Meeting](https://www.cirano.qc.ca/en/events/972) | Econometric Society | All | [February 05](https://www.cirano.qc.ca/en/events/972) | senior | 10/06/21 |
+| [CEPR/JIE Conference on Applied IO](https://cepr.org/6754/cfp-mainconference) | CEPR | IO | [February 12]() | junior | 08/06/21 |
 | [Economics and Computation](http://ec20.sigecom.org/) | ACM SIGecom | Theory | [February 12](http://ec20.sigecom.org/call-for-contributions-acm/papers/) | all | 13/07/21 |
 | [EEA Summer Meeting](https://www.eea-esem-congresses.org/index.html) | European Economic Association | All | [February 15](https://www.eea-esem-congresses.org/important-dates.html) | all | 23/08/21 |
 | [ES European Summer Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [February 15](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
@@ -38,6 +39,7 @@ If you know about public conferences or meetings that are missing from this list
 | [Virtual Finance and Economics Conference](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Yale University | Finecon | [March 25](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | all | 17/04/20 |
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | Georgetown University | IO | [March 31](https://sites.google.com/view/dc-io-day) | all | 15/05/20 |
 | [SITE](https://economics.stanford.edu/site/site-2021) | Stanford University | Theory | [April 01](https://economics.stanford.edu/site/site-2021) | all | 12/06/21 |
+| [Swiss IO Day](static/files/swissIOday2021_CallForPapers.pdf) | University of Bern | IO | [April 16](static/files/swissIOday2021_CallForPapers.pdf) | all | 11/06/21 |
 | [CRESSE](https://www.cresse.info/) | CRESSE | IO | [April 30](https://www.cresse.info/) | all | 26/07/21 |
 | [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR | Trade | [May 02](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | all | 22/10/21 |
 | [Warsaw International Economic Meeting](http://coin.wne.uw.edu.pl/wiem/) | Warsaw University | All | [May 03](http://coin.wne.uw.edu.pl/wiem/wiem2020-cfp.pdf) | all | 01/07/20 |
