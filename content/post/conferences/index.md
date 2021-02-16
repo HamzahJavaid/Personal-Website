@@ -39,7 +39,7 @@ If you know about public conferences or meetings that are missing from this list
 | [Virtual Finance and Economics Conference](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Yale University | Finecon | [March 25](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | all | 17/04/20 |
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day) | Georgetown University | IO | [March 31](https://sites.google.com/view/dc-io-day) | all | 15/05/20 |
 | [SITE](https://economics.stanford.edu/site/site-2021) | Stanford University | Theory | [April 01](https://economics.stanford.edu/site/site-2021) | all | 12/06/21 |
-| [Swiss IO Day](static/files/swissIOday2021_CallForPapers.pdf) | University of Bern | IO | [April 16](static/files/swissIOday2021_CallForPapers.pdf) | all | 11/06/21 |
+| [Swiss IO Day](files/swissIOday2021_CallForPapers.pdf) | University of Bern | IO | [April 16](files/swissIOday2021_CallForPapers.pdf) | all | 11/06/21 |
 | [CRESSE](https://www.cresse.info/) | CRESSE | IO | [April 30](https://www.cresse.info/) | all | 26/07/21 |
 | [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR | Trade | [May 02](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | all | 22/10/21 |
 | [Warsaw International Economic Meeting](http://coin.wne.uw.edu.pl/wiem/) | Warsaw University | All | [May 03](http://coin.wne.uw.edu.pl/wiem/wiem2020-cfp.pdf) | all | 01/07/20 |
