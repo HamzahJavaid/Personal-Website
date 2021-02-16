@@ -31,6 +31,7 @@ If you know about public conferences or meetings that are missing from this list
 | [ES European Summer Meeting](https://www.eea-esem-congresses.org/) | Econometric Society | All | [February 15](https://www.eea-esem-congresses.org/) | senior | 23/08/21 |
 | [GAMES 2020](https://games2020.hu/)                          | Game Theory Society           | Game Theory    | [February 20](https://games2020.hu/registration/)        | all    | 19/07/21 |
 | [Annual GEP/CEPR Postgraduate Conference](https://www.nottingham.ac.uk/gep/news-events/conferences/2020-21/postgrad-conference-2021.aspx) | University of Nottingham | Policy | [February 26](https://www.nottingham.ac.uk/gep/documents/conferences/2020-21/pg-conf-cfp-2021.pdf) | junior | 06/05/21 |
+| [Annual IIOC](https://cssh.northeastern.edu/economics/iioc/) | Northeastern University | IO | [March 01](https://cssh.northeastern.edu/economics/iioc/) | all | 30/04/21 |
 | [Young Economists' Meeting](https://yem2020.econ.muni.cz/) | University fo Munich | All | [March 08](https://yem2020.econ.muni.cz/) | junior | 01/10/20 |
 | [GSE Summer Forum](https://www.barcelonagse.eu/summer-forum) | Barcelona GSE | All | [March 14](https://www.barcelonagse.eu/summer-forum) | all | 07/06/21 |
 | [Economics of Media Workshop](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | Queen’s University | IO | [March 15](https://www.sioe.org/news/economics-media-workshop-call-paper-poster-presentations) | junior | 12/06/20 |
