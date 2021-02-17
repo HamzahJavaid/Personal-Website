@@ -28,7 +28,7 @@ Note that conferences are ordered by deadline and not by conference date.
 |:-----------|-------|:-----|:------------:|------------|------------|
 | [Doctoral Workshop on the Economics of Digitization](https://www.digital-economics.org/) | TSE | Digitalization | [January 31](https://www.digital-economics.org/) | Junior | 18/05/21 |
 
-\
+<br>
 
 
 
@@ -46,7 +46,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | [GAMES 2020](https://games2020.hu/)                          | Game Theory Society           | Game Theory |      [February 20](https://games2020.hu/registration/)       | All    | 19/07/21 |
 | [Annual GEP/CEPR Postgraduate Conference](https://www.nottingham.ac.uk/gep/news-events/conferences/2020-21/postgrad-conference-2021.aspx) | University of Nottingham      | Policy      | [February 26](https://www.nottingham.ac.uk/gep/documents/conferences/2020-21/pg-conf-cfp-2021.pdf) | Junior | 06/05/21 |
 
-\
+<br>
 
 
 
@@ -61,7 +61,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | [Virtual Finance and Economics Conference](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | Yale University         | Finecon | [March 25](https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/5e753140c2225859fa93ba1e/1584738624656/callforpapers.pdf) | All    | 17/04/20 |
 | [DC IO Day 2020](https://sites.google.com/view/dc-io-day)    | Georgetown University   | IO      |     [March 31](https://sites.google.com/view/dc-io-day)      | All    | 15/05/20 |
 
-\
+<br>
 
 
 
@@ -74,7 +74,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | [Swiss IO Day](files/swissIOday2021_CallForPapers.pdf)       | University of Bern  | IO     |      [April 16](files/swissIOday2021_CallForPapers.pdf)      | All    | 11/06/21 |
 | [CRESSE](https://www.cresse.info/)                           | CRESSE              | IO     |             [April 30](https://www.cresse.info/)             | All    | 26/07/21 |
 
-\
+<br>
 
 
 
@@ -85,7 +85,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | [European Research Workshop in International Trade](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | CEPR              | Trade | [May 02](https://mailchi.mp/cepr/european-research-workshop-in-international-trade-erwit-506353) | All    | 22/10/21 |
 | [Warsaw International Economic Meeting](http://coin.wne.uw.edu.pl/wiem/) | Warsaw University | All   |  [May 03](http://coin.wne.uw.edu.pl/wiem/wiem2020-cfp.pdf)   | All    | 01/07/20 |
 
-\
+<br>
 
 
 
@@ -95,7 +95,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :--------- | --------- | :---- | :------: | ------ | ---- |
 |            |           |       |          |        |      |
 
-\
+<br>
 
 
 
@@ -105,7 +105,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :----------------------------------------------------------- | ---------------------- | :-------- | :--------------------------------------: | ------ | -------- |
 | [Empirics and Methods in Economics Conference](https://www.emconference.net/) | Northwestern & Chicago | Empirical | [July 30](https://www.emconference.net/) | Junior | 22/10/20 |
 
-\
+<br>
 
 
 
@@ -115,7 +115,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :--------- | --------- | :---- | :------: | ------ | ---- |
 |            |           |       |          |        |      |
 
-\
+<br>
 
 
 
@@ -125,7 +125,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :----------------------------------------------------------- | -------------------- | :---- | :----------------------------------------------------------: | ------ | -------- |
 | [ES European Winter Meeting](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | Econometricc Society | All   | [September 22](https://www.econometricsociety.org/meetings/schedule/2020/12/14/european-winter-meeting-2020-virtual) | Senior | 14/12/20 |
 
-\
+<br>
 
 
 
@@ -135,7 +135,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :----------------------------------------------------------- | --------- | :---- | :----------------------------------------------------------: | ------ | -------- |
 | [Young Swiss Economists Meeting](https://www.sgvs.ch/conferences/ysem2021) | SSES      | All   | [October 25](https://www.sgvs.ch/files/Call_for_Papers_YSEM_2021.pdf) | Junior | 11/02/21 |
 
-\
+<br>
 
 
 
@@ -147,7 +147,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | [NBER IO Winter Meeting](https://www.nber.org/conferences/industrial-organization-program-meeting-spring-2021) | NBER                   | IO    | [November 20](https://conference.nber.org/confsubmit/backend/cfp?id=IOs21) | Senior | 12/02/21 |
 | [MaCCI Annual Conference](https://www.zew.de/en/events-and-professional-training/detail/2021-macci-annual-conference/3320) | University of Mannheim | IO    | [November 30](https://www.zew.de/en/events-and-professional-training/detail/2021-macci-annual-conference/3320) | All    | 12/03/21 |
 
-\
+<br>
 
 
 
@@ -157,7 +157,7 @@ Note that conferences are ordered by deadline and not by conference date.
 | :----------------------------------------------------------- | -------------------- | :--------- | :----------------------------------------------------------: | ------ | -------- |
 | [Early-Career Behavioral Economics Conference](https://sites.google.com/site/ecbeconference) | Princeton University | Behavioral | [December 15](https://sites.google.com/site/ecbeconference/call) | junior | 03/06/21 |
 
-\
+<br>
 
 
 
