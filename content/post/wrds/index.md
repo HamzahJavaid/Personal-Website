@@ -85,30 +85,46 @@ Done
 
 ## Query
 
-To list all the libraries in the WRDS database.
+The available functions are:
+
+- `db.connection() `
+- `db.list_libraries()`
+- `db.list_tables() `
+- `db.get_table() `
+- `db.describe_table() `
+- `db.raw_sql() `
+- `db.close()`
+
+I make a simple example of how they work. Suppose first you want to list all the libraries in the WRDS database.
 
 ```
 db.list_libraries()
 ```
 
-To list all the datasets within a given library.
+Then you can list all the datasets within a given library.
 
 ```
 db.list_tables(library='comp')
 ```
 
-To download the dataset.
+To download the dataset you can use the `get_table()` function.
 
 ```
-df_company = db.get_table(library='comp', table='company')
+df = db.get_table(library='comp', table='funda')
 ```
 
 You can restrict both the rows and the columns you want to query.
 
 ```
-df_company_short = db.get_table(library='comp', table='company', 
+df_short = db.get_table(library='comp', table='funda', 
                                 columns = ['conm', 'gvkey', 'cik'], 
                                 obs=5)
+```
+
+You can also query the database directly using SQL.
+
+```
+df_sql = db.raw_sql('''select conm, gvkey, cik FROM comp.funda WHERE fyear>2010 AND (indfmt='INDL')''')
 ```
 
 
