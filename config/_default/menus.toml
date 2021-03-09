@@ -74,10 +74,16 @@
   weight = 5
 
 [[main]]
+  name = "How to Access WRDS in Python"
+  parent = "resources"
+  url = "post/wrds"
+  weight = 6
+
+[[main]]
   name = "PhD FAQ"
   parent = "resources"
   url = "post/faq"
-  weight = 6
+  weight = 7
 
 [[main]]
   name = "CV"
