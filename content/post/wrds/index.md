@@ -74,17 +74,49 @@ import wrds
 db = wrds.Connection(wrds_username='your_username')
 ```
 
+If everything works, you should see the following output.
+
+```
+Loading library list...
+Done
+```
+
 
 
 ## Query
 
+To list all the libraries in the WRDS database.
+
+```
+db.list_libraries()
+```
+
+To list all the datasets within a given library.
+
+```
+db.list_tables(library='comp')
+```
+
+To download the dataset.
+
+```
+df_company = db.get_table(library='comp', table='company')
+```
+
+You can restrict both the rows and the columns you want to query.
+
+```
+df_company_short = db.get_table(library='comp', table='company', 
+                                columns = ['conm', 'gvkey', 'cik'], 
+                                obs=5)
+```
 
 
 
+## Sources
 
-## Resources
-
-- [Setting up WRDS connection](https://wrds-www.wharton.upenn.edu/documents/1443/wrds_connection.html)
-- [Intro to WRDS Python Package](https://sites.duke.edu/kevinstandridge/2020/03/07/introduction-to-the-wrds-python-package/)
+- [Querying WRDS Data using Python](https://wrds-www.wharton.upenn.edu/pages/support/programming-wrds/programming-python/querying-wrds-data-python/)
+- [Using Python on WRDS Platform](https://wrds-www.wharton.upenn.edu/documents/1443/wrds_connection.html)
+- [Introduction to the WRDS Python Package](https://sites.duke.edu/kevinstandridge/2020/03/07/introduction-to-the-wrds-python-package/)
 - [WRDS Data Access Via Python API](https://wizardkingz.github.io/wrdsdataaccesspython-tutorial/)
 
