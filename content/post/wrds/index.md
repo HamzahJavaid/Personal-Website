@@ -107,6 +107,12 @@ Then you can list all the datasets within a given library.
 db.list_tables(library='comp')
 ```
 
+Before downloading a table, you can describe it.
+
+```
+df = db.describe_table(library='comp', table='funda')
+```
+
 To download the dataset you can use the `get_table()` function.
 
 ```
@@ -116,9 +122,7 @@ df = db.get_table(library='comp', table='funda')
 You can restrict both the rows and the columns you want to query.
 
 ```
-df_short = db.get_table(library='comp', table='funda', 
-                                columns = ['conm', 'gvkey', 'cik'], 
-                                obs=5)
+df_short = db.get_table(library='comp', table='funda', columns = ['conm', 'gvkey', 'cik'], obs=5)
 ```
 
 You can also query the database directly using SQL.
