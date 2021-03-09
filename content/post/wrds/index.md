@@ -1,7 +1,7 @@
 ---
 
-title: Working with WRDS in Python
-linktitle: Working with WRDS in Python
+title: How to access WRDS in Python
+linktitle: How to access WRDS in Python
 toc: true
 date: "2021-01-01"
 draft: false
