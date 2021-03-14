@@ -1,5 +1,5 @@
 ---
-title: "One Step Forward, Two Steps Back: Foreclosure Dynamics in Tipping Markets"
+title: "Foreclosure Complementarities:Exclusionary Bundling and Predatory Pricing"
 authors:
 - "Matteo Courthoud"
 - "Gregory Crawford"
@@ -19,10 +19,10 @@ publication_types: []
 publication: ""
 publication_short: ""
 
-abstract: The widespread of data to make personalized products has generated new synergies across markets increasing the degree of market complementarity and the risk of foreclosure. At the same time, data promotes economies of scale that are often argued to be responsible for market tipping. This paper uses modern computational tools to nest the classical foreclosure literature into a broader framework to study market dynamics in data-intense industries. We show how firm bundling could statically bring higher consumer welfare through tougher competition, but dynamics push the market structure towards monopoly. Moreover, this paper analyzes how these dynamics interact with economy-of-scale technologies such as learning-by-doing. We show that while bundling increases firm ability to integrate, learning-by-doing increases firm incentives to integrate. Together they transform "competition in the market" into "competition for the market". 
+abstract: In recent merger cases across complementary markets, antitrust authorities have expressed foreclosure concerns. In particular, the presence of scale economies in one market might propagate to the complementary market, ultimately leading to the monopolization of both. In this paper, we investigate the interplay between two foreclosure practices: exclusionary bundling and predatory pricing in the setting of complementary markets with economies of scale. We show that the two practices are complementary: when markets shows economies of scale, exclusionary bundling is more likely and, when bundling is allowed, predatory pricing is more likely. We show that this outcome is due to exit-inducing behavior of dominant firms: shutting down predatory incentives restores competition in both markets. We investigate different policies: banning mergers between market leaders, allowing product bundling only when more than one firm is integrated and able to offer the bundle, and lastly knowledge sharing across firms in order to limit the economies of scale. All policies are effective, each for a different reason.
 
 # Summary. An optional shortened abstract.
-summary: We use computational theory to look at market dynamics in presence of complementarities and learning-by-doing. We show the importance of looking at long term dynamics in competition policy. For example, the conventional conclusion that mergers of complements are welfare improving is true in the short run but it can lead to market tipping in the long run.
+summary: We use a computational model of market dynamics to investigate the interplay between two foreclosure practices, exclusionary bundling and predatory pricing, in the setting of complementary markets with economies of scale. We show that the two practices are complementary and we investigate potential policy interventions to prevent market monopolization.
 
 tags:
 - Industrial Organization
