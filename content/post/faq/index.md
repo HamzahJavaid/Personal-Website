@@ -25,19 +25,26 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 
 ## Before the PhD
 
+- ["PhDs: the tortuous truth"](https://www.nature.com/articles/d41586-019-03459-7?sf223557541=1), Nature, 2019.
+- ["Why doing a PhD is often a waste of time"](https://medium.economist.com/why-doing-a-phd-is-often-a-waste-of-time-349206f9addb), The Economist, 2016
 - ["Advice for Applying to Grad School in Economics"](https://athey.people.stanford.edu/professional-advice), Susan Athey, 2016. 
+- [There’s an awful cost to getting a PhD that no one talks about](https://qz.com/547641/theres-an-awful-cost-to-getting-a-phd-that-no-one-talks-about/), Quartz, 2015.
 - ["The 12 Step Program for Grad School"](http://www.ericzwick.com/public_goods/twelve_steps.pdf), Erik Zwick.
 
 
 
 ## During the PhD
 
+### Starting
+
 - ["Reflections on Grad School in Economics"](https://github.com/hagertynw/grad-school-reflections/blob/master/grad_school_reflections.pdf), Nick Hagerty.
 - ["Graduate Student Mental Health: Lessons from American Economics Departments"](https://scholar.harvard.edu/files/bolotnyy/files/bbb_mentalhealth_paper.pdf), Bolotnyy, Valentin, Matthew Basilico, and Paul Barreira, 2021. 
+- [A practical guide of the first years](https://drive.google.com/file/d/1KryQkyfcSBDLIY6XKVtcyvp8mv5wrOoZ/view), Ceyhun Elgin and Mario Solis-Garcia, 2007.
+- [How to survive your first year of graduate school in economics](https://law.vanderbilt.edu/phd/How_to_Survive_1st_Year.pdf), Matthew Pearson, 2005.
 
 
 
-### Research Ideas
+### Ideas
 
 - ["Advice for Academic Research"](http://www.ricardodahis.com/files/papers/Dahis_Advice_Research.pdf), Ricardo Dahis, 2021.
 - ["Doing research"](https://medium.com/@paul.niehaus/doing-research-18cb310529e0), Paul Niehaus, 2019. 
@@ -61,8 +68,12 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 ### Writing
 
 - ["5 Steps Toward a Paper"](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fq7wjaidl5w91srt%2FGuest%20lecture%20FS.pdf%3Fdl%3D0&sa=D&sntz=1&usg=AFQjCNG_nRs6QlkZzWBHAy0PjF4jfEYBAw), Frank Schilbach, 2019.
+- ["Novelist Cormac McCarthy’s tips on how to write a great science paper"](https://www.nature.com/articles/d41586-019-02918-5), Nature, 2019.
+- ["The “Middle Bits” Formula for Applied Papers"](https://marcfbellemare.com/wordpress/12797), Marc Bellamare, 2018.
+- ["The Conclusion Formula"](https://marcfbellemare.com/wordpress/12060), Marc Bellamare, 2018.
 
 - ["The Ten Most Important Rules of Writing Your Job Market Paper"](https://economics.harvard.edu/files/economics/files/tenruleswriting.pdf), Goldin, Claudia and Lawrence Katz, 2008. 
+- ["The Introduction Formula"](https://www.albany.edu/spatial/training/5-The%20Introduction%20Formula.pdf), Keith Head.
 - ["Writing Tips for Ph.D. Students"](http://schwert.ssb.rochester.edu/aec510/phd_paper_writing.pdf), John Cochrane, 2005. 
 
 
@@ -79,6 +90,7 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 
 - ["A Guide and Advice for Economists on the U.S. Junior Academic Job Market 2018-2019 Edition"](https://www.aeaweb.org/content/file?id=869), John Cawley, 2018.
 - ["Academic job market advice for economics, political science, public policy, and other professional schools"](https://chrisblattman.com/job-market/), Blattman, Christopher,  2015. 
+- ["How I Learned to Stop Worrying and Love the Job Market"](http://www.ericzwick.com/public_goods/love_the_market.pdf), Erik Zwick.
 
 
 
