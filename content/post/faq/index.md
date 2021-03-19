@@ -25,29 +25,30 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 
 ## Before the PhD
 
-- Athey, Susan, “Advice for Applying to Grad School in Economics,” 2016. 
+- ["Advice for Applying to Grad School in Economics"](https://athey.people.stanford.edu/professional-advice), Susan Athey, 2016. 
 - ["The 12 Step Program for Grad School"](http://www.ericzwick.com/public_goods/twelve_steps.pdf), Erik Zwick.
 
 
 
-## Starting the PhD
+## During the PhD
 
 - ["Reflections on Grad School in Economics"](https://github.com/hagertynw/grad-school-reflections/blob/master/grad_school_reflections.pdf), Nick Hagerty.
 - ["Graduate Student Mental Health: Lessons from American Economics Departments"](https://scholar.harvard.edu/files/bolotnyy/files/bbb_mentalhealth_paper.pdf), Bolotnyy, Valentin, Matthew Basilico, and Paul Barreira, 2021. 
 
 
 
-## Research Ideas
+### Research Ideas
 
-- ["Doing research"](https://medium.com/@paul.niehaus/doing-research-18cb310529e0), Paul Niehaus, 2019. 
 - ["Advice for Academic Research"](http://www.ricardodahis.com/files/papers/Dahis_Advice_Research.pdf), Ricardo Dahis, 2021.
-- ["7 Rules for Maximizing Your Creative Output"](https://stevepavlina.com/blog/2007/01/7-rules-for-maximizing-your-creative-output/), Steve Pavlina, 2007.
+- ["Doing research"](https://medium.com/@paul.niehaus/doing-research-18cb310529e0), Paul Niehaus, 2019. 
 - ["An unofficial guidebook for PhD students in economics and education"](https://static1.squarespace.com/static/55c143d9e4b0cb07521c6d17/t/5b4f409f575d1ff83c2f12d8/1531920545061/PhDGuidebook.pdf), Alex Eble, 2018. 
+- ["The Research Productivity of New PhDs in Economics: The Surprisingly High Non-Success of the Successful"](https://iu.box.com/s/0ha9gcq0t22kyyy1rqv15mkmauw1py18), John P. Conley and Ali Sina Önder, 2014.
+- ["7 Rules for Maximizing Your Creative Output"](https://stevepavlina.com/blog/2007/01/7-rules-for-maximizing-your-creative-output/), Steve Pavlina, 2007.
 - ["How To Build An Economic Model in Your Spare Time"](http://people.ischool.berkeley.edu/~hal/Papers/how.pdf), Hal. R. Varian, 1998.
 
 
 
-## Presentations
+### Presentations
 
 - ["Public Speaking for Academic Economists"](http://www.princeton.edu/~reddings/tradephd/public_speaking_for_academic_economists.pdf), Rachel Meager, 2017. 
 - ["How to present your job market paper"](https://www.europeanjobmarketofeconomists.org/uploads/HowToPresent_LaFerrara.pdf), Eliana La Ferrara, 2018. 
@@ -57,7 +58,7 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 
 
 
-## Writing
+### Writing
 
 - ["5 Steps Toward a Paper"](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fq7wjaidl5w91srt%2FGuest%20lecture%20FS.pdf%3Fdl%3D0&sa=D&sntz=1&usg=AFQjCNG_nRs6QlkZzWBHAy0PjF4jfEYBAw), Frank Schilbach, 2019.
 
@@ -66,7 +67,7 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 
 
 
-## Referiing
+### Referiing
 
 - ["How to Review Manuscripts"](https://iu.box.com/s/lgmhqw5uxvrb7qdrhxxskzki9pcwx7o6), Elsevier, 2015.
 - [Contributing to Public Goods: My 20 Rules for Refereeing](http://marcfbellemare.com/wordpress/5542), Marc F. Bellemare, 2012
@@ -90,11 +91,16 @@ Personally, the article for PhD students that helped me the most is [“Doing re
 ## Misc
 
 - ["The Importance of Stupidity in Scientific Research"](https://iu.box.com/s/km7cxhcxgfcdpk4cp38b47x7is7lum11), Martin A. Schwartz, 2008.
-- ["The Research Productivity of New PhDs in Economics: The Surprisingly High Non-Success of the Successful"](https://iu.box.com/s/0ha9gcq0t22kyyy1rqv15mkmauw1py18), John P. Conley and Ali Sina Önder, 2014.
 - ["Sins of Omission and the Practice of Economics"](https://www.aeaweb.org/articles?id=10.1257/jel.20191573), George A. Akerlof, 2020.
 
 
 
 ## More
 
-You can find more resources here: https://www.aeaweb.org/about-aea/committees/cswep/mentoring/reading.
+You can find more resources here:
+
+- AEA [Mentoring Reading Materials](https://www.aeaweb.org/about-aea/committees/cswep/mentoring/reading)
+- Johannes Pfeifer [Job Market Resources](https://sites.google.com/site/pfeiferecon/job-market-resources)
+- Kristoph Kronenberg [Resources](https://sites.google.com/view/christoph-kronenberg/home/resources)
+- Random forum [Resource Collection](http://www.inhe365.com/thread-17506-1-1.html)
+
